@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary: #c19b62; /* Gold color */
+  --primary-hover: #b08c57;
+  --bg-color: #fcfbfa; /* Very light background for hero */
+  --topbar-bg: #c19b62; 
+  --text-dark: #1b1e2c; /* Main dark headings */
+  --text-gray: #707070; /* Body text */
+  --light-gray: #f2f2f2; /* Hamburger button bg */
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--white);
+  color: var(--text-gray);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: 'Inter', sans-serif;
+}
