@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Playfair+Display&family=Pacifico&display=swap');
 .hero-section {
   position: relative;
   min-height: 100vh;
@@ -144,4 +145,581 @@
   .hero-grid {
     background-size: 20px 20px;
   }
+}
+
+/* ─────────────────────────────────────────
+   ABOUT SECTION
+───────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.about-section {
+  padding: 100px 6%;
+  background-color: #fff;
+  position: relative;
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+  max-width: 1300px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+/* Left image composition */
+.about-image-wrapper {
+  position: relative;
+  flex: 1;
+  min-width: 340px;
+  max-width: 520px;
+}
+
+.main-image {
+  border-radius: 20px;
+  overflow: hidden;
+  height: 570px;
+  width: 100%;
+}
+
+.main-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.experience-badge {
+  position: absolute;
+  top: 60px;
+  right: -30px;
+  background-color: var(--primary, #c19b62);
+  width: 150px;
+  height: 150px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  padding: 15px;
+}
+
+.experience-badge h2 {
+  font-size: 44px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1;
+}
+
+.experience-badge p {
+  font-size: 13px;
+  margin-top: 6px;
+  color: rgba(255,255,255,0.9);
+}
+
+.floating-image {
+  position: absolute;
+  bottom: -40px;
+  left: -40px;
+  width: 260px;
+  height: 260px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 12px solid #fdf8f2;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.floating-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Right content */
+.about-content {
+  flex: 1;
+  min-width: 340px;
+  padding-bottom: 40px;
+}
+
+.about-subtitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--text-dark, #1b1e2c);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.about-subtitle-icon {
+  color: var(--primary, #c19b62);
+  font-size: 20px;
+}
+
+.about-title {
+  font-size: 44px;
+  color: #1a2530;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.about-description {
+  color: #666;
+  font-size: 15px;
+  line-height: 1.85;
+  margin-bottom: 36px;
+  text-align: justify;
+  max-width: 620px;
+}
+
+.about-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 40px;
+}
+
+.about-list li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 16px;
+  color: #1a2530;
+  font-weight: 500;
+}
+
+.check-icon {
+  color: var(--primary, #c19b62);
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.about-contact-area {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding-top: 30px;
+  border-top: 1px solid #eaeaea;
+  flex-wrap: wrap;
+}
+
+.contact-box {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.contact-icon-wrap {
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary, #c19b62);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 22px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-info span {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 3px;
+}
+
+.contact-info strong {
+  font-size: 17px;
+  color: #1a2530;
+  font-weight: 700;
+}
+
+.signature {
+  font-family: 'Pacifico', cursive;
+  font-size: 44px;
+  color: #1a2530;
+}
+
+/* About responsive */
+@media (max-width: 1024px) {
+  .experience-badge { right: 0; }
+  .floating-image { left: -20px; width: 220px; height: 220px; }
+  .about-title { font-size: 36px; }
+}
+
+@media (max-width: 768px) {
+  .about-container { flex-direction: column; gap: 100px; }
+  .about-image-wrapper { max-width: 100%; }
+  .floating-image { bottom: -50px; left: 20px; }
+  .experience-badge { right: 20px; }
+  .about-contact-area { gap: 20px; }
+}
+
+/* ─────────────────────────────────────────
+   SERVICES SECTION
+───────────────────────────────────────── */
+.services-section {
+  padding: 100px 6%;
+  background-color: #f8f5f0;
+  position: relative;
+}
+
+.services-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 70px;
+}
+
+.services-tagline {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--primary, #c19b62);
+  margin-bottom: 16px;
+}
+
+.services-title {
+  font-size: 46px;
+  font-weight: 700;
+  color: #1a2530;
+  line-height: 1.15;
+  margin-bottom: 18px;
+}
+
+.services-subtitle {
+  font-size: 16px;
+  color: #777;
+  line-height: 1.7;
+}
+
+/* ── Grid ── */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* ── Card ── */
+.service-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(193, 155, 98, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--primary, #c19b62);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(193, 155, 98, 0.15);
+}
+
+.service-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* ── Highlighted / active card ── */
+.service-card--highlight {
+  background: linear-gradient(145deg, #1a2530 0%, #243445 100%);
+  color: #fff;
+  border-color: transparent;
+}
+
+.service-card--highlight .service-tag {
+  color: var(--primary, #c19b62);
+}
+
+.service-card--highlight .service-card-title {
+  color: #fff;
+}
+
+.service-card--highlight .service-card-desc {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.service-card--highlight .service-card-footer {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.service-card--highlight .service-icon-wrap {
+  background: rgba(193, 155, 98, 0.18);
+  color: var(--primary, #c19b62);
+}
+
+.service-card--highlight::before {
+  background: var(--primary, #c19b62);
+}
+
+/* ── Icon ── */
+.service-icon-wrap {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  background: rgba(193, 155, 98, 0.1);
+  color: var(--primary, #c19b62);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  margin-bottom: 6px;
+  transition: background 0.3s ease;
+}
+
+.service-card:not(.service-card--highlight):hover .service-icon-wrap {
+  background: var(--primary, #c19b62);
+  color: #fff;
+}
+
+/* ── Tag ── */
+.service-tag {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--primary, #c19b62);
+}
+
+/* ── Title ── */
+.service-card-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a2530;
+  line-height: 1.3;
+}
+
+/* ── Description ── */
+.service-card-desc {
+  font-size: 14px;
+  color: #777;
+  line-height: 1.8;
+  flex: 1;
+}
+
+/* ── Footer "Learn More" ── */
+.service-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary, #c19b62);
+  margin-top: auto;
+}
+
+.arrow-icon {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .arrow-icon {
+  transform: translateX(5px);
+}
+
+/* ── Services responsive ── */
+@media (max-width: 1200px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .services-section {
+    padding: 70px 5%;
+  }
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .services-title {
+    font-size: 32px;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   SCROLL PROGRESS CIRCLE
+═══════════════════════════════════════════ */
+.scroll-progress {
+  position: fixed;
+  bottom: 32px;
+  right: 28px;
+  z-index: 999;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  filter: drop-shadow(0 4px 14px rgba(193, 155, 98, 0.35));
+  transition: transform 0.2s ease;
+}
+
+.scroll-progress:hover {
+  transform: scale(1.1);
+}
+
+/* Track ring */
+.sp-track {
+  fill: none;
+  stroke: #e8e0d4;
+  stroke-width: 4;
+}
+
+/* Progress arc */
+.sp-fill {
+  fill: none;
+  stroke: var(--primary, #c19b62);
+  stroke-width: 4;
+  stroke-linecap: round;
+  /* start from top */
+  transform: rotate(-90deg);
+  transform-origin: 30px 30px;
+  transition: stroke-dashoffset 0.25s ease;
+}
+
+/* Arrow icon */
+.sp-arrow {
+  position: absolute;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary, #c19b62);
+  pointer-events: none;
+  line-height: 1;
+  margin-top: -2px;
+}
+
+/* ═══════════════════════════════════════════
+   SCROLL-REVEAL ANIMATIONS
+═══════════════════════════════════════════ */
+
+/* Base hidden state — all reveal elements start invisible */
+.reveal {
+  opacity: 0;
+  transition:
+    opacity 0.75s ease calc(var(--delay, 0ms)),
+    transform 0.75s ease calc(var(--delay, 0ms));
+  will-change: opacity, transform;
+}
+
+/* Visible state added by IntersectionObserver */
+.reveal.revealed {
+  opacity: 1;
+  transform: none !important;
+}
+
+/* Slide up */
+.fade-up  { transform: translateY(50px); }
+
+/* Slide left (element enters from the left) */
+.fade-left  { transform: translateX(-60px); }
+
+/* Slide right (element enters from the right) */
+.fade-right { transform: translateX(60px); }
+
+/* Pop / scale in */
+.pop { transform: scale(0.7); }
+
+/* ── Hero content extra entrance ── */
+.hero-content.revealed .hero-subtitle {
+  animation: subtitleEntrance 0.6s ease 0.3s both;
+}
+.hero-content.revealed .hero-title {
+  animation: titleEntrance 0.7s ease 0.45s both;
+}
+.hero-content.revealed .hero-description {
+  animation: subtitleEntrance 0.6s ease 0.6s both;
+}
+.hero-content.revealed .btn-explore {
+  animation: subtitleEntrance 0.6s ease 0.75s both;
+}
+
+@keyframes subtitleEntrance {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes titleEntrance {
+  from { opacity: 0; transform: translateY(30px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* ── About image shimmer on reveal ── */
+.about-image-wrapper.revealed .main-image img {
+  animation: imgReveal 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes imgReveal {
+  from { clip-path: inset(0 100% 0 0); opacity: 0; }
+  to   { clip-path: inset(0 0% 0 0);   opacity: 1; }
+}
+
+/* ── Floating image drift ── */
+.floating-image.revealed {
+  animation: floatDrift 4s ease-in-out 1.2s infinite alternate;
+}
+
+@keyframes floatDrift {
+  from { transform: translateY(0px); }
+  to   { transform: translateY(-12px); }
+}
+
+/* ── Experience badge pulse ── */
+.experience-badge.revealed {
+  animation: badgePop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.5s both,
+             badgePulse 2.5s ease-in-out 1.4s infinite;
+}
+
+@keyframes badgePop {
+  from { opacity: 0; transform: scale(0.5); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes badgePulse {
+  0%,100% { box-shadow: 0 10px 30px rgba(193,155,98,0.25); }
+  50%      { box-shadow: 0 10px 40px rgba(193,155,98,0.55); }
+}
+
+/* ── About list items stagger ── */
+.about-content.revealed .about-list li:nth-child(1) { animation: listItem 0.5s ease 0.3s both; }
+.about-content.revealed .about-list li:nth-child(2) { animation: listItem 0.5s ease 0.45s both; }
+.about-content.revealed .about-list li:nth-child(3) { animation: listItem 0.5s ease 0.6s both; }
+
+@keyframes listItem {
+  from { opacity: 0; transform: translateX(-20px); }
+  to   { opacity: 1; transform: translateX(0); }
 }

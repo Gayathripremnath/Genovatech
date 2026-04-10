@@ -4,6 +4,7 @@ import './App.css';
 import Topbar from './Components/Topbar';
 import Navbar from './Components/Navbar';
 import Hero from './Components/Hero';
+import Footer from './Components/Footer';
 
 // Basic Placeholder Page Components for routing purposes
 const Projects = () => <div style={{padding: '150px 20px', textAlign: 'center'}}><h1>Projects Page</h1></div>;
@@ -28,6 +29,7 @@ function App() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );
