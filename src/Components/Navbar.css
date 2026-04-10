@@ -116,15 +116,15 @@
 .sidebar-menu {
   position: fixed;
   top: 0;
-  right: -110%; /* Hidden offscreen safely */
-  width: 380px; /* Increased from 320px */
-  max-width: 100vw; /* Keep it responsive on mobile */
-  /* height: 100vh; */
-  background-color: var(--white);
+  right: -110%;
+  width: 320px;
+  max-width: 100vw;
+  height: 100vh;
+  background-color: var(--white); /* Reverted to light theme for black links */
   z-index: 1000;
-  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-  transition: right 0.4s ease;
-  padding: 40px 30px; /* Increased padding slightly for better look */
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  padding: 60px 40px;
   display: flex;
   flex-direction: column;
   overflow-y: auto;
@@ -136,18 +136,24 @@
 
 .sidebar-close {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 46px;
-  height: 42px;
-  background-color: rgb(50, 28, 5);
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary, #c19b62);
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 24px;
-  color: white;
+  font-size: 20px;
+  color: rgb(38, 36, 36);
   cursor: pointer;
   border: none;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.sidebar-close:hover {
+  transform: rotate(90deg);
 }
 
 .sidebar-logo-img {
@@ -163,7 +169,7 @@
 
 .sidebar-content h3 {
   font-size: 20px;
-  color: var(--text-dark);
+  color: black;
   margin-bottom: 12px;
 }
 
@@ -214,7 +220,7 @@
   height: 40px;
   border-radius: 50%;
   background-color: rgb(212, 85, 7);
-  color: white;
+  color: rgb(18, 18, 18);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -224,6 +230,7 @@
 
 .sidebar-socials a:hover {
   transform: translateY(-3px);
+  background-color: var(--primary-hover, #b08c57);
 }
 
 /* Hide links inside sidebar on Desktop, because they are already in the main Navbar */
@@ -248,33 +255,55 @@
     max-height: 50px;
   }
 
-  /* When on Mobile, swap sidebar content! */
+  /* Mobile Menu Styles */
   .sidebar-links {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    margin-bottom: 30px;
+    gap: 0;
+    margin-top: 30px;
+  }
+
+  .sidebar-links li {
+    border-bottom: 1px solid #f0f0f0; /* Subtle light border */
   }
 
   .sidebar-links li a {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
-    color: var(--text-dark);
+    color: #000000; /* Black links after Home */
     display: block;
-    padding: 10px 0;
-    border-bottom: 1px solid #f0f0f0;
-    transition: color 0.3s;
+    padding: 18px 0;
+    transition: all 0.3s ease;
+  }
+
+  .sidebar-links li:first-child a {
+    color: var(--primary, #c19b62); /* Home link in Gold */
   }
 
   .sidebar-links li a:hover,
   .sidebar-links li a.active {
-    color: rgb(212, 85, 7);
+    color: var(--primary, #c19b62);
+    padding-left: 10px;
   }
 
-  /* User request: "at the media quiry menubafr add only navbar links" so we HIDE content and context */
-  .sidebar-content,
-  .sidebar-contact {
-    display: none;
+  /* Social section styling */
+  .sidebar-socials {
+    margin-top: auto;
+    display: flex;
+    gap: 15px;
+    padding-top: 40px;
+  }
+
+  .sidebar-socials a {
+    background-color: var(--primary, #c19b62);
+    color: #ffffff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
   }
 }
 

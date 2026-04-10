@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Playfair+Display&family=Pacifico&display=swap');
+
 .hero-section {
   position: relative;
   min-height: 100vh;
-  background:white;
+  background: white;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-top: 100px; 
+  padding-top: 100px;
   overflow: hidden;
 }
 
@@ -17,7 +18,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: 
+  background-image:
     linear-gradient(to right, rgba(111, 64, 64, 0.162) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(79, 45, 45, 0.1) 1px, transparent 1px);
   background-size: 30px 30px;
@@ -46,7 +47,7 @@
 }
 
 .subtitle-icon {
-  color:  rgba(210, 99, 30, 0.878);
+  color: rgba(210, 99, 30, 0.878);
   font-size: 20px;
 }
 
@@ -88,7 +89,7 @@
   right: 0;
   top: 60%;
   transform: translateY(-50%);
-  background-color:  rgb(212, 85, 7);
+  background-color: rgb(212, 85, 7);
   color: white;
   padding: 12px 10px;
   writing-mode: vertical-rl;
@@ -99,7 +100,7 @@
   letter-spacing: 1px;
   cursor: pointer;
   z-index: 100;
-  box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
   transition: padding-left 0.3s;
 }
 
@@ -120,14 +121,17 @@
     min-height: auto;
     padding-bottom: 80px;
   }
+
   .hero-title {
     font-size: 40px;
     margin-bottom: 15px;
   }
+
   .hero-subtitle {
     font-size: 16px;
     margin-bottom: 20px;
   }
+
   .hero-description {
     font-size: 14px;
     margin-bottom: 30px;
@@ -138,10 +142,12 @@
   .hero-title {
     font-size: 32px;
   }
+
   .btn-explore {
     padding: 12px 24px;
     font-size: 14px;
   }
+
   .hero-grid {
     background-size: 20px 20px;
   }
@@ -204,7 +210,7 @@
   align-items: center;
   color: #fff;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
   padding: 15px;
 }
 
@@ -218,7 +224,7 @@
 .experience-badge p {
   font-size: 13px;
   margin-top: 6px;
-  color: rgba(255,255,255,0.9);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .floating-image {
@@ -230,7 +236,7 @@
   border-radius: 20px;
   overflow: hidden;
   border: 12px solid #fdf8f2;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
 }
 
 .floating-image img {
@@ -354,17 +360,109 @@
 
 /* About responsive */
 @media (max-width: 1024px) {
-  .experience-badge { right: 0; }
-  .floating-image { left: -20px; width: 220px; height: 220px; }
-  .about-title { font-size: 36px; }
+  .experience-badge {
+    right: -10px;
+    width: 130px;
+    height: 130px;
+  }
+
+  .floating-image {
+    width: 200px;
+    height: 200px;
+    bottom: -30px;
+    left: -20px;
+  }
+
+  .about-title {
+    font-size: 34px;
+  }
 }
 
 @media (max-width: 768px) {
-  .about-container { flex-direction: column; gap: 100px; }
-  .about-image-wrapper { max-width: 100%; }
-  .floating-image { bottom: -50px; left: 20px; }
-  .experience-badge { right: 20px; }
-  .about-contact-area { gap: 20px; }
+  .about-section {
+    padding: 60px 4%;
+  }
+
+  .about-container {
+    flex-direction: column;
+    gap: 80px;
+    text-align: center;
+  }
+
+  .about-image-wrapper {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    min-width: unset;
+  }
+
+  .main-image {
+    height: 450px;
+    width: 90%;
+  }
+
+  .floating-image {
+    bottom: -40px;
+    left: 0;
+    width: 180px;
+    height: 180px;
+    border-width: 8px;
+  }
+
+  .experience-badge {
+    right: 0;
+    top: 30px;
+    width: 110px;
+    height: 110px;
+  }
+
+  .experience-badge h2 {
+    font-size: 32px;
+  }
+
+  .about-subtitle {
+    justify-content: center;
+  }
+
+  .about-description {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+  }
+
+  .about-list {
+    align-items: center;
+  }
+
+  .about-contact-area {
+    justify-content: center;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-image {
+    height: 350px;
+  }
+
+  .floating-image {
+    width: 140px;
+    height: 140px;
+    bottom: -30px;
+  }
+
+  .experience-badge {
+    width: 90px;
+    height: 90px;
+  }
+
+  .experience-badge h2 {
+    font-size: 24px;
+  }
+
+  .about-title {
+    font-size: 28px;
+  }
 }
 
 /* ─────────────────────────────────────────
@@ -563,9 +661,11 @@
   .services-section {
     padding: 70px 5%;
   }
+
   .services-grid {
     grid-template-columns: 1fr;
   }
+
   .services-title {
     font-size: 32px;
   }
@@ -643,39 +743,64 @@
 }
 
 /* Slide up */
-.fade-up  { transform: translateY(50px); }
+.fade-up {
+  transform: translateY(50px);
+}
 
 /* Slide left (element enters from the left) */
-.fade-left  { transform: translateX(-60px); }
+.fade-left {
+  transform: translateX(-60px);
+}
 
 /* Slide right (element enters from the right) */
-.fade-right { transform: translateX(60px); }
+.fade-right {
+  transform: translateX(60px);
+}
 
 /* Pop / scale in */
-.pop { transform: scale(0.7); }
+.pop {
+  transform: scale(0.7);
+}
 
 /* ── Hero content extra entrance ── */
 .hero-content.revealed .hero-subtitle {
   animation: subtitleEntrance 0.6s ease 0.3s both;
 }
+
 .hero-content.revealed .hero-title {
   animation: titleEntrance 0.7s ease 0.45s both;
 }
+
 .hero-content.revealed .hero-description {
   animation: subtitleEntrance 0.6s ease 0.6s both;
 }
+
 .hero-content.revealed .btn-explore {
   animation: subtitleEntrance 0.6s ease 0.75s both;
 }
 
 @keyframes subtitleEntrance {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes titleEntrance {
-  from { opacity: 0; transform: translateY(30px) scale(0.97); }
-  to   { opacity: 1; transform: translateY(0) scale(1); }
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 /* ── About image shimmer on reveal ── */
@@ -684,8 +809,15 @@
 }
 
 @keyframes imgReveal {
-  from { clip-path: inset(0 100% 0 0); opacity: 0; }
-  to   { clip-path: inset(0 0% 0 0);   opacity: 1; }
+  from {
+    clip-path: inset(0 100% 0 0);
+    opacity: 0;
+  }
+
+  to {
+    clip-path: inset(0 0% 0 0);
+    opacity: 1;
+  }
 }
 
 /* ── Floating image drift ── */
@@ -694,32 +826,66 @@
 }
 
 @keyframes floatDrift {
-  from { transform: translateY(0px); }
-  to   { transform: translateY(-12px); }
+  from {
+    transform: translateY(0px);
+  }
+
+  to {
+    transform: translateY(-12px);
+  }
 }
 
 /* ── Experience badge pulse ── */
 .experience-badge.revealed {
   animation: badgePop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.5s both,
-             badgePulse 2.5s ease-in-out 1.4s infinite;
+    badgePulse 2.5s ease-in-out 1.4s infinite;
 }
 
 @keyframes badgePop {
-  from { opacity: 0; transform: scale(0.5); }
-  to   { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 @keyframes badgePulse {
-  0%,100% { box-shadow: 0 10px 30px rgba(193,155,98,0.25); }
-  50%      { box-shadow: 0 10px 40px rgba(193,155,98,0.55); }
+
+  0%,
+  100% {
+    box-shadow: 0 10px 30px rgba(193, 155, 98, 0.25);
+  }
+
+  50% {
+    box-shadow: 0 10px 40px rgba(193, 155, 98, 0.55);
+  }
 }
 
 /* ── About list items stagger ── */
-.about-content.revealed .about-list li:nth-child(1) { animation: listItem 0.5s ease 0.3s both; }
-.about-content.revealed .about-list li:nth-child(2) { animation: listItem 0.5s ease 0.45s both; }
-.about-content.revealed .about-list li:nth-child(3) { animation: listItem 0.5s ease 0.6s both; }
+.about-content.revealed .about-list li:nth-child(1) {
+  animation: listItem 0.5s ease 0.3s both;
+}
+
+.about-content.revealed .about-list li:nth-child(2) {
+  animation: listItem 0.5s ease 0.45s both;
+}
+
+.about-content.revealed .about-list li:nth-child(3) {
+  animation: listItem 0.5s ease 0.6s both;
+}
 
 @keyframes listItem {
-  from { opacity: 0; transform: translateX(-20px); }
-  to   { opacity: 1; transform: translateX(0); }
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
