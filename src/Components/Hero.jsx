@@ -3,7 +3,7 @@ import './Hero.css';
 import { BsStars } from 'react-icons/bs';
 import { GoSun } from 'react-icons/go';
 import { FaCheckCircle } from 'react-icons/fa';
-import { FiPhoneCall, FiMonitor, FiLayers, FiSmartphone, FiTrendingUp } from 'react-icons/fi';
+import { FiPhoneCall, FiMonitor, FiLayers, FiSmartphone, FiTrendingUp, FiSettings, FiCheckCircle, FiUsers, FiAward, FiEye } from 'react-icons/fi';
 
 /* ── Reusable scroll-reveal hook ── */
 const useReveal = () => {
@@ -68,6 +68,7 @@ const Hero = () => {
   const card2Ref = useReveal();
   const card3Ref = useReveal();
   const card4Ref = useReveal();
+  const agencyStatsRef = useReveal();
 
   return (
     <div>
@@ -75,7 +76,6 @@ const Hero = () => {
 
       {/* ── HERO SECTION ── */}
       <div className="hero-section">
-        <div className="hero-grid"></div>
 
         <div className="hero-content reveal fade-up" ref={heroContentRef}>
           <div className="hero-subtitle">
@@ -97,6 +97,38 @@ const Hero = () => {
           </button>
         </div>
       </div>
+
+      {/* ── AGENCY STATS SECTION ── */}
+      <section className="agency-stats-section reveal fade-up" ref={agencyStatsRef}>
+        <div className="agency-stats-container">
+          <div className="agency-stats-cards">
+            <div className="agency-stat-card">
+              <h3>2013</h3>
+              <p>FOUNDED</p>
+            </div>
+            <div className="agency-stat-card">
+              <h3></h3>
+              <p>VALUATION</p>
+            </div>
+          </div>
+          
+          <div className="agency-stats-content">
+            <p className="agency-stats-desc">
+              We are the leading agency dedicated to enhancing your deals, driving growth, and delivering exceptional results. Trust us to maximize your potential and take your business to the next level
+            </p>
+            <div className="agency-stats-divider"></div>
+            <div className="agency-stats-clients">
+              <div className="client-avatars">
+                <div className="avatar-plus">+</div>
+              </div>
+              <div className="client-text">
+                <strong>60+ Client Connect with</strong>
+                <span>our Company</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* ── ABOUT SECTION ── */}
       <section className="about-section">
@@ -180,70 +212,78 @@ const Hero = () => {
           <p className="services-subtitle">We deliver cutting-edge digital solutions tailored to your business needs.</p>
         </div>
 
-        <div className="services-grid">
-
-          <div className="service-card reveal fade-up" ref={card1Ref} style={{ '--delay': '0ms' }}>
-            <div className="service-icon-wrap"><FiMonitor /></div>
-            <span className="service-tag">Web Development</span>
-            <h3 className="service-card-title">Creative Design</h3>
-            <p className="service-card-desc">
-              We, at Genova Technologies has a young and creative team of designers who believe in
-              uniqueness, passion to excel and optimum coordination with clients to deliver results
-              that far exceed their expectations.
-            </p>
-            <div className="service-card-footer">
-              <span>Learn More</span>
-              <span className="arrow-icon">→</span>
+        <div className="services-carousel-wrapper">
+          <div className="services-carousel">
+            
+            {/* Card 1 */}
+            <div className="service-img-card reveal fade-up" ref={card1Ref} style={{ '--delay': '0ms' }}>
+              <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=600" className="sic-bg" alt="Web Development" />
+              <div className="sic-overlay">
+                <div className="sic-content">
+                  <h3 className="sic-category">Web Development</h3>
+                  <p className="sic-subtitle">simplicity is the ultimate sophistication</p>
+                  <div className="sic-hover-data">
+                    <h4 className="sic-hover-title">Creative Design</h4>
+                    <p className="sic-hover-desc">
+                      We, at Genova Technologies has a young and creative team of designers who believe in uniqueness, passion to excel and optimum coordination with clients to deliver results that far exceed their expectations.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
 
-          <div className="service-card service-card--highlight reveal fade-up" ref={card2Ref} style={{ '--delay': '100ms' }}>
-            <div className="service-icon-wrap"><FiLayers /></div>
-            <span className="service-tag">Web Applications</span>
-            <h3 className="service-card-title">Custom Web Applications</h3>
-            <p className="service-card-desc">
-              We offer a range of web application solutions including ERP Applications, data
-              management applications, and personalized ecommerce applications. Using PHP framework
-              our programmers create custom applications that are intuitive, smart, and easily
-              adapted to any situation your business may face.
-            </p>
-            <div className="service-card-footer">
-              <span>Learn More</span>
-              <span className="arrow-icon">→</span>
+            {/* Card 2 */}
+            <div className="service-img-card reveal fade-up" ref={card2Ref} style={{ '--delay': '100ms' }}>
+              <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=600" className="sic-bg" alt="Web Applications" />
+              <div className="sic-overlay">
+                <div className="sic-content">
+                  <h3 className="sic-category">Web Applications</h3>
+                  <p className="sic-subtitle">latest technology and techniques available</p>
+                  <div className="sic-hover-data">
+                    <h4 className="sic-hover-title">Custom Web Applications</h4>
+                    <p className="sic-hover-desc">
+                      We offer a range of web application solutions including ERP Applications, data management applications, and personalized ecommerce applications. Using PHP framework our programmers are able to create custom applications that are intuitive, smart, and easily adapted to any situation your business may face.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
 
-          <div className="service-card reveal fade-up" ref={card3Ref} style={{ '--delay': '200ms' }}>
-            <div className="service-icon-wrap"><FiSmartphone /></div>
-            <span className="service-tag">Mobile Applications</span>
-            <h3 className="service-card-title">We Watch the World Closely</h3>
-            <p className="service-card-desc">
-              Technology combined with the reachability of internet at the fingertips has led our
-              vibrant team in designing Android Apps that are easy to access, have the best in
-              cutting-edge technology and requires minimum time to offer optimum information about
-              the company.
-            </p>
-            <div className="service-card-footer">
-              <span>Learn More</span>
-              <span className="arrow-icon">→</span>
+            {/* Card 3 */}
+            <div className="service-img-card reveal fade-up" ref={card3Ref} style={{ '--delay': '200ms' }}>
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600" className="sic-bg" alt="Mobile Applications" />
+              <div className="sic-overlay">
+                <div className="sic-content">
+                  <h3 className="sic-category">Mobile Applications</h3>
+                  <p className="sic-subtitle">Technology combined with the reachability of internet</p>
+                  <div className="sic-hover-data">
+                    <h4 className="sic-hover-title">We watch the world closely</h4>
+                    <p className="sic-hover-desc">
+                      Technology combined with the reachability of internet at the fingertips has led our vibrant team in designing Android Apps that are easy to access, have the best in cutting-edge technology and requires minimum time to offer optimum information about the company.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
 
-          <div className="service-card reveal fade-up" ref={card4Ref} style={{ '--delay': '300ms' }}>
-            <div className="service-icon-wrap"><FiTrendingUp /></div>
-            <span className="service-tag">Digital Marketing</span>
-            <h3 className="service-card-title">Digital Technology</h3>
-            <p className="service-card-desc">
-              Digital Technology has taken the world by storm and we at Genova Technologies offer
-              contemporary technology with creativity to heighten the reach of our clients and
-              maximize their digital presence across all platforms.
-            </p>
-            <div className="service-card-footer">
-              <span>Learn More</span>
-              <span className="arrow-icon">→</span>
+            {/* Card 4 */}
+            <div className="service-img-card reveal fade-up" ref={card4Ref} style={{ '--delay': '300ms' }}>
+              <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=600" className="sic-bg" alt="Digital Marketing" />
+              <div className="sic-overlay">
+                <div className="sic-content">
+                  <h3 className="sic-category">Digital Marketing</h3>
+                  <p className="sic-subtitle">Contemporary technology with creativity to heighten</p>
+                  <div className="sic-hover-data">
+                    <h4 className="sic-hover-title">Digital Technology</h4>
+                    <p className="sic-hover-desc">
+                      Digital Technology has taken the world by storm and we at Genova Technologies offer contemporary technology with creativity to heighten the reach of our clients.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
 
+          </div>
         </div>
       </section>
 
