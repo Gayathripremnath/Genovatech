@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Pacifico&display=swap');
 
 :root {
   --primary: #c19b62; /* Gold color */
@@ -9,6 +9,10 @@
   --text-gray: #707070; /* Body text */
   --light-gray: #f2f2f2; /* Hamburger button bg */
   --white: #ffffff;
+  
+  /* Premium Font System */
+  --font-headings: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
 }
 
 * {
@@ -18,10 +22,19 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-body);
   background-color: var(--white);
   color: var(--text-gray);
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-headings);
+  color: var(--text-dark);
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 a {
@@ -37,5 +50,5 @@ button {
   cursor: pointer;
   border: none;
   outline: none;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-headings);
 }

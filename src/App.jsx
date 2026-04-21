@@ -5,10 +5,10 @@ import Topbar from './Components/Topbar';
 import Navbar from './Components/Navbar';
 import Hero from './Components/Hero';
 import Footer from './Components/Footer';
+import Products from './Components/Products';
 
 // Basic Placeholder Page Components for routing purposes
 const Projects = () => <div style={{padding: '150px 20px', textAlign: 'center'}}><h1>Projects Page</h1></div>;
-const Products = () => <div style={{padding: '150px 20px', textAlign: 'center'}}><h1>Products Page</h1></div>;
 const Services = () => <div style={{padding: '150px 20px', textAlign: 'center'}}><h1>Services Page</h1></div>;
 const Clients  = () => <div style={{padding: '150px 20px', textAlign: 'center'}}><h1>Clients Page</h1></div>;
 const AboutUs  = () => <div style={{padding: '150px 20px', textAlign: 'center'}}><h1>About Us Page</h1></div>;

@@ -3,7 +3,7 @@ import './Hero.css';
 import { BsStars } from 'react-icons/bs';
 import { GoSun } from 'react-icons/go';
 import { FaCheckCircle } from 'react-icons/fa';
-import { FiPhoneCall, FiMonitor, FiLayers, FiSmartphone, FiTrendingUp, FiSettings, FiCheckCircle, FiUsers, FiAward, FiEye } from 'react-icons/fi';
+import { FiPhoneCall, FiMonitor, FiLayers, FiSmartphone, FiTrendingUp, FiSettings, FiCheckCircle, FiUsers, FiAward, FiEye, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
 /* ── Reusable scroll-reveal hook ── */
 const useReveal = () => {
@@ -69,22 +69,51 @@ const Hero = () => {
   const card3Ref = useReveal();
   const card4Ref = useReveal();
   const agencyStatsRef = useReveal();
+  const carouselRef = useRef(null);
+
+  const scrollCarousel = (direction) => {
+    if (carouselRef.current) {
+      const scrollAmount = 400; // Approx one card width + gap
+      carouselRef.current.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  /* ── Auto-scroll Effect ── */
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (carouselRef.current) {
+        const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
+        // If near the end, reset to start, else scroll right
+        if (scrollLeft + clientWidth >= scrollWidth - 10) {
+          carouselRef.current.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          scrollCarousel('right');
+        }
+      }
+    }, 4000); 
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div>
       <ScrollProgress />
 
       {/* ── HERO SECTION ── */}
-      <div className="hero-section">
+      <div className="hero-section reveal" ref={heroContentRef}>
 
-        <div className="hero-content reveal fade-up" ref={heroContentRef}>
+        <div className="hero-content fade-up">
           <div className="hero-subtitle">
             <BsStars className="subtitle-icon" />
-            <span>Innovation. Leadership. Challenge. Creative</span>
+            <span className="typewriter-text">Innovation. Leadership. Challenge. Creative</span>
           </div>
 
           <h1 className="hero-title">
-            The Future of Investing<br />Starts Here
+            <span className="line-wrap"><span className="line">The Future of Investing</span></span>
+            <span className="line-wrap"><span className="line">Starts Here</span></span>
           </h1>
 
           <p className="hero-description">
@@ -197,7 +226,6 @@ const Hero = () => {
                 </div>
               </div>
 
-              <div className="signature">Jinesh Nair</div>
             </div>
           </div>
 
@@ -213,7 +241,11 @@ const Hero = () => {
         </div>
 
         <div className="services-carousel-wrapper">
-          <div className="services-carousel">
+          <button className="carousel-nav-btn prev" onClick={() => scrollCarousel('left')} aria-label="Previous service">
+            <FiChevronLeft />
+          </button>
+          
+          <div className="services-carousel" ref={carouselRef}>
             
             {/* Card 1 */}
             <div className="service-img-card reveal fade-up" ref={card1Ref} style={{ '--delay': '0ms' }}>
@@ -284,6 +316,10 @@ const Hero = () => {
             </div>
 
           </div>
+
+          <button className="carousel-nav-btn next" onClick={() => scrollCarousel('right')} aria-label="Next service">
+            <FiChevronRight />
+          </button>
         </div>
       </section>
 

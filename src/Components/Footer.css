@@ -1,7 +1,7 @@
 .main-footer {
   background-color: #1a1e26;
   color: #ffffff;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-body);
   margin-top: 100px;
 }
 
@@ -24,6 +24,7 @@
 
 /* CTA Styling */
 .footer-cta-title {
+  font-family: var(--font-headings);
   font-size: 32px;
   font-weight: 800;
   line-height: 1.2;
@@ -63,6 +64,7 @@
 
 /* Common Links styling */
 .footer-title {
+  font-family: var(--font-headings);
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 30px;
