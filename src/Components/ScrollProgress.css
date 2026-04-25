@@ -1,0 +1,79 @@
+.scroll-progress {
+  position: fixed;
+  bottom: 32px;
+  right: 28px;
+  z-index: 999;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  filter: drop-shadow(0 4px 14px rgba(193, 155, 98, 0.35));
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.5) translateY(20px);
+}
+
+.scroll-progress.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1) translateY(0);
+}
+
+.scroll-progress:hover {
+  transform: scale(1.1);
+}
+
+/* Track ring */
+.sp-track {
+  fill: none;
+  stroke: #e8e0d4;
+  stroke-width: 4;
+}
+
+/* Progress arc */
+.sp-fill {
+  fill: none;
+  stroke: var(--primary, #d04e09);
+  stroke-width: 4;
+  stroke-linecap: round;
+  transform: rotate(-90deg);
+  transform-origin: 30px 30px;
+  transition: stroke-dashoffset 0.25s ease;
+}
+
+/* Arrow icon */
+.sp-arrow {
+  position: absolute;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary, #d04e09);
+  pointer-events: none;
+  line-height: 1;
+  margin-top: -2px;
+}
+
+/* Ensure visibility on Mobile and adjust positioning */
+@media (max-width: 768px) {
+  .scroll-progress {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .scroll-progress svg {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* Adjust circle radius/origin for smaller size if needed, 
+     but standard SVG scaling usually works. 
+     Keeping it simple for stability. */
+  
+  .sp-arrow {
+    font-size: 16px;
+  }
+}

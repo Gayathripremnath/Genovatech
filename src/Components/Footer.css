@@ -1,5 +1,9 @@
 .main-footer {
-  background-color: #1a1e26;
+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), 
+              url("https://images.unsplash.com/photo-1579403124614-197f69d8187b?auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZGV2ZWxvcGVtZW50fGVufDB8fDB8fHww");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: #ffffff;
   font-family: var(--font-body);
   margin-top: 100px;
@@ -8,7 +12,7 @@
 .footer-container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 5%;
+  padding: 0 5%;  
 }
 
 .footer-top {
@@ -183,7 +187,7 @@
     grid-template-columns: 1fr;
     gap: 40px;
   }
-  
+
   .footer-top {
     padding: 60px 0;
   }

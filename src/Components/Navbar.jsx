@@ -10,6 +10,20 @@ import logoImg from '../assets/genovalogo.jpg';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   // Prevent background scrolling when sidebar is open
   useEffect(() => {
@@ -22,7 +36,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="navbar">
+      <div className={`navbar ${scrolled ? 'scrolled' : ''}`}>
         <div className="navbar-container">
           
           <div className="navbar-logo">

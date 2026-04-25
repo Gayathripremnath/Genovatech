@@ -1,10 +1,22 @@
 .navbar {
   background-color: transparent;
-  padding: 15px 0;
+  padding: 25px 0;
   position: absolute;
   top: 40px; /* Below topbar */
+  left: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 1000;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.navbar.scrolled {
+  position: fixed;
+  top: 0;
+  padding: 15px 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .navbar-container {
