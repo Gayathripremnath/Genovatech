@@ -133,7 +133,7 @@ const Hero = () => {
 
           <div className="service-modern-card reveal fade-up" ref={card2Ref} style={{ '--delay': '200ms' }}>
             <div className="smc-image-wrap">
-              <img src="https://images.unsplash.com/photo-1522071823991-b5ae72647a4a?auto=format&fit=crop&q=80&w=800" alt="Startup Solution" />
+              <img src="https://plus.unsplash.com/premium_photo-1661304699559-36faef43655b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHRlYW1zJTIwd29ya3xlbnwwfHwwfHx8MA%3D%3D" alt="Startup Solution" />
             </div>
             <div className="smc-content">
               <h3>Startup Solution</h3>
