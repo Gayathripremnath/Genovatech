@@ -35,18 +35,45 @@
   line-height: 1.2;
 }
 
+/* Animated Hero Title Wrapper */
+.hero-title .title-wrapper {
+  display: inline-block;
+  position: relative;
+}
+
 .hero-title .line {
   display: block;
   transform: translateY(100%);
   opacity: 0;
   filter: blur(10px);
-  transition: all 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+  /* Use explicit transitions */
+  transition: transform 1.2s cubic-bezier(0.23, 1, 0.32, 1),
+              opacity 1.2s cubic-bezier(0.23, 1, 0.32, 1),
+              filter 1.2s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.hero-section.revealed .hero-title .line {
+/* Base reveal */
+.hero-section.revealed .hero-title .title-wrapper.fade-in .line {
   transform: translateY(0);
   opacity: 1;
   filter: blur(0);
+}
+
+/* Fade out state: slide up and fade */
+.hero-section.revealed .hero-title .title-wrapper.fade-out .line {
+  transform: translateY(-80%);
+  opacity: 0;
+  filter: blur(10px);
+  /* Faster transition for fade out */
+  transition-duration: 0.6s;
+}
+
+/* Reset state: jump to bottom instantly */
+.hero-section.revealed .hero-title .title-wrapper.fade-reset .line {
+  transform: translateY(100%);
+  opacity: 0;
+  filter: blur(10px);
+  transition: none; /* Instant jump */
 }
 
 .hero-title .line:nth-child(1) {
@@ -109,7 +136,7 @@
   line-height: 1.8;
   opacity: 0;
   transform: translateY(20px);
-  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1) 0.6s;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1) 0.6s;
 }
 
 .hero-section.revealed .hero-description {

@@ -29,6 +29,32 @@ const Hero = () => {
   const card3Ref = useReveal();
   const card4Ref = useReveal();
 
+  const quotes = [
+    { line1: "The Future of Investing", line2: "Starts Here" },
+    { line1: "Transforming Ideas", line2: "Into Reality" },
+    { line1: "Empowering Your", line2: "Digital Journey" }
+  ];
+  const [currentQuoteIndex, setCurrentQuoteIndex] = useState(0);
+  const [animClass, setAnimClass] = useState('fade-in');
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setAnimClass('fade-out');
+      
+      setTimeout(() => {
+        setCurrentQuoteIndex((prev) => (prev + 1) % quotes.length);
+        setAnimClass('fade-reset');
+        
+        setTimeout(() => {
+          setAnimClass('fade-in');
+        }, 50);
+        
+      }, 600);
+      
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
 
   return (
     <div>
@@ -41,8 +67,10 @@ const Hero = () => {
           </div>
 
           <h1 className="hero-title">
-            <span className="line-wrap"><span className="line">The Future of Investing</span></span>
-            <span className="line-wrap"><span className="line">Starts Here</span></span>
+            <div className={`title-wrapper ${animClass}`}>
+              <span className="line-wrap"><span className="line">{quotes[currentQuoteIndex].line1}</span></span>
+              <span className="line-wrap"><span className="line">{quotes[currentQuoteIndex].line2}</span></span>
+            </div>
           </h1>
 
           <p className="hero-description">
