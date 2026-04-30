@@ -12,8 +12,9 @@ import Contact from './Components/Contact';
 import ScrollProgress from './Components/ScrollProgress';
 import ScrollToTop from './Components/ScrollToTop';
 
+import Project from './Components/Project';
+
 // Basic Placeholder Page Components for routing purposes
-const Projects = () => <div style={{ padding: '150px 20px', textAlign: 'center' }}><h1>Projects Page</h1></div>;
 const Clients = () => <div style={{ padding: '150px 20px', textAlign: 'center' }}><h1>Clients Page</h1></div>;
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Hero />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/projects" element={<Project />} />
           <Route path="/products" element={<Products />} />
           <Route path="/services" element={<Services />} />
           <Route path="/clients" element={<Clients />} />

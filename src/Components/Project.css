@@ -1,0 +1,400 @@
+/* Project.css */
+.project-page {
+  background-color: var(--white, #ffffff);
+  min-height: 100vh;
+}
+
+/* Banner Styles */
+.project-banner {
+  position: relative;
+  height: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 0; /* Ensures it starts at the top under the transparent navbar */
+}
+
+.banner-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.banner-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(34, 43, 49, 0.75); /* Dark blue/grey overlay to match reference */
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Large stroked background text */
+.bg-text {
+  position: absolute;
+  font-size: 180px;
+  font-family: var(--font-headings, sans-serif);
+  font-weight: 800;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+  z-index: -1;
+  pointer-events: none;
+  white-space: nowrap;
+  letter-spacing: 2px;
+}
+
+/* Foreground title */
+.banner-title {
+  font-size: 52px;
+  font-family: var(--font-headings, sans-serif);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  position: relative;
+  letter-spacing: -0.5px;
+}
+
+/* Content Area Placeholder */
+.project-content {
+  padding: 100px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .bg-text {
+    font-size: 130px;
+  }
+  
+  .banner-title {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-banner {
+    height: 400px;
+  }
+  
+  .bg-text {
+    font-size: 90px;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.15);
+  }
+  
+  .banner-title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-banner {
+    height: 350px;
+  }
+  
+  .bg-text {
+    font-size: 60px;
+  }
+  
+  .banner-title {
+    font-size: 26px;
+  }
+}
+
+/* --- Case Studies Section --- */
+.case-studies-section {
+  padding: 100px 0;
+  background-color: var(--white, #ffffff);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 60px;
+}
+
+.header-text .subtitle {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.header-text h2 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1a2530;
+  margin: 0;
+}
+
+.btn-view-project {
+  background-color: #1a2530;
+  color: #fff;
+  padding: 15px 35px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-view-project:hover {
+  background-color: #d04e09;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(208, 78, 9, 0.2);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-image {
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 25px;
+  height: 320px;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.05);
+}
+
+.project-info h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a2530;
+  margin-bottom: 15px;
+}
+
+.project-info p {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.7;
+}
+
+/* --- Trusted Clients Section --- */
+.trusted-clients-section {
+  padding: 60px 0;
+  border-top: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.clients-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.clients-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1a2530;
+  white-space: nowrap;
+  letter-spacing: 1px;
+}
+
+.clients-logos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.client-logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #888;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.client-logo:hover {
+  color: #1a2530;
+}
+
+.client-logo::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-color: #ccc;
+  border-radius: 50% 0 50% 50%;
+  transition: background-color 0.3s ease;
+}
+
+.client-logo:hover::before {
+  background-color: #d04e09;
+}
+
+/* --- Newsletter Section --- */
+.project-newsletter-section {
+  padding: 120px 0;
+  background-color: #f8f9fa;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle background pattern */
+.project-newsletter-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(45deg, rgba(0,0,0,0.02) 25%, transparent 25%, transparent 50%, rgba(0,0,0,0.02) 50%, rgba(0,0,0,0.02) 75%, transparent 75%, transparent);
+  background-size: 100px 100px;
+  pointer-events: none;
+}
+
+.newsletter-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.newsletter-subtitle {
+  display: block;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.newsletter-text h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #1a2530;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.newsletter-input-group {
+  display: flex;
+  background-color: #1a2530;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.newsletter-input-group input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: 15px 25px;
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+}
+
+.newsletter-input-group input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.btn-subscribe {
+  background-color: #fff;
+  color: #1a2530;
+  padding: 15px 35px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-subscribe:hover {
+  background-color: #d04e09;
+  color: #fff;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .newsletter-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .clients-wrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .clients-logos {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .newsletter-input-group {
+    flex-direction: column;
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+    gap: 15px;
+  }
+  
+  .newsletter-input-group input {
+    background-color: #1a2530;
+    border-radius: 12px;
+    padding: 20px;
+  }
+}

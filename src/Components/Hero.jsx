@@ -56,10 +56,6 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="view-rtl">
-        <span>VIEW RTL VERSION</span>
-      </div>
-
 
       {/* ── ABOUT SECTION ── */}
       <section className="about-section">

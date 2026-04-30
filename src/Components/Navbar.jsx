@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
 import { IoIosArrowDown } from 'react-icons/io';
 import { HiOutlineMenuAlt3, HiX } from 'react-icons/hi';
@@ -13,6 +13,7 @@ import megaMenuImg from '../assets/mega-menu-team.png';
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,9 +37,11 @@ const Navbar = () => {
     }
   }, [isMenuOpen]);
 
+  const isInnerPage = location.pathname !== '/';
+
   return (
     <>
-      <div className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+      <div className={`navbar ${scrolled ? 'scrolled' : ''} ${isInnerPage ? 'inner-page-navbar' : ''}`}>
         <div className="navbar-container">
           
           <div className="navbar-logo">

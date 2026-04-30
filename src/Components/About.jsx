@@ -11,7 +11,6 @@ const About = () => {
         <div className="container">
           <div className="header-content">
             <div className="header-bg-text">About Us</div>
-            <span className="header-tagline">About Genova</span>
             <h1 className="header-title">Smart and effective<br />business agency.</h1>
           </div>
           
@@ -29,6 +28,77 @@ const About = () => {
                   <path d="M10 50 Q 50 10 90 50" fill="none" stroke="currentColor" strokeWidth="2" />
                   <path d="M70 30 L 90 50 L 70 70" fill="none" stroke="currentColor" strokeWidth="2" />
                 </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Journey Section */}
+      <section className="about-journey">
+        <div className="container">
+          <div className="journey-grid">
+            <div className="journey-content">
+              <h2 className="journey-title">Our Journey: From Vision to Reality, and Beyond.</h2>
+              <p className="journey-description">
+                Dabus nisl aliquet congue tellus nascetur lectus sagpien mattis arcu dictums
+                augue volutpat felis etiam
+              </p>
+              <div className="journey-decorative">
+                <svg width="200" height="300" viewBox="0 0 200 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M180 280C180 280 50 250 40 150C30 50 150 80 150 120C150 160 80 180 20 120" stroke="#100f0fff" strokeWidth="2" strokeLinecap="round" strokeDasharray="6 6"/>
+                  <path d="M25 125L15 115L25 105" stroke="#e0e0e0" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+            </div>
+            
+            <div className="journey-timeline">
+              <div className="timeline-card">
+                <div className="card-bg">
+                  <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=600" alt="Office" />
+                </div>
+                <div className="timeline-card-header">
+                  <h3>Elevate Web Design</h3>
+                  <div className="timeline-line"></div>
+                  <span className="year">2022</span>
+                </div>
+                <p>Neque partrient sed nascetur facilisis suscipit ridiculus magna lobortis imperdiet vivamus est aliquam euismod nector quam convallis ornare justo service visionary sources unleash online</p>
+              </div>
+
+              <div className="timeline-card">
+                <div className="card-bg">
+                  <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=600" alt="Workspace" />
+                </div>
+                <div className="timeline-card-header">
+                  <h3>WebFoundry Solutions</h3>
+                  <div className="timeline-line"></div>
+                  <span className="year">2020</span>
+                </div>
+                <p>Neque partrient sed nascetur facilisis suscipit ridiculus magna lobortis imperdiet vivamus est aliquam euismod nector quam convallis ornare justo service visionary sources unleash online</p>
+              </div>
+
+              <div className="timeline-card">
+                <div className="card-bg">
+                  <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=600" alt="Team" />
+                </div>
+                <div className="timeline-card-header">
+                  <h3>BrightPath Creations</h3>
+                  <div className="timeline-line"></div>
+                  <span className="year">2016</span>
+                </div>
+                <p>Neque partrient sed nascetur facilisis suscipit ridiculus magna lobortis imperdiet vivamus est aliquam euismod nector quam convallis ornare justo service visionary sources unleash online</p>
+              </div>
+
+              <div className="timeline-card">
+                <div className="card-bg">
+                  <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=600" alt="Meeting" />
+                </div>
+                <div className="timeline-card-header">
+                  <h3>BoldFrame Designs</h3>
+                  <div className="timeline-line"></div>
+                  <span className="year">2010</span>
+                </div>
+                <p>Neque partrient sed nascetur facilisis suscipit ridiculus magna lobortis imperdiet vivamus est aliquam euismod nector quam convallis ornare justo service visionary sources unleash online</p>
               </div>
             </div>
           </div>
@@ -73,61 +143,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Vision & Mission Section */}
-      <section className="vision-mission-section">
-        <div className="container">
-          <div className="vision-mission-grid">
-            <div className="vm-card reveal fade-up">
-              <span className="vm-number">01.</span>
-              <div className="vm-icon-box"><PiPresentationChartLight /></div>
-              <h3>Our Mission</h3>
-              <p>We strive to deliver cutting-edge technology solutions that bridge the gap between complex challenges and simple, elegant user experiences.</p>
-            </div>
-            
-            <div className="vm-card reveal fade-up" style={{ '--delay': '200ms' }}>
-              <span className="vm-number">02.</span>
-              <div className="vm-icon-box"><PiLightbulbLight /></div>
-              <h3>Our Vision</h3>
-              <p>To be the leading catalyst for digital innovation globally, empowering companies to redefine their industries through superior engineering.</p>
-            </div>
-
-            <div className="vm-card reveal fade-up" style={{ '--delay': '400ms' }}>
-              <span className="vm-number">03.</span>
-              <div className="vm-icon-box"><PiHandshakeLight /></div>
-              <h3>Our Value</h3>
-              <p>Built on the foundation of trust, integrity, and extreme attention to detail, we treat every project as our own masterpiece.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Improved Stats Section */}
-      <section className="about-stats-modern">
-        <div className="container">
-          <div className="stats-header">
-            <span className="stats-tag">OUR IMPACT</span>
-            <h2>Global Reach, Local Impact.</h2>
-          </div>
-          <div className="modern-stats-grid">
-            <div className="modern-stat-item reveal pop">
-              <div className="ms-value">13+</div>
-              <div className="ms-label">Years of Mastery</div>
-            </div>
-            <div className="modern-stat-item reveal pop" style={{ '--delay': '200ms' }}>
-              <div className="ms-value">500+</div>
-              <div className="ms-label">Projects Delivered</div>
-            </div>
-            <div className="modern-stat-item reveal pop" style={{ '--delay': '400ms' }}>
-              <div className="ms-value">98%</div>
-              <div className="ms-label">Client Retention</div>
-            </div>
-            <div className="modern-stat-item reveal pop" style={{ '--delay': '600ms' }}>
-              <div className="ms-value">3</div>
-              <div className="ms-label">Global Offices</div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
     </div>
   );
 };
