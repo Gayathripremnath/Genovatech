@@ -1,6 +1,6 @@
 /* Project.css */
 .project-page {
-  background-color: var(--white, #ffffff);
+  background-color: var(--theme-bg);
   min-height: 100vh;
 }
 
@@ -124,7 +124,7 @@
 /* --- Case Studies Section --- */
 .case-studies-section {
   padding: 100px 0;
-  background-color: var(--white, #ffffff);
+  background-color: var(--theme-bg);
 }
 
 .section-header {
@@ -398,3 +398,65 @@
     padding: 20px;
   }
 }
+
+/* ════════════════════════════════════
+   DARK MODE OVERRIDES — Project.css
+════════════════════════════════════ */
+[data-theme="dark"] .project-page {
+  background-color: var(--theme-bg);
+}
+
+[data-theme="dark"] .case-studies-section {
+  background-color: var(--theme-bg);
+}
+
+[data-theme="dark"] .header-text .subtitle {
+  color: var(--theme-text-secondary);
+}
+
+[data-theme="dark"] .header-text h2 {
+  color: var(--theme-text-primary);
+}
+
+[data-theme="dark"] .btn-view-project {
+  background-color: #e8eaf0;
+  color: #0f1117;
+}
+
+[data-theme="dark"] .project-info h3 {
+  color: var(--theme-text-primary);
+}
+
+[data-theme="dark"] .project-info p {
+  color: var(--theme-text-secondary);
+}
+
+[data-theme="dark"] .trusted-clients-section {
+  border-top-color: rgba(255,255,255,0.08);
+  border-bottom-color: rgba(255,255,255,0.08);
+}
+
+[data-theme="dark"] .clients-title {
+  color: var(--theme-text-primary);
+}
+
+[data-theme="dark"] .client-logo {
+  color: var(--theme-text-muted);
+}
+
+[data-theme="dark"] .client-logo:hover {
+  color: var(--theme-text-primary);
+}
+
+[data-theme="dark"] .project-newsletter-section {
+  background-color: #161b27;
+}
+
+[data-theme="dark"] .newsletter-text h2 {
+  color: var(--theme-text-primary);
+}
+
+[data-theme="dark"] .newsletter-subtitle {
+  color: var(--theme-text-secondary);
+}
+

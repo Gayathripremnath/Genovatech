@@ -1,20 +1,9 @@
 /* About.css */
-:root {
-  --primary: #d04e09;
-  --primary-light: #ff6b1a;
-  --secondary: #c19b62;
-  --dark: #121212;
-  --light: #f9f9f9;
-  --text: #333;
-  --text-muted: #666;
-  --white: #ffffff;
-  --glass: rgba(255, 255, 255, 0.8);
-  --shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
-  --transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-}
+/* Variables inherited from global index.css :root and [data-theme="dark"] */
+
 
 .about-page {
-  background-color: var(--white);
+  background-color: var(--theme-bg);
   overflow-x: hidden;
   padding-top: 80px; /* Space for Navbar */
 }
@@ -48,10 +37,10 @@
 .header-content {
   position: relative;
   z-index: 5;
-  max-width: 1200px;
+  max-width: 1200px; 
   margin: 0 auto;
   padding: 0 30px;
-}
+} 
 
 .header-tagline {
   font-size: 18px;
@@ -125,7 +114,7 @@
 /* Intro Section */
 .about-intro {
   padding: 120px 0;
-  background: var(--white);
+  background: var(--theme-bg);
 }
 
 .hero-grid {
@@ -227,12 +216,12 @@
 
 .vm-card {
   position: relative;
-  background: var(--white);
+  background: var(--theme-surface);
   padding: 60px 45px;
   border-radius: 4px;
   box-shadow: 0 15px 40px rgba(0,0,0,0.03);
   transition: var(--transition);
-  border: 1px solid #f0f0f0;
+  border: 1px solid var(--theme-border-solid);
 }
 
 .vm-card:hover {
@@ -570,3 +559,92 @@
     padding: 30px;
   }
 }
+
+/* ════════════════════════════════════
+   DARK MODE OVERRIDES — About.css
+════════════════════════════════════ */
+[data-theme="dark"] .about-page {
+  background-color: var(--theme-bg);
+}
+
+[data-theme="dark"] .about-page-header {
+  background-color: #161b27;
+}
+
+[data-theme="dark"] .header-tagline {
+  color: var(--theme-text-secondary);
+}
+
+[data-theme="dark"] .header-title {
+  color: var(--theme-text-primary);
+}
+
+[data-theme="dark"] .about-intro {
+  background-color: var(--theme-bg);
+}
+
+[data-theme="dark"] .hero-text h2 {
+  color: var(--theme-text-primary);
+}
+
+[data-theme="dark"] .hero-text .lead {
+  color: var(--theme-text-secondary);
+}
+
+[data-theme="dark"] .vision-mission-section {
+  background-color: #161b27;
+}
+
+[data-theme="dark"] .vm-card {
+  background: #1a2030;
+  border-color: rgba(255,255,255,0.06);
+}
+
+[data-theme="dark"] .vm-card h3 {
+  color: var(--theme-text-primary);
+}
+
+[data-theme="dark"] .vm-card p {
+  color: var(--theme-text-secondary);
+}
+
+[data-theme="dark"] .vm-number {
+  color: rgba(255,255,255,0.15);
+}
+
+[data-theme="dark"] .vm-icon-box {
+  background: rgba(255,255,255,0.05);
+}
+
+[data-theme="dark"] .about-journey {
+  background-color: var(--theme-bg);
+}
+
+[data-theme="dark"] .journey-title {
+  color: var(--theme-text-primary);
+}
+
+[data-theme="dark"] .journey-description {
+  color: var(--theme-text-secondary);
+}
+
+[data-theme="dark"] .timeline-card {
+  background: #161b27;
+}
+
+[data-theme="dark"] .timeline-card-header h3 {
+  color: var(--theme-text-primary);
+}
+
+[data-theme="dark"] .timeline-card-header .year {
+  color: var(--theme-text-primary);
+}
+
+[data-theme="dark"] .timeline-card p {
+  color: var(--theme-text-secondary);
+}
+
+[data-theme="dark"] .timeline-line {
+  background: linear-gradient(to right, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.05) 100%);
+}
+

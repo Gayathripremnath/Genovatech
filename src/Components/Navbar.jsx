@@ -3,19 +3,22 @@ import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
 import { IoIosArrowDown } from 'react-icons/io';
 import { HiOutlineMenuAlt3, HiX } from 'react-icons/hi';
-import { FaArrowTrendUp, FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa6';
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa6';
 import { MdOutlineEmail, MdPhone, MdLocationOn } from 'react-icons/md';
 import { TbWorld } from 'react-icons/tb';
 import { PiPresentationChartLight, PiHandshakeLight, PiLightbulbLight, PiGearLight, PiMagnifyingGlassLight } from 'react-icons/pi';
+import { BsSun, BsMoonStarsFill } from 'react-icons/bs';
 import logoImg from '../assets/genovalogo.jpg';
 import megaMenuImg from '../assets/mega-menu-team.png';
+import { useTheme } from '../context/ThemeContext';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const { isDark, toggleTheme } = useTheme();
 
-  useEffect(() => {
+  useEffect(() => {   
     const handleScroll = () => {
       if (window.scrollY > 50) {
         setScrolled(true);
@@ -111,6 +114,18 @@ const Navbar = () => {
           </nav>
 
           <div className="navbar-actions">
+            <button
+              className="btn-theme-toggle"
+              onClick={toggleTheme}
+              title={isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+              aria-label={isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+            >
+              <span className={`toggle-track ${isDark ? 'dark' : 'light'}`}>
+                <span className="toggle-thumb">
+                  {isDark ? <BsMoonStarsFill /> : <BsSun />}
+                </span>
+              </span>
+            </button>
             <button className="btn-book">Book a Meeting</button>
             <button className="btn-menu" onClick={() => setIsMenuOpen(true)}>
               <HiOutlineMenuAlt3 />
@@ -132,10 +147,10 @@ const Navbar = () => {
         {/* On Mobile Only: Nav Links */}
         <ul className="sidebar-links">
           <li><Link to="/" className="active" onClick={() => setIsMenuOpen(false)}>Home</Link></li>
-          <li><Link to="/about" onClick={() => setIsMenuOpen(false)}>Pages</Link></li>
-          <li><Link to="/services" onClick={() => setIsMenuOpen(false)}>Service</Link></li>
-          <li><Link to="/projects" onClick={() => setIsMenuOpen(false)}>Project</Link></li>
-          <li><Link to="/products" onClick={() => setIsMenuOpen(false)}>Blog</Link></li>
+          <li><Link to="/projects" onClick={() => setIsMenuOpen(false)}>Projects</Link></li>
+          <li><Link to="/products" onClick={() => setIsMenuOpen(false)}>Products</Link></li>
+          <li><Link to="/services" onClick={() => setIsMenuOpen(false)}>Services</Link></li>
+          <li><Link to="/about" onClick={() => setIsMenuOpen(false)}>About us </Link></li>
           <li><Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</Link></li>
         </ul>
 

@@ -3,7 +3,7 @@
 .products-section {
   margin-top: 35px;
   padding: 100px 6%;
-  background-color: #fff;
+  background-color: var(--theme-bg);
   overflow: hidden;
 }
 
@@ -275,4 +275,24 @@
   .newsletter-btn {
     width: 100%;
   }
+}
+
+/* ════════════════════════════════════
+   DARK MODE OVERRIDES — Products.css
+════════════════════════════════════ */
+[data-theme="dark"] .products-section {
+  background-color: var(--theme-bg);
+}
+
+[data-theme="dark"] .products-title {
+  color: var(--theme-text-primary);
+}
+
+[data-theme="dark"] .products-subtitle {
+  color: var(--theme-text-secondary);
+}
+
+[data-theme="dark"] .product-card {
+  background-color: #161b27;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
 }

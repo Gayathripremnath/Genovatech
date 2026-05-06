@@ -77,3 +77,11 @@
     font-size: 16px;
   }
 }
+
+/* ════════════════════════════════════
+   DARK MODE OVERRIDES — ScrollProgress
+════════════════════════════════════ */
+[data-theme="dark"] .sp-track {
+  stroke: #2a3245;
+}
+

@@ -827,7 +827,7 @@
 .smc-content h3 {
   font-size: 26px;
   font-weight: 700;
-  color: #1a2530;
+  color: #000;
   margin-bottom: 6px;
 }
 
@@ -1079,4 +1079,104 @@
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+/* ════════════════════════════════════
+   DARK MODE OVERRIDES — Hero.css
+════════════════════════════════════ */
+[data-theme="dark"] .hero-section {
+  background-color: #0f1117;
+  background-image: none;
+}
+
+[data-theme="dark"] .hero-title {
+  color: var(--theme-text-primary);
+}
+
+[data-theme="dark"] .hero-description {
+  color: var(--theme-text-secondary);
+}
+
+/* Agency Stats */
+[data-theme="dark"] .agency-stats-section {
+  background-color: #0f1117;
+}
+
+[data-theme="dark"] .agency-stat-card {
+  background-color: #161b27;
+  border-color: rgba(255,255,255,0.05);
+}
+
+[data-theme="dark"] .agency-stat-card h3 {
+  color: var(--theme-text-primary);
+}
+
+[data-theme="dark"] .agency-stat-card p {
+  color: var(--theme-text-secondary);
+}
+
+[data-theme="dark"] .agency-stats-desc {
+  color: var(--theme-text-secondary);
+}
+
+[data-theme="dark"] .agency-stats-divider {
+  background-color: rgba(255,255,255,0.08);
+}
+
+[data-theme="dark"] .client-text {
+  color: var(--theme-text-primary);
+}
+
+[data-theme="dark"] .client-avatars img {
+  border-color: #161b27;
+}
+
+/* About Section (in Hero.css) */
+[data-theme="dark"] .about-section {
+  background-color: #0f1117;
+}
+
+[data-theme="dark"] .about-title {
+  color: var(--theme-text-primary);
+}
+
+[data-theme="dark"] .about-description {
+  color: var(--theme-text-secondary);
+}
+
+[data-theme="dark"] .about-list li {
+  color: var(--theme-text-primary);
+}
+
+[data-theme="dark"] .about-contact-area {
+  border-top-color: rgba(255,255,255,0.08);
+}
+
+[data-theme="dark"] .contact-info span {
+  color: var(--theme-text-muted);
+}
+
+[data-theme="dark"] .contact-info strong {
+  color: var(--theme-text-primary);
+}
+
+[data-theme="dark"] .signature {
+  color: var(--theme-text-primary);
+}
+
+[data-theme="dark"] .floating-image {
+  border-color: #161b27;
+}
+
+/* Services Section (in Hero.css) */
+[data-theme="dark"] .services-section {
+  background-color: #161b27;
+}
+
+[data-theme="dark"] .services-title {
+  color: var(--theme-text-primary);
+}
+
+[data-theme="dark"] .services-subtitle {
+  color: var(--theme-text-secondary);
 }

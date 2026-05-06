@@ -1,15 +1,10 @@
 /* Services.css */
-:root {
-  --primary: #d04e09;
-  --dark: #121212;
-  --text-muted: #777;
-  --bg-light: #fdfdfd;
-  --transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-}
+/* Variables inherited from global index.css :root and [data-theme="dark"] */
+
 
 .services-page {
   padding: 150px 0 100px;
-  background-color: #fff;
+  background-color: var(--theme-bg);
 }
 
 /* Container removed, now global in index.css */
@@ -170,3 +165,43 @@
     font-size: 32px;
   }
 }
+
+/* ════════════════════════════════════
+   DARK MODE OVERRIDES — Services.css
+════════════════════════════════════ */
+[data-theme="dark"] .services-page {
+  background-color: var(--theme-bg);
+}
+
+[data-theme="dark"] .services-quote-section blockquote {
+  color: var(--theme-text-primary);
+}
+
+[data-theme="dark"] .services-intro h2 {
+  color: var(--theme-text-primary);
+}
+
+[data-theme="dark"] .services-intro p {
+  color: var(--theme-text-secondary);
+}
+
+[data-theme="dark"] .service-card {
+  background: #161b27;
+  border-color: rgba(255,255,255,0.04);
+}
+
+[data-theme="dark"] .service-card:hover {
+  background: #1a2030;
+  border-color: var(--primary);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+[data-theme="dark"] .service-card h3 {
+  color: var(--theme-text-primary);
+}
+
+[data-theme="dark"] .service-image,
+[data-theme="dark"] .service-image-container {
+  background-color: #1e2840;
+}
+

@@ -1,8 +1,10 @@
 /* App.css */
 .app-container {
   font-family: 'Inter', sans-serif;
-  color: var(--text-color);
+  color: var(--theme-text-secondary);
+  background-color: var(--theme-bg);
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
+  transition: background-color 0.35s ease, color 0.35s ease;
 }

@@ -91,7 +91,7 @@
 
 .btn-book {
   background-color: var(--primary);
-  color: var(--white);
+  color: #ffffff;
   padding: 12px 24px;
   border-radius: 8px;
   font-weight: 600;
@@ -107,17 +107,73 @@
   width: 48px;
   height: 48px;
   border-radius: 8px;
-  background-color: var(--light-gray);
+  background-color: var(--theme-bg-tertiary);
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 24px;
-  color: var(--text-dark);
-  transition: background-color 0.3s;
+  color: var(--theme-text-primary);
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .btn-menu:hover {
-  background-color: #e5e5e5;
+  background-color: var(--theme-border-solid);
+}
+
+/* ── Theme Toggle Button ── */
+.btn-theme-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.toggle-track {
+  display: flex;
+  align-items: center;
+  width: 56px;
+  height: 28px;
+  border-radius: 50px;
+  padding: 3px;
+  transition: background-color 0.4s ease;
+  position: relative;
+}
+
+.toggle-track.light {
+  background-color: #e2e8f0;
+}
+
+.toggle-track.dark {
+  background-color: #3b4a6b;
+}
+
+.toggle-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.4s ease;
+  position: absolute;
+  left: 3px;
+}
+
+.toggle-track.light .toggle-thumb {
+  transform: translateX(0);
+  color: #f59e0b;
+  background-color: #fff;
+}
+
+.toggle-track.dark .toggle-thumb {
+  transform: translateX(28px);
+  color: #818cf8;
+  background-color: #1e2433;
 }
 
 /* Mega Menu Styling */
@@ -470,4 +526,108 @@
     width: 40px;
     height: 40px;
   }
+}
+
+/* ════════════════════════════════════
+   DARK MODE OVERRIDES — Navbar
+════════════════════════════════════ */
+[data-theme="dark"] .navbar {
+  color: var(--theme-text-primary);
+}
+
+[data-theme="dark"] .navbar.inner-page-navbar {
+  background-color: #0f1117;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="dark"] .navbar.scrolled {
+  background-color: rgba(15, 17, 23, 0.88);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+[data-theme="dark"] .navbar-links a {
+  color: var(--theme-text-primary);
+}
+
+[data-theme="dark"] .navbar-links a:hover,
+[data-theme="dark"] .navbar-links a.active {
+  color: var(--primary);
+}
+
+[data-theme="dark"] .mega-menu {
+  background-color: #161b27;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .mega-menu-item {
+  background-color: #1a2030;
+  border: 1px solid transparent;
+}
+
+[data-theme="dark"] .mega-menu-item:hover {
+  background-color: #1e2840;
+  border-color: rgba(193, 155, 98, 0.25);
+}
+
+[data-theme="dark"] .mega-menu-icon {
+  color: var(--theme-text-primary);
+}
+
+[data-theme="dark"] .mega-menu-info h4 {
+  color: var(--theme-text-primary);
+}
+
+[data-theme="dark"] .mega-menu-info p {
+  color: var(--theme-text-secondary);
+}
+
+[data-theme="dark"] .navbar-logo {
+  background-color: var(--theme-bg);
+  padding: 5px 10px;
+  border-radius: 8px;
+  display: inline-flex;
+}
+
+[data-theme="dark"] .sidebar-logo-img {
+  background-color: var(--theme-bg);
+  padding: 10px 15px;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 25px;
+}
+
+[data-theme="dark"] .logo-image,
+[data-theme="dark"] .sidebar-logo-img {
+  filter: invert(1) hue-rotate(180deg) brightness(1.2) contrast(1.1);
+  mix-blend-mode: screen;
+}
+
+[data-theme="dark"] .sidebar-menu {
+  background-color: #161b27;
+}
+
+[data-theme="dark"] .sidebar-content p {
+  color: var(--theme-text-secondary);
+}
+
+[data-theme="dark"] .sidebar-contact h4 {
+  color: var(--theme-text-primary);
+}
+
+[data-theme="dark"] .sidebar-contact-item {
+  color: var(--theme-text-secondary);
+}
+
+[data-theme="dark"] .sidebar-links li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .sidebar-links li a {
+  color: var(--theme-text-primary);
+}
+
+[data-theme="dark"] .sidebar-links li:first-child a {
+  color: var(--primary);
 }

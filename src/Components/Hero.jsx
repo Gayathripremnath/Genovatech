@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import './Hero.css';
 import { BsStars } from 'react-icons/bs';
 import { GoSun } from 'react-icons/go';
@@ -78,9 +79,9 @@ const Hero = () => {
             Dui feugiat fusce conubia ridiculus tristique parturient
           </p>
 
-          <button className="btn-explore">
+          <Link to="/projects" className="btn-explore">
             Explore Opportunities
-          </button>
+          </Link>
         </div>
       </div>
 
@@ -130,7 +131,7 @@ const Hero = () => {
                 <div className="contact-icon-wrap"><FiPhoneCall /></div>
                 <div className="contact-info">
                   <span>Call us anytime</span>
-                  <strong>+91 7559080005</strong>
+                  <strong onClick={()=> window.location.href = 'tel:+917559080005'}>+91 7559080005</strong>
                 </div>
               </div>
             </div>
@@ -140,8 +141,11 @@ const Hero = () => {
 
       {/* ── SERVICES SECTION ── */}
       <section className="services-section">
-        <div className="services-header reveal fade-up">
-          <h2 className="services-title">What We Do</h2>
+        <div className="services-header-wrap reveal fade-up">
+          <div className="services-header">
+            <h2 className="services-title">What We Do</h2>
+          </div>
+          <Link to="/projects" className="btn-view-project">View Project</Link>
         </div>
 
         <div className="services-grid-container">
