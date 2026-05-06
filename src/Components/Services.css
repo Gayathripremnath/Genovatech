@@ -379,6 +379,10 @@
   .testimonial-quote {
     font-size: 22px;
   }
+
+  .services-testimonials {
+    padding-bottom: 60px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -396,6 +400,10 @@
 
   .testimonial-title {
     font-size: 36px;
+  }
+
+  .services-testimonials {
+    padding-bottom: 40px;
   }
 }
 
