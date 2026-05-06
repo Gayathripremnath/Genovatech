@@ -10,8 +10,9 @@ const About = () => {
       <section className="about-page-header">
         <div className="container">
           <div className="header-content">
-            <div className="header-bg-text">About Us</div>
+            <span className="header-tagline">Team collaboration</span>
             <h1 className="header-title">Smart and effective<br />business agency.</h1>
+            <div className="header-bg-text">About Us</div>
           </div>
           
           <div className="header-banner">

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Red+Hat+Display:wght@400;500;700;800;900&display=swap');
 
 :root {
   --primary: #c19b62;
@@ -27,8 +27,8 @@
   --theme-input-border: #eeeeee;
 
   /* Premium Font System */
-  --font-headings: 'Outfit', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-headings: 'Red Hat Display', serif;
+  --font-body: 'DM Sans', serif;
 }
 
 /* ─── DARK MODE TOKEN OVERRIDES ─── */

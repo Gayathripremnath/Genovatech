@@ -5,7 +5,7 @@
 .about-page {
   background-color: var(--theme-bg);
   overflow-x: hidden;
-  padding-top: 80px; /* Space for Navbar */
+  padding-top: 0; /* Removed space for Navbar to let header bg show through */
 }
 
 /* Container removed, now global in index.css */
@@ -13,25 +13,26 @@
 /* Modern Page Header Refinement */
 .about-page-header {
   position: relative;
-  padding: 180px 0 100px;
-  background-color: #f7f7f7;
+  padding: 160px 0 100px;
+  background-color: var(--theme-surface-alt);
   text-align: left;
   overflow: hidden;
 }
 
 .header-bg-text {
   position: absolute;
-  top: -80px;
-  left: -10px;
-  font-size: 160px;
+  bottom: -30px;
+  right: -20px;
+  font-size: 110px;
   font-weight: 900;
   color: transparent;
-  -webkit-text-stroke: 2px rgba(0, 0, 0, 0.03);
+  -webkit-text-stroke: 1px var(--theme-border-solid);
   white-space: nowrap;
   pointer-events: none;
-  z-index: -1;
+  z-index: 1;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 10px;
+  opacity: 0.3;
 }
 
 .header-content {
@@ -51,11 +52,11 @@
 }
 
 .header-title {
-  font-size: 88px;
+  font-size: 80px;
   font-weight: 800;
-  color: #1a2530;
-  line-height: 1.02;
-  letter-spacing: -4px;
+  color: var(--theme-text-primary);
+  line-height: 1.1;
+  letter-spacing: -2px;
   margin: 0;
 }
 
@@ -335,12 +336,18 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .about-page-header {
+    padding: 120px 0 60px;
+  }
+
   .header-title {
     font-size: 64px;
+    letter-spacing: -1px;
   }
   
   .header-bg-text {
-    font-size: 240px;
+    font-size: 80px;
+    bottom: -10px;
   }
 }
 
@@ -349,16 +356,26 @@
     grid-template-columns: 1fr;
   }
   
+  .about-page-header {
+    padding: 100px 0 50px;
+  }
+
   .header-title {
     font-size: 48px;
+    letter-spacing: 0;
   }
 
   .header-bg-text {
-    font-size: 180px;
+    font-size: 60px;
+    bottom: 0;
   }
 
   .header-tagline {
     font-size: 16px;
+  }
+
+  .about-page {
+    padding-top: 0;
   }
 
   .about-intro {
@@ -374,6 +391,11 @@
 @media (max-width: 480px) {
   .header-title {
     font-size: 36px;
+    letter-spacing: 0;
+  }
+  
+  .about-page-header {
+    padding: 60px 0 40px;
   }
 
   .ms-value {
