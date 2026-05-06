@@ -48,7 +48,9 @@ const Navbar = () => {
         <div className="navbar-container">
           
           <div className="navbar-logo">
-            <img src={logoImg} alt="Genova Technologies Logo" className="logo-image" />
+            <Link to="/">
+              <img src={logoImg} alt="Genova Technologies Logo" className="logo-image" />
+            </Link>
           </div>
 
           <nav className="navbar-links">
