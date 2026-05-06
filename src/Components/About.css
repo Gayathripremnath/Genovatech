@@ -21,9 +21,9 @@
 
 .header-bg-text {
   position: absolute;
-  bottom: -30px;
-  right: -20px;
-  font-size: 110px;
+  bottom: -40px;
+  left: -20px;
+  font-size: 140px;
   font-weight: 900;
   color: transparent;
   -webkit-text-stroke: 1px var(--theme-border-solid);
@@ -31,7 +31,7 @@
   pointer-events: none;
   z-index: 1;
   text-transform: uppercase;
-  letter-spacing: 10px;
+  letter-spacing: 5px;
   opacity: 0.3;
 }
 
@@ -347,7 +347,9 @@
   
   .header-bg-text {
     font-size: 80px;
-    bottom: -10px;
+    bottom: -20px;
+    left: -10px;
+    top: auto;
   }
 }
 
@@ -367,7 +369,9 @@
 
   .header-bg-text {
     font-size: 60px;
-    bottom: 0;
+    bottom: -10px;
+    left: -5px;
+    top: auto;
   }
 
   .header-tagline {

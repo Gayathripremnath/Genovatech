@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Red+Hat+Display:wght@400;500;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Red+Hat+Display:wght@400;500;700;800;900&family=Outfit:wght@300;400;500;600;700&display=swap');
 
 :root {
   --primary: #c19b62;
@@ -29,6 +29,7 @@
   /* Premium Font System */
   --font-headings: 'Red Hat Display', serif;
   --font-body: 'DM Sans', serif;
+  --font-paragraph: 'Outfit', sans-serif;
 }
 
 /* ─── DARK MODE TOKEN OVERRIDES ─── */
@@ -69,10 +70,14 @@ body {
   transition: background-color 0.35s ease, color 0.35s ease;
 }
 
+p {
+  font-family: var(--font-paragraph);
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-headings);
   color: var(--theme-text-primary);
-  font-weight: 700;
+  font-weight: 800 !important;
   line-height: 1.2;
   transition: color 0.35s ease;
 }
