@@ -1,30 +1,31 @@
 import React, { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import './Products.css';
 
 const productData = [
   {
     id: 1,
-    name: "Enquiry Management App",
-    shortName: "EMA",
-    img: "https://www.genovatechnologies.com/images/products/ema.jpg",
+    name: "School Management App",
+    shortName: "SMA",
+    img: "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHByb2R1Y3RzfGVufDB8fDB8fHww",
   },
   {
     id: 2,
-    name: "Contract Management App",
-    shortName: "CMA",
-    img: "https://www.genovatechnologies.com/images/products/cma.jpg",
+    name: "Vehicle Management App",
+    shortName: "VMA",
+    img: "https://images.unsplash.com/photo-1638803782506-d975a6809f43?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDk3fHx8ZW58MHx8fHx8",
   },
   {
     id: 3,
-    name: "School Management App",
-    shortName: "SMA",
-    img: "https://www.genovatechnologies.com/images/products/sma.jpg",
+    name: "Enquiry Management App",
+    shortName: "EMA",
+    img: "https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cHJvZHVjdHN8ZW58MHx8MHx8fDA%3D",
   },
   {
     id: 4,
-    name: "Vehicle Management App",
-    shortName: "VMA",
-    img: "https://www.genovatechnologies.com/images/products/vma.jpg",
+    name: "Contract Management App",
+    shortName: "CMA",
+    img: "https://images.unsplash.com/photo-1621331122533-465bdcfa6e01?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDYyfHx8ZW58MHx8fHx8",
   }
 ];
 
@@ -66,10 +67,11 @@ const Products = () => {
             <div key={product.id} className="product-card">
               <div className="product-img-wrapper">
                 <img src={product.img} alt={product.name} className="product-img" />
-                <div className="product-overlay">
-                  <span className="product-badge">{product.shortName}</span>
-                  <h3 className="product-name">{product.name}</h3>
-                </div>
+              </div>
+              <div className="product-content">
+                <h3 className="product-short-name">{product.shortName}</h3>
+                <h4 className="product-full-name">{product.name}</h4>
+                <Link to={`/product-details/${product.shortName}`} className="product-btn">View Details</Link>
               </div>
             </div>
           ))}
