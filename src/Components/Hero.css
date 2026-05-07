@@ -1095,8 +1095,9 @@
   background-image: none;
 }
 
-[data-theme="dark"] .hero-title {
-  color: var(--theme-text-primary);
+[data-theme="dark"] .hero-title,
+[data-theme="dark"] .line-wrap {
+  color: #ffffff;
 }
 
 [data-theme="dark"] .hero-description {
