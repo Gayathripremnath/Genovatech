@@ -29,7 +29,7 @@
   font-size: 64px;
   line-height: 1.1;
   font-weight: 800;
-  color: var(--dark);
+  color: black;
   letter-spacing: -2px;
 }
 
@@ -81,7 +81,7 @@
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 12px;
-  color: var(--dark);
+  color: black;
 }
 
 .office-card p {
@@ -94,7 +94,7 @@
 .mob {
   font-size: 14px;
   font-weight: 700;
-  color: var(--dark);
+  color: black;
 }
 
 .mob a {
@@ -123,7 +123,7 @@
 .email-us a {
   font-size: 28px;
   font-weight: 700;
-  color: var(--dark);
+  color: black;
   text-decoration: none;
   transition: var(--transition);
   display: inline-block;
@@ -179,7 +179,7 @@
   background: transparent;
   outline: none;
   transition: var(--transition);
-  color: var(--dark);
+  color: black;
 }
 
 .pro-form label {
@@ -211,7 +211,7 @@
 
 .submit-btn {
   width: 100%;
-  background: var(--dark);
+  background: black;
   color: #fff;
   border: none;
   padding: 18px;
