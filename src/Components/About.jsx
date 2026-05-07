@@ -46,9 +46,9 @@ const About = () => {
                 augue volutpat felis etiam
               </p>
               <div className="journey-decorative">
-                <svg width="200" height="300" viewBox="0 0 200 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M180 280C180 280 50 250 40 150C30 50 150 80 150 120C150 160 80 180 20 120" stroke="#100f0fff" strokeWidth="2" strokeLinecap="round" strokeDasharray="6 6"/>
-                  <path d="M25 125L15 115L25 105" stroke="#e0e0e0" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <svg width="250" height="400" viewBox="0 0 250 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M180 480 C180 400 180 350 110 350 C20 350 40 230 120 230 C200 230 200 350 120 350 C60 350 60 200 60 50" stroke="#83878f78" strokeWidth="2" strokeLinecap="round" />
+                  <path d="M50 65 L60 50 L75 60" stroke="#83878f78" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>
             </div>

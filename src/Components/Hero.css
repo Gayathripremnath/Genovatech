@@ -34,7 +34,13 @@
   height: auto;
   line-height: 1.2;
 }
-
+.line-wrap {
+  color: black;
+  font-size: 53px;
+  font-family: 'Barlow Condensed', "Barlow", sans-serif;
+  font-weight: 600;
+ 
+}
 /* Animated Hero Title Wrapper */
 .hero-title .title-wrapper {
   display: inline-block;
