@@ -14,7 +14,7 @@ const Topbar = () => {
         <div className="topbar-right">
           <div className="topbar-item">
             <MdOutlineEmail className="topbar-icon" />
-            <span></span>
+            <span>[genovatechnology]</span>
           </div>
           <div className="topbar-divider"></div>
           <div className="topbar-item">
@@ -27,4 +27,4 @@ const Topbar = () => {
   )
 }
 
-export default Topbar;
+export default Topbar;  
