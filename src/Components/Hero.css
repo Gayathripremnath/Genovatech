@@ -1325,18 +1325,16 @@
 
 .hqs-bg-text {
   position: absolute;
-  /* top: 50%; */
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 160px;
+  font-size: clamp(80px, 15vw, 180px);
   font-weight: 900;
   color: transparent;
-  -webkit-text-stroke: 1.5px rgba(14, 13, 13, 0.06);
-  /* letter-spacing: 15px; */
+  -webkit-text-stroke: 1.5px rgba(14, 13, 13, 0.05);
   z-index: 0;
   pointer-events: none;
   white-space: nowrap;
-  /* text-transform: uppercase; */
   user-select: none;
 }
 
@@ -1715,15 +1713,17 @@
 
 .testi-bg-text {
   position: absolute;
-  top: 60px;
-  left: 6%;
-  font-size: 160px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(80px, 15vw, 180px);
   font-weight: 900;
   color: transparent;
   -webkit-text-stroke: 1.5px rgba(0, 0, 0, 0.03);
   z-index: 0;
   pointer-events: none;
-  line-height: 1;
+  white-space: nowrap;
+  user-select: none;
 }
 
 .testi-container {
@@ -1911,15 +1911,17 @@
 
 .appointment-bg-text {
   position: absolute;
-  top: 40px;
-  left: 6%;
-  font-size: 160px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(80px, 15vw, 180px);
   font-weight: 900;
   color: transparent;
   -webkit-text-stroke: 1.5px rgba(0, 0, 0, 0.03);
   z-index: 0;
   pointer-events: none;
-  line-height: 1;
+  white-space: nowrap;
+  user-select: none;
 }
 
 .appointment-container {
@@ -2049,26 +2051,65 @@
   background-color: #d04e09;
 }
 
-/* Responsive Appointment */
+/* ─────────────────────────────────────────
+   GLOBAL RESPONSIVE FIXES
+───────────────────────────────────────── */
+@media (max-width: 1200px) {
+  .hero-title { font-size: 64px; }
+  .line-wrap { font-size: 48px; }
+}
+
 @media (max-width: 992px) {
+  .hero-title { font-size: 54px; }
+  .line-wrap { font-size: 42px; }
+  .about-container, .agency-stats-container, .cta-container, .testi-container, .appointment-container {
+    padding: 0 4%;
+  }
   .appointment-container {
-    flex-direction: column;
-    gap: 60px;
+    flex-direction: column !important;
+    gap: 40px;
   }
   .appointment-image {
     width: 100%;
-    height: 400px;
+    height: 350px;
+    order: 2;
+  }
+  .appointment-form-wrap {
+    width: 100%;
+    order: 1;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
+  .hero-title { font-size: 46px; }
+  .line-wrap { font-size: 34px; }
+  .hqs-title, .about-title, .services-title, .testi-title, .appointment-title {
+    font-size: 32px;
+  }
+  .hqs-section, .about-section, .agency-stats-section, .services-section, .testi-section, .appointment-section {
+    padding: 60px 4%;
+  }
+  .hqs-bg-text, .testi-bg-text, .appointment-bg-text { 
+    font-size: 60px;
+    top: 5%;
+  }
   .form-row {
     flex-direction: column;
+    gap: 20px;
   }
-  .appointment-title {
-    font-size: 34px;
+}
+
+@media (max-width: 480px) {
+  .hero-title { font-size: 36px; }
+  .line-wrap { font-size: 26px; }
+  .btn-explore, .btn-cta, .btn-submit {
+    width: 100%;
+    text-align: center;
   }
-  .appointment-bg-text {
-    font-size: 100px;
+  .hqs-card {
+    padding: 30px 20px;
+  }
+  .testi-counter {
+    margin: 10px 0;
   }
 }

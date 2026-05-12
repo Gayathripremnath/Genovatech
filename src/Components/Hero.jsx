@@ -145,7 +145,19 @@ const Hero = () => {
     },
   ];
   const [hqIndex, setHqIndex] = useState(0);
-  const visibleCount = 3;
+  const [visibleCount, setVisibleCount] = useState(3);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 640) setVisibleCount(1);
+      else if (window.innerWidth <= 1024) setVisibleCount(2);
+      else setVisibleCount(3);
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const maxIndex = hqServices.length - visibleCount;
 
   const hqPrev = () => setHqIndex(i => Math.max(i - 1, 0));
@@ -244,12 +256,56 @@ const Hero = () => {
         </div>
       </section>
 
+
       {/* ── HIGH QUALITY SERVICES SECTION ── */}
       <section className="hqs-section">
         <div className="hqs-bg-text">Service</div>
         <div className="hqs-header">
           <span className="hqs-tagline">OUR SERVICE</span>
           <h2 className="hqs-title">High Quality Services</h2>
+        </div>
+
+        {/* The Grid (What We Do content) placed here */}
+        <div className="services-grid-container" style={{ marginBottom: '60px' }}>
+          <div className="service-modern-card reveal fade-up" ref={card1Ref} style={{ '--delay': '100ms' }}>
+            <div className="smc-image-wrap">
+              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800" alt="Business Growth" />
+            </div>
+            <div className="smc-content">
+              <h3>Business Growth</h3>
+              <p>Business Strategy</p>
+            </div>
+          </div>
+
+          <div className="service-modern-card reveal fade-up" ref={card2Ref} style={{ '--delay': '200ms' }}>
+            <div className="smc-image-wrap">
+              <img src="https://plus.unsplash.com/premium_photo-1661304699559-36faef43655b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHRlYW1zJTIwd29ya3xlbnwwfHwwfHx8MA%3D%3D" alt="Startup Solution" />
+            </div>
+            <div className="smc-content">
+              <h3>Startup Solution</h3>
+              <p>Business Strategy</p>
+            </div>
+          </div>
+
+          <div className="service-modern-card reveal fade-up" ref={card3Ref} style={{ '--delay': '300ms' }}>
+            <div className="smc-image-wrap">
+              <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=800" alt="Growth Manage" />
+            </div>
+            <div className="smc-content">
+              <h3>Growth Manage</h3>
+              <p>Business Strategy</p>
+            </div>
+          </div>
+
+          <div className="service-modern-card reveal fade-up" ref={card4Ref} style={{ '--delay': '400ms' }}>
+            <div className="smc-image-wrap">
+              <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800" alt="Company Skills" />
+            </div>
+            <div className="smc-content">
+              <h3>Company Skills</h3>
+              <p>Business Strategy</p>
+            </div>
+          </div>
         </div>
 
         <div className="hqs-slider-wrapper">
@@ -296,57 +352,6 @@ const Hero = () => {
         </div>
       </section>
 
-      {/* ── SERVICES SECTION ── */}
-      <section className="services-section">
-        <div className="services-header-wrap reveal fade-up">
-          <div className="services-header">
-            <h2 className="services-title">What We Do</h2>
-          </div>
-          <Link to="/projects" className="btn-view-project">View Project</Link>
-        </div>
-
-        <div className="services-grid-container">
-          <div className="service-modern-card reveal fade-up" ref={card1Ref} style={{ '--delay': '100ms' }}>
-            <div className="smc-image-wrap">
-              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800" alt="Business Growth" />
-            </div>
-            <div className="smc-content">
-              <h3>Business Growth</h3>
-              <p>Business Strategy</p>
-            </div>
-          </div>
-
-          <div className="service-modern-card reveal fade-up" ref={card2Ref} style={{ '--delay': '200ms' }}>
-            <div className="smc-image-wrap">
-              <img src="https://plus.unsplash.com/premium_photo-1661304699559-36faef43655b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHRlYW1zJTIwd29ya3xlbnwwfHwwfHx8MA%3D%3D" alt="Startup Solution" />
-            </div>
-            <div className="smc-content">
-              <h3>Startup Solution</h3>
-              <p>Business Strategy</p>
-            </div>
-          </div>
-
-          <div className="service-modern-card reveal fade-up" ref={card3Ref} style={{ '--delay': '300ms' }}>
-            <div className="smc-image-wrap">
-              <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=800" alt="Growth Manage" />
-            </div>
-            <div className="smc-content">
-              <h3>Growth Manage</h3>
-              <p>Business Strategy</p>
-            </div>
-          </div>
-
-          <div className="service-modern-card reveal fade-up" ref={card4Ref} style={{ '--delay': '400ms' }}>
-            <div className="smc-image-wrap">
-              <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800" alt="Company Skills" />
-            </div>
-            <div className="smc-content">
-              <h3>Company Skills</h3>
-              <p>Business Strategy</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ── TESTIMONIALS SECTION ── */}
       <section className="testi-section">
