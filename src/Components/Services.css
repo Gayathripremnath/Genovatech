@@ -10,115 +10,106 @@
 /* Container removed, now global in index.css */
 
 /* Quote Section */
-.services-quote-section {
+/* Header */
+.services-header {
   text-align: center;
   margin-bottom: 40px;
   position: relative;
 }
 
-.services-quote-section::before {
-  content: '"';
-  position: absolute;
-  top: -40px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 120px;
-  color: rgba(208, 78, 9, 0.1);
-  font-family: serif;
-}
-
-.services-quote-section blockquote {
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--dark);
-  line-height: 1.4;
-  max-width: 900px;
-  margin: 0 auto 30px;
-  font-style: italic;
-}
-
-.services-quote-section cite {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--primary);
-  text-transform: uppercase;
-  letter-spacing: 2px;
+.services-sub {
   display: block;
+  color: var(--text-muted);
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
 }
 
-/* Intro Section */
-.services-intro {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto 50px;
-}
-
-.services-intro h2 {
-  font-size: 32px;
+.services-title {
+  font-size: 40px;
   font-weight: 800;
-  margin-bottom: 15px;
+  margin: 0;
   color: var(--dark);
 }
 
-.services-intro p {
-  font-size: 14px;
-  line-height: 1.8;
-  color: var(--text-muted);
-}
-
-/* Services Grid */
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-}
-
-.service-card {
-  background: var(--bg-light);
-  padding: 40px 30px;
-  border-radius: 24px;
-  border: 1px solid transparent;
-  transition: var(--transition);
-  height: 100%;
+/* Panel that holds the bordered grid */
+.services-panel {
+  background: transparent;
   display: flex;
-  flex-direction: column;
   justify-content: center;
 }
 
-.service-card:hover {
-  background: #fff;
-  border-color: var(--primary);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
-  transform: translateY(-10px);
-}
+/* Services Grid */
 
-.service-image,
-.service-image-container {
+.services-grid {
   width: 100%;
-  height: 200px;
-  background-color: #f5f5f5;
-  margin-bottom: 20px;
-  border-radius: 12px;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border: 1px solid rgba(0,0,0,0.08);
+  background: var(--bg-light);
+}
+
+.tile {
+  position: relative;
+  min-height: 280px; /* adjusted image height */
+  border-right: 1px solid rgba(0,0,0,0.06);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
-  transition: var(--transition);
 }
 
-.service-image {
-  background-image: url('../assets/services-sprite.png');
-  background-size: 300% 300%;
-  /* 3x3 grid */
-  background-repeat: no-repeat;
+.tile:nth-child(4n) {
+  border-right: 0;
 }
 
-.service-actual-img {
+.tile:nth-last-child(-n+4) {
+  border-bottom: 0;
+}
+
+.image-tile img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: var(--transition);
+  display: block;
+  transition: transform .6s ease;
 }
 
-.service-card:hover .service-actual-img {
-  transform: scale(1.1);
+.image-tile:hover img {
+  transform: scale(1.06);
+}
+
+.content-tile {
+  padding: 36px 40px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.content-tile .service-icon {
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+
+.content-tile h3 {
+  font-size: 18px;
+  margin: 0 0 10px 0;
+  color: var(--dark);
+}
+
+.content-tile .service-desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+}
+
+.content-tile .service-more {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
 }
 
 /* Sprite Positions */
@@ -170,12 +161,18 @@
 @media (max-width: 1200px) {
   .services-grid {
     grid-template-columns: repeat(3, 1fr);
+    max-width: 1000px;
   }
 }
 
 @media (max-width: 992px) {
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
+    max-width: 720px;
+  }
+
+  .tile:nth-child(4n) {
+    border-right: 1px solid rgba(0,0,0,0.06);
   }
 
   .services-quote-section blockquote {
@@ -186,10 +183,21 @@
 @media (max-width: 600px) {
   .services-grid {
     grid-template-columns: 1fr;
+    border-right: 0;
   }
 
-  .services-intro h2 {
-    font-size: 32px;
+  .tile {
+    flex-direction: column;
+    border-right: 0;
+  }
+
+  .image-tile,
+  .content-tile {
+    width: 100%;
+  }
+
+  .services-title {
+    font-size: 28px;
   }
 }
 

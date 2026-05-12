@@ -8,56 +8,59 @@ import panorma from '../assets/interactive.jpg';
 import hosting from '../assets/hosting.jpg';
 
 const Services = () => {
-  const serviceList = [
-    { title: "Website Design & Development", image: webDesignImg },
-    { title: "Search Engine Optimization", image: seoImg },
-    { title: "Custom Web Application Development", image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800" },
-    { title: "Mobile App Development", image: mobileAppImg },
-    { title: "E-Commerce Development", image: ecommerceImg },
-    { title: "Social Media Marketing", image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&q=80&w=800" },
-    { title: "Interactive 360° Panoramas", image: panorma },
-    { title: "Domain & Webhosting", image: hosting }
+  // 4 columns per row, alternating pattern across rows:
+  // Row1: image, content, image, content
+  // Row2: content, image, content, image
+  // Row3: image, content, image, content
+  const tiles = [
+    { type: 'image', image: webDesignImg },
+    { type: 'content', title: 'Business Solution', desc: 'Fusce dignissim erat dis proin ornare class sem nibh' },
+    { type: 'image', image: seoImg },
+    { type: 'content', title: 'Marketing Solution', desc: 'Fusce dignissim erat dis proin ornare class sem nibh' },
+
+    { type: 'content', title: 'Agency Marketing', desc: 'Fusce dignissim erat dis proin ornare class sem nibh' },
+    { type: 'image', image: mobileAppImg },
+    { type: 'content', title: 'Business Marketing', desc: 'Fusce dignissim erat dis proin ornare class sem nibh' },
+    { type: 'image', image: ecommerceImg },
+
+    { type: 'image', image: panorma },
+    { type: 'content', title: 'Interactive 360° Panoramas', desc: 'Fusce dignissim erat dis proin ornare class sem nibh' },
+    { type: 'image', image: hosting },
+    { type: 'content', title: 'Domain & Webhosting', desc: 'Fusce dignissim erat dis proin ornare class sem nibh' }
   ];
 
   return (
     <div className="services-page">
       <div className="container">
-        {/* Quote Section */}
-        <section className="services-quote-section">
-          <blockquote>
-            “Quality in a service or product is now what you put into it;
-            it is what the customer gets out of it”
-          </blockquote>
-          <cite>— Peter Drucker</cite>
-        </section>
+        <header className="services-header">
+          <span className="services-sub">Our Service</span>
+          <h1 className="services-title">Service We Provide</h1>
+        </header>
 
-        {/* Intro Section */}
-        <section className="services-intro">
-          <h2>Uncompromising Excellence</h2>
-          <p>
-            Consistent Quality, uncompromising standards and effective marketing techniques
-            is the motto of Genova Technologies. Our team of experts follow the market,
-            trends and attitudes of people worldwide keenly and we are well-aware of the
-            fact that sales fluctuate but service stays forever.
-          </p>
-        </section>
-
-        {/* Services Grid */}
-        <div className="services-grid">
-          {serviceList.map((service, index) => (
-            <div key={index} className="service-card">
-              {service.image ? (
-                <div className="service-image-container">
-                  <img src={service.image} alt={service.title} className="service-actual-img" />
+        <div className="services-panel">
+          <div className="services-grid">
+            {tiles.map((tile, index) => (
+              tile.type === 'image' ? (
+                <div key={index} className="tile image-tile">
+                  <img src={tile.image} alt={`service-img-${index}`} />
                 </div>
               ) : (
-                <div className={`service-image ${service.class}`}></div>
-              )}
-              <h3>{service.title}</h3>
-            </div>
-          ))}
+                <div key={index} className="tile content-tile">
+                  <div className="service-icon" aria-hidden>
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" strokeWidth="1.2" />
+                      <path d="M8 12h8" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
+                      <path d="M8 16h8" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
+                    </svg>
+                  </div>
+                  <h3>{tile.title}</h3>
+                  <p className="service-desc">{tile.desc}</p>
+                  <a className="service-more" href="#">Learn More <span className="arrow">→</span></a>
+                </div>
+              )
+            ))}
+          </div>
         </div>
-
 
       </div>
     </div>
