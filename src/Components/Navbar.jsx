@@ -185,7 +185,7 @@ const Navbar = () => {
           </div>
 
           <div className="sidebar-socials">
-            <a href="#"><FaFacebookF /></a>
+            <a href="https://www.facebook.com/Genova-Technologies-Pvt-Ltd" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
             <a href="#"><FaTwitter /></a>
             <a href="#"><FaInstagram /></a>
             <a href="#"><FaLinkedinIn /></a>

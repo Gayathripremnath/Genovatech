@@ -25,7 +25,7 @@ const Footer = () => {
                 Partner with us to transform your ideas into powerful digital experiences. Let's create something extraordinary together.
               </p>
               <div className="social-links">
-                <a href="#" className="social-icon" aria-label="Facebook"><FaFacebookF /></a>
+                <a href="https://www.facebook.com/Genova-Technologies-Pvt-Ltd" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Facebook"><FaFacebookF /></a>
                 {/* <a href="#" className="social-icon" aria-label="LinkedIn"><FaLinkedinIn /></a> */}
                 <a href="#" className="social-icon" aria-label="Instagram"><FaInstagram /></a>
               </div>
