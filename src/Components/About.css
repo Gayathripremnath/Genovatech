@@ -492,7 +492,7 @@
 
 .timeline-card:hover {
   transform: translateY(-5px);
-  background: #ff783486; /* Switch to dark bg on hover for better contrast with grayscale image */
+  background: #ff783486; 
   box-shadow: 0 30px 60px rgba(0,0,0,0.15);
 }
 
@@ -511,7 +511,7 @@
 }
 
 .timeline-card:hover .timeline-line {
-  background: linear-gradient(to right, #fff 0%, rgba(255,255,255,0.2) 100%);
+  background: linear-gradient(to right, #fff 0%, rgba(255, 255, 255, 0.2) 100%);
 }
 
 .timeline-card-header,
@@ -674,7 +674,8 @@
   color: var(--theme-text-secondary);
 }
 
-[data-theme="dark"] .timeline-line {
-  background: linear-gradient(to right, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.05) 100%);
+[data-theme="dark"] .timeline-card:hover {
+  background: #ff783486;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.3);
 }
 

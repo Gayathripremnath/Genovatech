@@ -8,7 +8,7 @@ import { MdOutlineEmail, MdPhone, MdLocationOn } from 'react-icons/md';
 import { TbWorld } from 'react-icons/tb';
 import { PiPresentationChartLight, PiHandshakeLight, PiLightbulbLight, PiGearLight, PiMagnifyingGlassLight } from 'react-icons/pi';
 import { BsSun, BsMoonStarsFill } from 'react-icons/bs';
-import logoImg from '../assets/genovalogo.jpg';
+import logoImg from '../assets/Genovatech.png';
 import megaMenuImg from '../assets/mega-menu-team.png';
 import { useTheme } from '../context/ThemeContext';
 

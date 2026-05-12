@@ -398,20 +398,52 @@ const Hero = () => {
             <span className="appointment-tagline">MAKE AN APPOINTMENT</span>
             <h2 className="appointment-title">Request a free quote</h2>
             
-            <form className="appointment-form" onSubmit={(e) => e.preventDefault()}>
+            <form className="appointment-form" onSubmit={(e) => {
+              e.preventDefault();
+              const form = e.target;
+              const name = form.name.value.trim();
+              const number = form.number.value.trim();
+              const email = form.email.value.trim();
+              const message = form.message.value.trim();
+              const errors = {};
+              if (!name) errors.name = 'Name is required';
+              if (!number) errors.number = 'Number is required';
+              else if (!/^[0-9+\-\s]{7,15}$/.test(number)) errors.number = 'Enter a valid number';
+              if (!email) errors.email = 'Email is required';
+              else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errors.email = 'Enter a valid email';
+              if (!message) errors.message = 'Message is required';
+              // show errors
+              document.querySelectorAll('.appt-error').forEach(el => el.remove());
+              let hasError = false;
+              Object.entries(errors).forEach(([field, msg]) => {
+                hasError = true;
+                const input = form[field];
+                input.classList.add('input-error');
+                const span = document.createElement('span');
+                span.className = 'appt-error';
+                span.textContent = msg;
+                input.parentNode.appendChild(span);
+              });
+              if (!hasError) {
+                form.reset();
+                document.querySelectorAll('.appt-error').forEach(el => el.remove());
+                form.querySelectorAll('.input-error').forEach(el => el.classList.remove('input-error'));
+                alert('Message sent successfully!');
+              }
+            }}>
               <div className="form-row">
                 <div className="input-group">
-                  <input type="text" placeholder="Your Name" className="form-input" />
+                  <input type="text" name="name" placeholder="Your Name" className="form-input" onChange={e => { e.target.classList.remove('input-error'); e.target.parentNode.querySelector('.appt-error')?.remove(); }} />
                 </div>
                 <div className="input-group">
-                  <input type="text" placeholder="Number" className="form-input" />
+                  <input type="text" name="number" placeholder="Number" className="form-input" onChange={e => { e.target.classList.remove('input-error'); e.target.parentNode.querySelector('.appt-error')?.remove(); }} />
                 </div>
               </div>
               <div className="input-group full-width">
-                <input type="email" placeholder="Your Email" className="form-input" />
+                <input type="email" name="email" placeholder="Your Email" className="form-input" onChange={e => { e.target.classList.remove('input-error'); e.target.parentNode.querySelector('.appt-error')?.remove(); }} />
               </div>
               <div className="input-group full-width">
-                <textarea placeholder="Type Your Message" className="form-textarea"></textarea>
+                <textarea name="message" placeholder="Type Your Message" className="form-textarea" onChange={e => { e.target.classList.remove('input-error'); e.target.parentNode.querySelector('.appt-error')?.remove(); }}></textarea>
               </div>
               <button type="submit" className="btn-submit">Submit Message</button>
             </form>

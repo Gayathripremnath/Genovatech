@@ -2027,6 +2027,20 @@
   object-fit: cover;
 }
 
+/* Form validation */
+.input-error {
+  border: 1.5px solid #e53e3e !important;
+  background-color: #fff5f5 !important;
+}
+
+.appt-error {
+  display: block;
+  color: #e53e3e;
+  font-size: 12px;
+  margin-top: 5px;
+  padding-left: 4px;
+}
+
 /* Dark mode for Appointment */
 [data-theme="dark"] .appointment-section {
   background-color: #0f1117;

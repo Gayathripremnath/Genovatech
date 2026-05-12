@@ -590,11 +590,13 @@
 }
 
 [data-theme="dark"] .sidebar-logo-img {
-  background-color: var(--theme-bg);
-  padding: 10px 15px;
-  border-radius: 8px;
   display: block;
   margin-bottom: 25px;
+  background: none;
+  padding: 0;
+  color: white;
+  border-radius: 0;
+  filter: none;
 }
 
 [data-theme="dark"] .logo-image,
