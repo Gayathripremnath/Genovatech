@@ -32,13 +32,16 @@
   display: block;
   overflow: hidden;
   height: auto;
+  min-height: 1.2em;
   line-height: 1.2;
 }
 .line-wrap {
   color: black;
-  font-size: 53px;
-  font-family: 'Barlow Condensed', "Barlow", sans-serif;
-  font-weight: 600;
+  font-size: 66px;
+  font-family: 'Red Hat Display', serif;
+  font-weight: 700;
+  text-transform: capitalize;
+  letter-spacing: -1px;
  
 }
 /* Animated Hero Title Wrapper */
@@ -63,6 +66,19 @@
   transform: translateY(0);
   opacity: 1;
   filter: blur(0);
+}
+
+.title-cursor {
+  display: inline-block;
+  margin-left: 4px;
+  color: #d04e09;
+  font-weight: 300;
+  animation: cursorBlink 0.8s infinite;
+}
+
+@keyframes cursorBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 /* Fade out state: slide up and fade */
@@ -1307,6 +1323,23 @@
   pointer-events: none;
 }
 
+.hqs-bg-text {
+  position: absolute;
+  /* top: 50%; */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 160px;
+  font-weight: 900;
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(14, 13, 13, 0.06);
+  /* letter-spacing: 15px; */
+  z-index: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  /* text-transform: uppercase; */
+  user-select: none;
+}
+
 /* Header */
 .hqs-header {
   text-align: center;
@@ -1381,6 +1414,14 @@
   margin-bottom: 24px;
   background: #fafafa;
   transition: background 0.3s, color 0.3s, border-color 0.3s;
+  overflow: hidden;
+}
+
+.hqs-card-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 10px;
 }
 
 .hqs-card:hover .hqs-card-icon {
@@ -1514,6 +1555,10 @@
   background-color: #12151e;
 }
 
+[data-theme="dark"] .hqs-bg-text {
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.03);
+}
+
 [data-theme="dark"] .hqs-title {
   color: #f0f0f0;
 }
@@ -1572,4 +1617,458 @@
 
 [data-theme="dark"] .hqs-dot.active {
   background: #d04e09;
+}
+
+/* ─────────────────────────────────────────
+   CTA SECTION
+───────────────────────────────────────── */
+.cta-section {
+  position: relative;
+  padding: 100px 6%;
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin: 40px 0;
+}
+
+.cta-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  gap: 60px;
+}
+
+.cta-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  max-width: 800px;
+  color: #fff;
+}
+
+.btn-cta {
+  background-color: #fff;
+  color: #1a2530;
+  padding: 18px 42px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 16px;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.btn-cta:hover {
+  background-color: #d04e09;
+  color: #fff;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(208, 78, 9, 0.3);
+}
+
+@media (max-width: 1024px) {
+  .cta-title {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cta-section {
+    padding: 80px 6%;
+    background-attachment: scroll;
+  }
+  .cta-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+  .cta-title {
+    font-size: 32px;
+  }
+  .btn-cta {
+    padding: 16px 36px;
+  }
+}
+
+/* Dark mode for CTA */
+[data-theme="dark"] .cta-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200') no-repeat center center;
+  background-size: cover;
+}
+
+/* ─────────────────────────────────────────
+   TESTIMONIALS SECTION
+───────────────────────────────────────── */
+.testi-section {
+  padding: 100px 6%;
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.testi-bg-text {
+  position: absolute;
+  top: 60px;
+  left: 6%;
+  font-size: 160px;
+  font-weight: 900;
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(0, 0, 0, 0.03);
+  z-index: 0;
+  pointer-events: none;
+  line-height: 1;
+}
+
+.testi-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.testi-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 60px;
+}
+
+.testi-tagline {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #d04e09;
+  margin-bottom: 12px;
+}
+
+.testi-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1a2530;
+  margin: 0;
+}
+
+.testi-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.testi-nav-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: #1a2530;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.testi-nav-btn:hover {
+  background-color: #d04e09;
+  color: #fff;
+}
+
+.testi-counter {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a2530;
+  min-width: 60px;
+  text-align: center;
+}
+
+.testi-card-wrapper {
+  perspective: 1000px;
+}
+
+.testi-card {
+  display: flex;
+  background-color: #1c2229;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.testi-card-image {
+  flex: 0 0 45%;
+  height: 500px;
+}
+
+.testi-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testi-card-content {
+  flex: 1;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.testi-quote {
+  font-size: 26px;
+  line-height: 1.6;
+  color: #fff;
+  margin-bottom: 40px;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.testi-author-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 8px 0;
+}
+
+.testi-author-role {
+  font-size: 14px;
+  color: #8a94a1;
+  margin: 0;
+}
+
+/* Dark mode overrides for Testimonials */
+[data-theme="dark"] .testi-section {
+  background-color: #0f1117;
+}
+
+[data-theme="dark"] .testi-title {
+  color: #fff;
+}
+
+[data-theme="dark"] .testi-bg-text {
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.02);
+}
+
+[data-theme="dark"] .testi-nav-btn {
+  background-color: #1a1e28;
+  color: #fff;
+}
+
+[data-theme="dark"] .testi-counter {
+  color: #8a94a1;
+}
+
+/* Responsive Testimonials */
+@media (max-width: 992px) {
+  .testi-card {
+    flex-direction: column;
+  }
+  .testi-card-image {
+    height: 350px;
+    flex: none;
+  }
+  .testi-card-content {
+    padding: 40px;
+  }
+  .testi-quote {
+    font-size: 20px;
+  }
+  .testi-bg-text {
+    font-size: 100px;
+  }
+}
+
+@media (max-width: 576px) {
+  .testi-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+  .testi-title {
+    font-size: 32px;
+  }
+  .testi-card-content {
+    padding: 30px 20px;
+  }
+}
+
+/* ─────────────────────────────────────────
+   APPOINTMENT SECTION
+───────────────────────────────────────── */
+.appointment-section {
+  padding: 100px 6%;
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.appointment-bg-text {
+  position: absolute;
+  top: 40px;
+  left: 6%;
+  font-size: 160px;
+  font-weight: 900;
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(0, 0, 0, 0.03);
+  z-index: 0;
+  pointer-events: none;
+  line-height: 1;
+}
+
+.appointment-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  position: relative;
+  z-index: 1;
+}
+
+.appointment-form-wrap {
+  flex: 1;
+}
+
+.appointment-tagline {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #1a2530;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.appointment-title {
+  font-size: 46px;
+  font-weight: 700;
+  color: #1a2530;
+  margin-bottom: 40px;
+  line-height: 1.2;
+}
+
+.appointment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.input-group {
+  flex: 1;
+}
+
+.form-input, .form-textarea {
+  width: 100%;
+  padding: 18px 24px;
+  background-color: #f8f9fa;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  color: #1a2530;
+  transition: all 0.3s ease;
+}
+
+.form-textarea {
+  height: 150px;
+  resize: none;
+}
+
+.form-input:focus, .form-textarea:focus {
+  background-color: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  outline: none;
+}
+
+.btn-submit {
+  align-self: flex-start;
+  background-color: #1c2229;
+  color: #fff;
+  padding: 18px 36px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.btn-submit:hover {
+  background-color: #d04e09;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(208, 78, 9, 0.2);
+}
+
+.appointment-image {
+  flex: 1;
+  height: 550px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+.appointment-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Dark mode for Appointment */
+[data-theme="dark"] .appointment-section {
+  background-color: #0f1117;
+}
+
+[data-theme="dark"] .appointment-title,
+[data-theme="dark"] .appointment-tagline {
+  color: #fff;
+}
+
+[data-theme="dark"] .appointment-bg-text {
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.02);
+}
+
+[data-theme="dark"] .form-input,
+[data-theme="dark"] .form-textarea {
+  background-color: #1a1e28;
+  color: #fff;
+}
+
+[data-theme="dark"] .btn-submit {
+  background-color: #d04e09;
+}
+
+/* Responsive Appointment */
+@media (max-width: 992px) {
+  .appointment-container {
+    flex-direction: column;
+    gap: 60px;
+  }
+  .appointment-image {
+    width: 100%;
+    height: 400px;
+  }
+}
+
+@media (max-width: 576px) {
+  .form-row {
+    flex-direction: column;
+  }
+  .appointment-title {
+    font-size: 34px;
+  }
+  .appointment-bg-text {
+    font-size: 100px;
+  }
 }

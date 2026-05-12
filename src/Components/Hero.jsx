@@ -5,6 +5,10 @@ import { BsStars } from 'react-icons/bs';
 import { GoSun } from 'react-icons/go';
 import { FaCheckCircle, FaArrowRight } from 'react-icons/fa';
 import { FiPhoneCall, FiMonitor, FiLayers, FiSmartphone, FiTrendingUp, FiSettings, FiCheckCircle, FiUsers, FiAward, FiEye, FiChevronLeft, FiChevronRight, FiTarget, FiBarChart2, FiGitBranch } from 'react-icons/fi';
+import serv1 from '../assets/serv1.png';
+import serv2 from '../assets/serv2.png';
+import serv3 from '../assets/serv3.png';
+import williamAvatar from '../assets/william_henry_avatar_1778044209054.png';
 
 /* ── Reusable scroll-reveal hook ── */
 const useReveal = () => {
@@ -37,6 +41,67 @@ const Hero = () => {
   ];
   const [currentQuoteIndex, setCurrentQuoteIndex] = useState(0);
   const [animClass, setAnimClass] = useState('fade-in');
+  const [typedLine1, setTypedLine1] = useState('');
+  const [typedLine2, setTypedLine2] = useState('');
+
+  useEffect(() => {
+    let timeout1, timeout2;
+    const q = quotes[currentQuoteIndex];
+    setTypedLine1('');
+    setTypedLine2('');
+
+    let charIndex1 = 0;
+    const type1 = () => {
+      if (charIndex1 < q.line1.length) {
+        setTypedLine1(q.line1.substring(0, charIndex1 + 1));
+        charIndex1++;
+        timeout1 = setTimeout(type1, 60);
+      } else {
+        let charIndex2 = 0;
+        const type2 = () => {
+          if (charIndex2 < q.line2.length) {
+            setTypedLine2(q.line2.substring(0, charIndex2 + 1));
+            charIndex2++;
+            timeout2 = setTimeout(type2, 60);
+          }
+        };
+        timeout2 = setTimeout(type2, 100);
+      }
+    };
+
+    const startDelay = setTimeout(type1, 800);
+
+    return () => {
+      clearTimeout(startDelay);
+      clearTimeout(timeout1);
+      clearTimeout(timeout2);
+    };
+  }, [currentQuoteIndex]);
+
+  const testimonials = [
+    {
+      image: williamAvatar,
+      quote: "I can't recommend Genovatech enough. Their professional approach and innovative solutions have transformed how we operate. It's a true partnership that delivers consistent value.",
+      author: "William Henry",
+      role: "Designer at Vertex Agency"
+    },
+    {
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400",
+      quote: "The team's attention to detail and commitment to excellence is unparalleled. They understood our vision perfectly and delivered a product that exceeded our expectations.",
+      author: "James Wilson",
+      role: "CEO at TechFlow"
+    },
+    {
+      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=400",
+      quote: "Strategic planning and execution at its best. Genovatech has been instrumental in our digital transformation journey. Highly recommended for any forward-thinking business.",
+      author: "Sarah Jenkins",
+      role: "Product Manager at Innovate"
+    }
+  ];
+  const [testiIndex, setTestiIndex] = useState(0);
+
+  const testiPrev = () => setTestiIndex(i => (i === 0 ? testimonials.length - 1 : i - 1));
+  const testiNext = () => setTestiIndex(i => (i === testimonials.length - 1 ? 0 : i + 1));
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -59,23 +124,23 @@ const Hero = () => {
   /* ── High Quality Services slider ── */
   const hqServices = [
     {
-      icon: <FiTarget />,
+      icon: <img src={serv1} alt="Business Goal" />,
       title: 'Business Goal',
       desc: 'We align every project with your core business objectives, delivering results that drive measurable growth and long-term value.',
     },
     {
-      icon: <FiBarChart2 />,
+      icon: <img src={serv1} alt="Business Planning" />,
       title: 'Business Planning',
       desc: 'Our strategic planning process maps a clear path from concept to execution, ensuring every decision supports your vision.',
     },
     {
-      icon: <FiGitBranch />,
+      icon: <img src={serv2} alt="Process Development" />,
       title: 'Process Development',
       desc: 'We design scalable, efficient workflows and processes that empower your team to deliver consistently excellent outcomes.',
     },
     {
-      icon: <FiSettings />,
-      title: 'Technical Excellence',
+      icon: <img src={serv3} alt="Strategy & Planning" />,
+      title: 'Strategy & Planning',
       desc: 'Leveraging cutting-edge technology and industry best practices to build robust, future-proof digital solutions.',
     },
   ];
@@ -99,8 +164,18 @@ const Hero = () => {
 
           <h1 className="hero-title">
             <div className={`title-wrapper ${animClass}`}>
-              <span className="line-wrap"><span className="line">{quotes[currentQuoteIndex].line1}</span></span>
-              <span className="line-wrap"><span className="line">{quotes[currentQuoteIndex].line2}</span></span>
+              <span className="line-wrap">
+                <span className="line">
+                  {typedLine1}
+                  {typedLine1 && !typedLine2 && <span className="title-cursor">|</span>}
+                </span>
+              </span>
+              <span className="line-wrap">
+                <span className="line">
+                  {typedLine2}
+                  {typedLine2 && <span className="title-cursor">|</span>}
+                </span>
+              </span>
             </div>
           </h1>
 
@@ -171,6 +246,7 @@ const Hero = () => {
 
       {/* ── HIGH QUALITY SERVICES SECTION ── */}
       <section className="hqs-section">
+        <div className="hqs-bg-text">Service</div>
         <div className="hqs-header">
           <span className="hqs-tagline">OUR SERVICE</span>
           <h2 className="hqs-title">High Quality Services</h2>
@@ -205,6 +281,18 @@ const Hero = () => {
               aria-label={`Go to slide ${i + 1}`}
             />
           ))}
+        </div>
+      </section>
+
+      {/* ── CTA SECTION ── */}
+      <section className="cta-section">
+        <div className="cta-container">
+          <div className="cta-content">
+            <h2 className="cta-title">Let's discuss about how we can help make your business better</h2>
+          </div>
+          <div className="cta-action">
+            <Link to="/contact" className="btn-cta">Lets Work Together</Link>
+          </div>
         </div>
       </section>
 
@@ -256,6 +344,72 @@ const Hero = () => {
               <h3>Company Skills</h3>
               <p>Business Strategy</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── TESTIMONIALS SECTION ── */}
+      <section className="testi-section">
+        <div className="testi-bg-text">Review</div>
+        <div className="testi-container">
+          <div className="testi-header">
+            <div className="testi-header-left">
+              <span className="testi-tagline">OUR TESTIMONIAL</span>
+              <h2 className="testi-title">Our Client Reviews</h2>
+            </div>
+            <div className="testi-nav">
+              <button onClick={testiPrev} className="testi-nav-btn"><FiChevronLeft /></button>
+              <span className="testi-counter">{`0${testiIndex + 1} / 0${testimonials.length}`}</span>
+              <button onClick={testiNext} className="testi-nav-btn"><FiChevronRight /></button>
+            </div>
+          </div>
+
+          <div className="testi-card-wrapper">
+            <div className="testi-card">
+              <div className="testi-card-image">
+                <img src={testimonials[testiIndex].image} alt={testimonials[testiIndex].author} />
+              </div>
+              <div className="testi-card-content">
+                <p className="testi-quote">"{testimonials[testiIndex].quote}"</p>
+                <div className="testi-author-info">
+                  <h4 className="testi-author-name">{testimonials[testiIndex].author}</h4>
+                  <p className="testi-author-role">{testimonials[testiIndex].role}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── APPOINTMENT SECTION ── */}
+      <section className="appointment-section">
+        <div className="appointment-bg-text">Hello</div>
+        <div className="appointment-container">
+          <div className="appointment-form-wrap">
+            <span className="appointment-tagline">MAKE AN APPOINTMENT</span>
+            <h2 className="appointment-title">Request a free quote</h2>
+            
+            <form className="appointment-form" onSubmit={(e) => e.preventDefault()}>
+              <div className="form-row">
+                <div className="input-group">
+                  <input type="text" placeholder="Your Name" className="form-input" />
+                </div>
+                <div className="input-group">
+                  <input type="text" placeholder="Number" className="form-input" />
+                </div>
+              </div>
+              <div className="input-group full-width">
+                <input type="email" placeholder="Your Email" className="form-input" />
+              </div>
+              <div className="input-group full-width">
+                <textarea placeholder="Type Your Message" className="form-textarea"></textarea>
+              </div>
+              <button type="submit" className="btn-submit">Submit Message</button>
+            </form>
+          </div>
+
+          <div className="appointment-image">
+            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=800" alt="Consultation" />
           </div>
         </div>
       </section>

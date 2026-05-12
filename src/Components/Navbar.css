@@ -90,7 +90,7 @@
 }
 
 .btn-book {
-  background-color: var(--primary);
+  background-color: rgb(255, 102, 0);
   color: #ffffff;
   padding: 12px 24px;
   border-radius: 8px;
