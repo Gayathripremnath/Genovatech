@@ -1,11 +1,10 @@
 .navbar {
   background-color: transparent;
-  padding: 25px 0;
+  padding: 12px 0;
   position: absolute;
-  top: 40px; /* Below topbar */
+  top: 40px;
   left: 0;
   width: 100%;
-  /* height: 160px; */
   z-index: 1000;
   transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }

@@ -14,6 +14,7 @@ import ScrollToTop from './Components/ScrollToTop';
 
 import Project from './Components/Project';
 import ProductDetails from './Components/Product-details';
+import ServiceDetails from './Components/Service-details';
 
 // Basic Placeholder Page Components for routing purposes
 const Clients = () => <div style={{ padding: '150px 20px', textAlign: 'center' }}><h1>Clients Page</h1></div>;
@@ -32,6 +33,7 @@ function App() {
           <Route path="/products" element={<Products />} />
           <Route path="/product-details/:id" element={<ProductDetails />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/service-details/:slug" element={<ServiceDetails />} />
           <Route path="/clients" element={<Clients />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />

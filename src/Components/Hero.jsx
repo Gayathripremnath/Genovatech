@@ -127,21 +127,25 @@ const Hero = () => {
       icon: <img src={serv1} alt="Business Goal" />,
       title: 'Business Goal',
       desc: 'We align every project with your core business objectives, delivering results that drive measurable growth and long-term value.',
+      slug: 'business-solution',
     },
     {
       icon: <img src={serv1} alt="Business Planning" />,
       title: 'Business Planning',
       desc: 'Our strategic planning process maps a clear path from concept to execution, ensuring every decision supports your vision.',
+      slug: 'marketing-solution',
     },
     {
       icon: <img src={serv2} alt="Process Development" />,
       title: 'Process Development',
       desc: 'We design scalable, efficient workflows and processes that empower your team to deliver consistently excellent outcomes.',
+      slug: 'agency-marketing',
     },
     {
       icon: <img src={serv3} alt="Strategy & Planning" />,
       title: 'Strategy & Planning',
       desc: 'Leveraging cutting-edge technology and industry best practices to build robust, future-proof digital solutions.',
+      slug: 'business-marketing',
     },
   ];
   const [hqIndex, setHqIndex] = useState(0);
@@ -318,10 +322,10 @@ const Hero = () => {
                 <div className="hqs-card-icon">{svc.icon}</div>
                 <h3 className="hqs-card-title">{svc.title}</h3>
                 <p className="hqs-card-desc">{svc.desc}</p>
-                <button className="hqs-read-more">
+                <Link to={`/service-details/${svc.slug}`} className="hqs-read-more">
                   <span className="hqs-arrow-circle"><FaArrowRight /></span>
                   Read More
-                </button>
+                </Link>
               </div>
             ))}
           </div>

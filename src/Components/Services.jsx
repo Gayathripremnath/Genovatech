@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './Services.css';
 import webDesignImg from '../assets/web-design.jpg';
 import seoImg from '../assets/seo.jpg';
@@ -14,25 +15,26 @@ const Services = () => {
   // Row3: image, content, image, content
   const tiles = [
     { type: 'image', image: webDesignImg },
-    { type: 'content', title: 'Business Solution', desc: 'Fusce dignissim erat dis proin ornare class sem nibh' },
+    { type: 'content', title: 'Business Solution', desc: 'Fusce dignissim erat dis proin ornare class sem nibh', slug: 'business-solution' },
     { type: 'image', image: seoImg },
-    { type: 'content', title: 'Marketing Solution', desc: 'Fusce dignissim erat dis proin ornare class sem nibh' },
+    { type: 'content', title: 'Marketing Solution', desc: 'Fusce dignissim erat dis proin ornare class sem nibh', slug: 'marketing-solution' },
 
-    { type: 'content', title: 'Agency Marketing', desc: 'Fusce dignissim erat dis proin ornare class sem nibh' },
+    { type: 'content', title: 'Agency Marketing', desc: 'Fusce dignissim erat dis proin ornare class sem nibh', slug: 'agency-marketing' },
     { type: 'image', image: mobileAppImg },
-    { type: 'content', title: 'Business Marketing', desc: 'Fusce dignissim erat dis proin ornare class sem nibh' },
+    { type: 'content', title: 'Business Marketing', desc: 'Fusce dignissim erat dis proin ornare class sem nibh', slug: 'business-marketing' },
     { type: 'image', image: ecommerceImg },
 
     { type: 'image', image: panorma },
-    { type: 'content', title: 'Interactive 360° Panoramas', desc: 'Fusce dignissim erat dis proin ornare class sem nibh' },
+    { type: 'content', title: 'Interactive 360° Panoramas', desc: 'Fusce dignissim erat dis proin ornare class sem nibh', slug: 'interactive-panoramas' },
     { type: 'image', image: hosting },
-    { type: 'content', title: 'Domain & Webhosting', desc: 'Fusce dignissim erat dis proin ornare class sem nibh' }
+    { type: 'content', title: 'Domain & Webhosting', desc: 'Fusce dignissim erat dis proin ornare class sem nibh', slug: 'domain-hosting' }
   ];
 
   return (
     <div className="services-page">
       <div className="container">
         <header className="services-header">
+          <span className="services-stroke-text">Services</span>
           <span className="services-sub">Our Service</span>
           <h1 className="services-title">Service We Provide</h1>
         </header>
@@ -55,7 +57,7 @@ const Services = () => {
                   </div>
                   <h3>{tile.title}</h3>
                   <p className="service-desc">{tile.desc}</p>
-                  <a className="service-more" href="#">Learn More <span className="arrow">→</span></a>
+                  <a className="service-more" href={`/service-details/${tile.slug}`}>Learn More <span className="arrow">→</span></a>
                 </div>
               )
             ))}

@@ -1,0 +1,365 @@
+/* Service-details.css */
+
+.sd-page {
+  background-color: var(--theme-bg);
+  color: var(--dark);
+}
+
+/* ── HERO ── */
+.sd-hero {
+  background-size: cover;
+  background-position: center top;
+  position: relative;
+  padding-top: 190px;
+  /* hero ends roughly at mid-point of categories card */
+  padding-bottom: 0;
+  min-height: 550px;
+}
+
+.sd-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.52);
+}
+
+/* ── LAYOUT WRAPPER: spans hero bottom + page top ── */
+.sd-layout {
+  position: relative;
+  z-index: 1;
+}
+
+/* inner grid inside hero: left text only */
+.sd-hero-inner {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 60px;
+}
+
+.sd-hero-content {
+  color: #fff;
+  max-width: 620px;
+  padding: 0 0 60px;
+}
+
+.sd-hero-content h1 {
+  font-size: 52px;
+  font-weight: 800;
+  margin: 0 0 24px;
+  color: white;
+  line-height: 1.1;
+}
+
+.sd-hero-content p {
+  font-size: 15px;
+  line-height: 1.85;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+/* ── BODY: content image left, sidebar right ── */
+/* The sidebar starts INSIDE the hero (negative margin-top pulls it up) */
+.sd-body {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 40px;
+  align-items: start;
+  padding-bottom: 100px;
+}
+
+/* Content image breaks upward into hero */
+.sd-main {
+  margin-top: -200px;
+  position: relative;
+  z-index: 3;
+}
+
+.sd-main-img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  /* border-radius: 10px; */
+  margin-bottom: 36px;
+  margin-top:79px;
+  display: block;
+}
+
+.sd-main h2 {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--dark);
+  margin: 0 0 16px;
+}
+
+.sd-main p {
+  font-size: 17px;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* ── SIDEBAR: pulled up so top half sits on hero ── */
+.sd-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  /* pull sidebar up so ~half of categories card overlaps hero */
+  margin-top: -280px;
+  position: relative;
+  z-index: 4;
+}
+
+.sd-widget {
+  background: #1e2433;
+  border-radius: 10px;
+  padding: 32px 28px;
+  color: #fff;
+}
+
+.sd-widget-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 20px;
+}
+
+/* Categories */
+.sd-cat-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sd-cat-list li a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 18px;
+  background: #252d3d;
+  border-radius: 6px;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.25s;
+}
+
+.sd-cat-list li a:hover,
+.sd-cat-list li.active a {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* Download */
+.sd-download-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sd-download-list li a {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 13px 16px;
+  background: #252d3d;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #fff;
+  transition: background 0.25s;
+}
+
+.sd-download-list li a:hover {
+  background: var(--primary);
+}
+
+.sd-dl-icon {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+}
+
+.sd-dl-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.sd-dl-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.sd-dl-info strong {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.sd-dl-info small {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.sd-dl-arrow {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+/* Features grid */
+.sd-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px 40px;
+  margin-top: 36px;
+}
+
+.sd-feature-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.sd-feature-icon {
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+  background: #f0f2f5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sd-feature-icon svg {
+  width: 22px;
+  height: 22px;
+  color: #1e2433;
+}
+
+.sd-feature-item h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--dark);
+  margin: 0 0 6px;
+}
+
+.sd-feature-item p {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Need Help widget */
+.sd-help-widget {
+  text-align: center;
+}
+
+.sd-help-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.sd-help-logo svg {
+  color: #fff;
+}
+
+.sd-help-logo strong {
+  display: block;
+  font-size: 18px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.1;
+}
+
+.sd-help-logo span {
+  font-size: 12px;
+  color: rgba(255,255,255,0.55);
+}
+
+.sd-help-widget h3 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.35;
+  margin: 0 0 28px;
+}
+
+.sd-help-btn {
+  display: inline-block;
+  padding: 14px 36px;
+  background: #fff;
+  color: #1e2433;
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background 0.25s, color 0.25s;
+}
+
+.sd-help-btn:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+[data-theme="dark"] .sd-feature-icon {
+  background: #252d3d;
+}
+
+[data-theme="dark"] .sd-feature-icon svg {
+  color: #fff;
+}
+
+[data-theme="dark"] .sd-feature-item h4 {
+  color: var(--theme-text-primary);
+}
+[data-theme="dark"] .sd-main h2 {
+  color: var(--theme-text-primary);
+}
+
+[data-theme="dark"] .sd-main p {
+  color: var(--theme-text-secondary);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 992px) {
+  .sd-body {
+    grid-template-columns: 1fr;
+  }
+
+  .sd-main,
+  .sd-sidebar {
+    margin-top: 0;
+  }
+
+  .sd-hero-content h1 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sd-hero {
+    padding-top: 120px;
+  }
+
+  .sd-hero-content h1 {
+    font-size: 28px;
+  }
+
+  .sd-main-img {
+    height: 240px;
+  }
+}
