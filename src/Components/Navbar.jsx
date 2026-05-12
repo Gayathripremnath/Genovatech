@@ -18,7 +18,7 @@ const Navbar = () => {
   const location = useLocation();
   const { isDark, toggleTheme } = useTheme();
 
-  useEffect(() => {   
+  useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
         setScrolled(true);
@@ -46,7 +46,7 @@ const Navbar = () => {
     <>
       <div className={`navbar ${scrolled ? 'scrolled' : ''} ${isInnerPage ? 'inner-page-navbar' : ''}`}>
         <div className="navbar-container">
-          
+
           <div className="navbar-logo">
             <Link to="/">
               <img src={logoImg} alt="Genova Technologies Logo" className="logo-image" />
@@ -55,12 +55,12 @@ const Navbar = () => {
 
           <nav className="navbar-links">
             <ul>
-              <li><Link to="/" className="active">Home</Link></li>
-              <li><Link to="/projects">Projects</Link></li>
-              <li><Link to="/products">Products</Link></li>  
+              <li><Link to="/" className={location.pathname === '/' ? 'active' : ''}>Home</Link></li>
+              <li><Link to="/projects" className={location.pathname === '/projects' ? 'active' : ''}>Projects</Link></li>
+              <li><Link to="/products" className={location.pathname === '/products' ? 'active' : ''}>Products</Link></li>
 
               <li className="has-mega-menu">
-                <Link to="/services">Services <IoIosArrowDown /></Link>
+                <Link to="/services" className={location.pathname === '/services' ? 'active' : ''}>Services <IoIosArrowDown /></Link>
                 <div className="mega-menu">
                   <div className="mega-menu-container">
                     <div className="mega-menu-grid">
@@ -110,8 +110,8 @@ const Navbar = () => {
                   </div>
                 </div>
               </li>
-              <li><Link to="/about">About us</Link></li>
-              <li><Link to="/contact">Contact</Link></li>
+              <li><Link to="/about" className={location.pathname === '/about' ? 'active' : ''}>About us</Link></li>
+              <li><Link to="/contact" className={location.pathname === '/contact' ? 'active' : ''}>Contact</Link></li>
             </ul>
           </nav>
 
@@ -139,7 +139,7 @@ const Navbar = () => {
 
       {/* Sidebar Overlay */}
       <div className={`sidebar-overlay ${isMenuOpen ? 'show' : ''}`} onClick={() => setIsMenuOpen(false)}></div>
-      
+
       {/* Sidebar Drawer */}
       <div className={`sidebar-menu ${isMenuOpen ? 'open' : ''}`}>
         <button className="sidebar-close" onClick={() => setIsMenuOpen(false)}>
@@ -148,12 +148,12 @@ const Navbar = () => {
 
         {/* On Mobile Only: Nav Links */}
         <ul className="sidebar-links">
-          <li><Link to="/" className="active" onClick={() => setIsMenuOpen(false)}>Home</Link></li>
-          <li><Link to="/projects" onClick={() => setIsMenuOpen(false)}>Projects</Link></li>
-          <li><Link to="/products" onClick={() => setIsMenuOpen(false)}>Products</Link></li>
-          <li><Link to="/services" onClick={() => setIsMenuOpen(false)}>Services</Link></li>
-          <li><Link to="/about" onClick={() => setIsMenuOpen(false)}>About us </Link></li>
-          <li><Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</Link></li>
+          <li><Link to="/" className={location.pathname === '/' ? 'active' : ''} onClick={() => setIsMenuOpen(false)}>Home</Link></li>
+          <li><Link to="/projects" className={location.pathname === '/projects' ? 'active' : ''} onClick={() => setIsMenuOpen(false)}>Projects</Link></li>
+          <li><Link to="/products" className={location.pathname === '/products' ? 'active' : ''} onClick={() => setIsMenuOpen(false)}>Products</Link></li>
+          <li><Link to="/services" className={location.pathname === '/services' ? 'active' : ''} onClick={() => setIsMenuOpen(false)}>Services</Link></li>
+          <li><Link to="/about" className={location.pathname === '/about' ? 'active' : ''} onClick={() => setIsMenuOpen(false)}>About us </Link></li>
+          <li><Link to="/contact" className={location.pathname === '/contact' ? 'active' : ''} onClick={() => setIsMenuOpen(false)}>Contact</Link></li>
         </ul>
 
         {/* On Desktop Only: Original Small Paragraph */}
@@ -165,7 +165,7 @@ const Navbar = () => {
         {/* On Desktop Only: Contact Details */}
         <div className="sidebar-contact">
           <h4>Get In Touch</h4>
-          
+
           <div className="sidebar-contact-item">
             <MdPhone className="sidebar-contact-icon" />
             <span>+91 7559080005</span>
@@ -181,9 +181,9 @@ const Navbar = () => {
           <div className="sidebar-contact-item">
             <MdLocationOn className="sidebar-contact-icon-l" />
             <span>1st Floor, Basil Building, Horse Ride Road, Opp. St. Michels Church, Westhill, Kozhikode, Kerala, 673005
-</span>
+            </span>
           </div>
-          
+
           <div className="sidebar-socials">
             <a href="#"><FaFacebookF /></a>
             <a href="#"><FaTwitter /></a>

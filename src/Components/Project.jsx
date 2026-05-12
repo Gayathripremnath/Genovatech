@@ -76,40 +76,21 @@ const Project = () => {
 
             <div className="project-card">
               <div className="project-image">
-                <img src="https://plus.unsplash.com/premium_photo-1733317248765-0b0da954e7fe?auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8QnVzaW5lc3MlMjBHcm93dGh8ZW58MHx8MHx8fDA%3D" alt="Business Growth" />
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800" alt="Market Analysis" />
               </div>
               <div className="project-info">
-                <h3>Business Growth</h3>
-                <p>Growth isn't just about getting bigger—it's about getting better. At we specialize in empowering businesses to and strategically.</p>
+                <h3>Market Analysis</h3>
+                <p>Data-driven insights to help you understand market trends and consumer behavior for better decision making.</p>
               </div>
             </div>
 
             <div className="project-card">
               <div className="project-image">
-                <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&q=80&w=800" alt="Startup Solution" />
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800" alt="Strategic Planning" />
               </div>
               <div className="project-info">
-                <h3>Startup Solution</h3>
-                <p>Growth isn't just about getting bigger—it's about getting better. At we specialize in empowering businesses to and strategically.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-      {/* Newsletter Section */}
-      <section className="project-newsletter-section">
-        <div className="container">
-          <div className="newsletter-grid">
-            <div className="newsletter-text">
-              <span className="newsletter-subtitle">Subscribe Newsletter</span>
-              <h2>Stay Updated with<br/>the Latest News!</h2>
-            </div>
-            <div className="newsletter-form-container">
-              <div className="newsletter-input-group">
-                <input type="email" placeholder="Enter Email Address" />
-                <button className="btn-subscribe">Subscribe Now</button>
+                <h3>Strategic Planning</h3>
+                <p>Developing long-term roadmaps to ensure your business remains competitive and adaptable in a changing landscape.</p>
               </div>
             </div>
           </div>

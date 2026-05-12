@@ -492,7 +492,7 @@
 
 .timeline-card:hover {
   transform: translateY(-5px);
-  background: #1a2530; /* Switch to dark bg on hover for better contrast with grayscale image */
+  background: #ff783486; /* Switch to dark bg on hover for better contrast with grayscale image */
   box-shadow: 0 30px 60px rgba(0,0,0,0.15);
 }
 

@@ -265,7 +265,7 @@
 
 .testimonial-main-card {
   background-color: #1e2433;
-  
+
   border-radius: 30px;
   padding: 80px;
   display: flex;
@@ -307,8 +307,13 @@
 }
 
 @keyframes rotateCircle {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .quote-icon-large {
@@ -388,7 +393,8 @@
 @media (max-width: 992px) {
   .testimonial-main-card {
     flex-direction: column;
-    align-items: flex-start; /* Align left instead of center */
+    align-items: flex-start;
+    /* Align left instead of center */
     padding: 50px;
     text-align: left;
     gap: 40px;
