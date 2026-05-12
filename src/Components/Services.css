@@ -186,45 +186,118 @@
 
 /* Responsive */
 @media (max-width: 1200px) {
+  .services-page {
+    padding: 120px 0 80px;
+  }
   .services-grid {
     grid-template-columns: repeat(3, 1fr);
     max-width: 1000px;
   }
+  .services-stroke-text {
+    font-size: 70px;
+  }
 }
 
 @media (max-width: 992px) {
+  .services-page {
+    padding: 100px 0 60px;
+  }
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
     max-width: 720px;
   }
-
   .tile:nth-child(4n) {
     border-right: 1px solid rgba(0,0,0,0.06);
   }
-
-  .services-quote-section blockquote {
-    font-size: 24px;
+  .tile:nth-child(2n) {
+    border-right: 0;
+  }
+  .services-title {
+    font-size: 32px;
+  }
+  .services-stroke-text {
+    font-size: 55px;
+  }
+  .testimonial-main-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50px;
+    text-align: left;
+    gap: 40px;
+  }
+  .testimonial-author-block {
+    justify-content: flex-start;
+  }
+  .testimonial-title {
+    font-size: 36px;
+  }
+  .services-testimonials {
+    padding-bottom: 40px;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  .services-page {
+    padding: 90px 0 50px;
+  }
+  .services-title {
+    font-size: 26px;
+  }
+  .services-stroke-text {
+    font-size: 40px;
+    letter-spacing: 4px;
+  }
+  .content-tile {
+    padding: 24px 20px;
+  }
+  .testimonial-main-card {
+    padding: 36px 24px;
+  }
+  .testimonial-quote {
+    font-size: 18px;
+  }
+  .testimonial-title {
+    font-size: 28px;
+  }
+  .circular-text-wrapper {
+    width: 150px;
+    height: 150px;
+  }
+  .quote-icon-large {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-page {
+    padding: 80px 0 40px;
+  }
   .services-grid {
     grid-template-columns: 1fr;
     border-right: 0;
   }
-
   .tile {
     flex-direction: column;
     border-right: 0;
+    min-height: 220px;
   }
-
-  .image-tile,
-  .content-tile {
+  .image-tile, .content-tile {
     width: 100%;
   }
-
   .services-title {
-    font-size: 28px;
+    font-size: 22px;
+  }
+  .services-stroke-text {
+    font-size: 30px;
+    letter-spacing: 2px;
+  }
+  .testimonial-badge {
+    font-size: 11px;
+    padding: 6px 16px;
+  }
+  .testimonial-title {
+    font-size: 22px;
   }
 }
 

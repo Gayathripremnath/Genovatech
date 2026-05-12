@@ -242,73 +242,78 @@
 }
 
 /* Responsive */
+@media (max-width: 1200px) {
+  .contact-header h1 {
+    font-size: 54px;
+  }
+  .contact-content {
+    gap: 60px;
+  }
+}
+
 @media (max-width: 1024px) {
   .contact-content {
     grid-template-columns: 1fr;
-    gap: 80px;
+    gap: 60px;
   }
-  
   .contact-header h1 {
     font-size: 52px;
   }
-
   .contact-header {
     text-align: center;
     margin: 0 auto 60px;
+  }
+  .email-us {
+    text-align: center;
   }
 }
 
 @media (max-width: 768px) {
   .contact-page {
-    padding: 120px 0 60px;
+    padding: 100px 0 60px;
   }
-  
   .offices-grid {
     grid-template-columns: 1fr;
-    gap: 25px;
+    gap: 20px;
   }
-  
   .contact-header h1 {
-    font-size: 38px;
+    font-size: 36px;
     letter-spacing: -1px;
   }
-  
   .pro-form .form-row {
     grid-template-columns: 1fr;
     gap: 0;
   }
-  
   .contact-form-container {
-    padding: 35px 25px;
-    border-radius: 20px;
+    padding: 30px 20px;
+    border-radius: 16px;
   }
-  
-  .email-us {
-    text-align: center;
-  }
-
   .email-us a {
-    font-size: 24px;
+    font-size: 22px;
     word-break: break-all;
   }
-
   .form-header h2 {
-    font-size: 28px;
+    font-size: 26px;
   }
 }
 
 @media (max-width: 480px) {
+  .contact-page {
+    padding: 80px 0 40px;
+  }
   .contact-header h1 {
-    font-size: 32px;
+    font-size: 28px;
+    letter-spacing: 0;
   }
-  
   .office-card {
-    padding: 25px;
+    padding: 20px;
   }
-
   .submit-btn {
-    padding: 15px;
-    font-size: 15px;
+    padding: 14px;
+    font-size: 14px;
+  }
+  .contact-form-container {
+    padding: 24px 16px;
   }
 }
 
