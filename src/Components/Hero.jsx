@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import './Hero.css';
 import { BsStars } from 'react-icons/bs';
 import { GoSun } from 'react-icons/go';
-import { FaCheckCircle } from 'react-icons/fa';
-import { FiPhoneCall, FiMonitor, FiLayers, FiSmartphone, FiTrendingUp, FiSettings, FiCheckCircle, FiUsers, FiAward, FiEye, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
+import { FaCheckCircle, FaArrowRight } from 'react-icons/fa';
+import { FiPhoneCall, FiMonitor, FiLayers, FiSmartphone, FiTrendingUp, FiSettings, FiCheckCircle, FiUsers, FiAward, FiEye, FiChevronLeft, FiChevronRight, FiTarget, FiBarChart2, FiGitBranch } from 'react-icons/fi';
 
 /* ── Reusable scroll-reveal hook ── */
 const useReveal = () => {
@@ -55,6 +55,36 @@ const Hero = () => {
     }, 4000);
     return () => clearInterval(interval);
   }, []);
+
+  /* ── High Quality Services slider ── */
+  const hqServices = [
+    {
+      icon: <FiTarget />,
+      title: 'Business Goal',
+      desc: 'We align every project with your core business objectives, delivering results that drive measurable growth and long-term value.',
+    },
+    {
+      icon: <FiBarChart2 />,
+      title: 'Business Planning',
+      desc: 'Our strategic planning process maps a clear path from concept to execution, ensuring every decision supports your vision.',
+    },
+    {
+      icon: <FiGitBranch />,
+      title: 'Process Development',
+      desc: 'We design scalable, efficient workflows and processes that empower your team to deliver consistently excellent outcomes.',
+    },
+    {
+      icon: <FiSettings />,
+      title: 'Technical Excellence',
+      desc: 'Leveraging cutting-edge technology and industry best practices to build robust, future-proof digital solutions.',
+    },
+  ];
+  const [hqIndex, setHqIndex] = useState(0);
+  const visibleCount = 3;
+  const maxIndex = hqServices.length - visibleCount;
+
+  const hqPrev = () => setHqIndex(i => Math.max(i - 1, 0));
+  const hqNext = () => setHqIndex(i => Math.min(i + 1, maxIndex));
 
 
   return (
@@ -136,6 +166,45 @@ const Hero = () => {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ── HIGH QUALITY SERVICES SECTION ── */}
+      <section className="hqs-section">
+        <div className="hqs-header">
+          <span className="hqs-tagline">OUR SERVICE</span>
+          <h2 className="hqs-title">High Quality Services</h2>
+        </div>
+
+        <div className="hqs-slider-wrapper">
+          <div
+            className="hqs-slider-track"
+            style={{ transform: `translateX(calc(-${hqIndex * (100 / visibleCount)}% - ${hqIndex * 30 / visibleCount}px))` }}
+          >
+            {hqServices.map((svc, i) => (
+              <div className="hqs-card" key={i}>
+                <div className="hqs-card-icon">{svc.icon}</div>
+                <h3 className="hqs-card-title">{svc.title}</h3>
+                <p className="hqs-card-desc">{svc.desc}</p>
+                <button className="hqs-read-more">
+                  <span className="hqs-arrow-circle"><FaArrowRight /></span>
+                  Read More
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Pagination dots */}
+        <div className="hqs-dots">
+          {Array.from({ length: maxIndex + 1 }).map((_, i) => (
+            <button
+              key={i}
+              className={`hqs-dot${hqIndex === i ? ' active' : ''}`}
+              onClick={() => setHqIndex(i)}
+              aria-label={`Go to slide ${i + 1}`}
+            />
+          ))}
         </div>
       </section>
 
