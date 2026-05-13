@@ -9,10 +9,7 @@ import panorma from '../assets/interactive.jpg';
 import hosting from '../assets/hosting.jpg';
 
 const Services = () => {
-  // 4 columns per row, alternating pattern across rows:
-  // Row1: image, content, image, content
-  // Row2: content, image, content, image
-  // Row3: image, content, image, content
+
   const tiles = [
     { type: 'image', image: webDesignImg },
     { type: 'content', title: 'Business Solution', desc: 'Fusce dignissim erat dis proin ornare class sem nibh', slug: 'business-solution' },
