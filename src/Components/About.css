@@ -351,6 +351,20 @@
     left: -10px;
     top: auto;
   }
+
+  .image-card {
+    transform: none;
+  }
+
+  .experience-badge {
+    padding: 20px;
+    bottom: 30px;
+    right: 0;
+  }
+
+  .experience-badge .years {
+    font-size: 32px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -390,6 +404,20 @@
     grid-template-columns: 1fr;
     gap: 60px;
   }
+
+  .image-card img {
+    height: 400px;
+  }
+
+  .experience-badge {
+    bottom: 20px;
+    right: 20px;
+    padding: 15px 25px;
+  }
+
+  .experience-badge .years {
+    font-size: 28px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -408,6 +436,24 @@
 
   .modern-stats-grid {
     grid-template-columns: 1fr;
+  }
+
+  .image-card img {
+    height: 300px;
+  }
+
+  .experience-badge {
+    padding: 12px 20px;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .experience-badge .years {
+    font-size: 24px;
+  }
+
+  .experience-badge .label {
+    font-size: 10px;
   }
 }
 
