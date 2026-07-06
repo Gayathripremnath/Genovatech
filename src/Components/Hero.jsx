@@ -196,8 +196,9 @@ const Hero = () => {
           </h1>
 
           <p className="hero-description">
-            Porttitor ornare fermentum aliquam pharetra facilisis gravida risus suscipit<br />
-            Dui feugiat fusce conubia ridiculus tristique parturient
+            Building innovative digital experiences with modern technology.<br />
+Helping businesses grow through creative and reliable solutions.
+
           </p>
 
           <Link to="/projects" className="btn-explore">
@@ -218,7 +219,7 @@ const Hero = () => {
               />
             </div>
             <div className="experience-badge reveal pop" ref={badgeRef}>
-              <h2>13+</h2>
+              <h2>14</h2>
               <p>Years of experience</p>
             </div>
             <div className="floating-image reveal fade-up" ref={floatImgRef}>
@@ -236,16 +237,14 @@ const Hero = () => {
             </div>
             <h2 className="about-title">Who We Are</h2>
             <p className="about-description">
-              One of the leading Web Engineering Company in India &amp; Kuwait with over 13 years
-              of experience in this field and innumerable satisfied customers worldwide.
-              <br /><br />
-              <strong><em>"We understand that 'Design is not what it just looks like and feels like,
-                design is how it works' — Steve Jobs"</em></strong>
+              Genova Technologies is a leading web engineering and digital solutions company with operations in India and Kuwait. With over 14 years of experience, we have been helping businesses transform their ideas into innovative digital solutions through cutting-edge technology, creative design, and reliable development services.
+
+Driven by a team of passionate professionals, we are committed to delivering high-quality, user-focused solutions that create lasting value. At Genova Technologies, we believe that great design is not just about appearance—it's about creating experiences that work seamlessly and help businesses grow.
             </p>
             <ul className="about-list">
               <li><FaCheckCircle className="check-icon" /><span>Web Design &amp; Development</span></li>
               <li><FaCheckCircle className="check-icon" /><span>Expert &amp; Experienced Team</span></li>
-              <li><FaCheckCircle className="check-icon" /><span>13+ Years of Industry Excellence</span></li>
+              <li><FaCheckCircle className="check-icon" /><span>14 Years of Industry Excellence</span></li>
             </ul>
             <div className="about-contact-area">
               <div className="contact-box">
@@ -276,8 +275,8 @@ const Hero = () => {
               <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800" alt="Business Growth" />
             </div>
             <div className="smc-content">
-              <h3>Business Growth</h3>
-              <p>Business Strategy</p>
+              <h3>WEB DEVELOPMENT</h3>
+              <p>Creative Design</p>
             </div>
           </div>
 
@@ -286,8 +285,8 @@ const Hero = () => {
               <img src="https://plus.unsplash.com/premium_photo-1661304699559-36faef43655b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHRlYW1zJTIwd29ya3xlbnwwfHwwfHx8MA%3D%3D" alt="Startup Solution" />
             </div>
             <div className="smc-content">
-              <h3>Startup Solution</h3>
-              <p>Business Strategy</p>
+              <h3>WEB APPLICATIONS</h3>
+              <p>Custom web applications</p>
             </div>
           </div>
 
@@ -296,8 +295,8 @@ const Hero = () => {
               <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=800" alt="Growth Manage" />
             </div>
             <div className="smc-content">
-              <h3>Growth Manage</h3>
-              <p>Business Strategy</p>
+              <h3>MOBILE APPLICATIONS</h3>
+              <p>Native and cross-platform mobile apps</p>
             </div>
           </div>
 
@@ -306,8 +305,8 @@ const Hero = () => {
               <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800" alt="Company Skills" />
             </div>
             <div className="smc-content">
-              <h3>Company Skills</h3>
-              <p>Business Strategy</p>
+              <h3>DIGITAL MARKETING</h3>
+              <p>Digital technology</p>
             </div>
           </div>
         </div>

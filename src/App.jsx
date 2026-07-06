@@ -19,7 +19,7 @@ import ServiceDetails from './Components/Service-details';
 // Basic Placeholder Page Components for routing purposes
 const Clients = () => <div style={{ padding: '150px 20px', textAlign: 'center' }}><h1>Clients Page</h1></div>;
 
-function App() {
+function App() { 
   return (
     <Router>
       <ScrollToTop />
@@ -32,7 +32,7 @@ function App() {
           <Route path="/projects" element={<Project />} />
           <Route path="/products" element={<Products />} />
           <Route path="/product-details/:id" element={<ProductDetails />} />
-          <Route path="/services" element={<Services />} />
+          <Route path="/services" element={<Services />} />c
           <Route path="/service-details/:slug" element={<ServiceDetails />} />
           <Route path="/clients" element={<Clients />} />
           <Route path="/about" element={<About />} />

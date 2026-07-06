@@ -16,7 +16,7 @@ const serviceData = {
     heroImg: heroBg,
     desc: 'Intrinsicly coordinate multifunctional functionalities reliable potentialities. Objectively envisioneer high in convergence through collaborative networks. Interactively generate B2C e-tailers for business data restore fully researched relationships through resource maximizing results.',
     subTitle: 'Business Growth Management',
-    subDesc: 'We help businesses scale with tailored digital strategies, robust web platforms, and data-driven insights that drive measurable growth.',
+    subDesc: 'We empower businesses with innovative digital solutions, strategic web development, and technology-driven services that accelerate growth and strengthen online presence.',
     contentImg: webDesignImg,
   },
   'marketing-solution': {

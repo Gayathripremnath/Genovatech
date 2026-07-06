@@ -42,8 +42,7 @@ const About = () => {
             <div className="journey-content">
               <h2 className="journey-title">Our Journey: From Vision to Reality, and Beyond.</h2>
               <p className="journey-description">
-                Dabus nisl aliquet congue tellus nascetur lectus sagpien mattis arcu dictums
-                augue volutpat felis etiam
+                Over the past 14 years, Genova Technologies has grown from a passionate vision into a trusted web engineering and digital solutions company, serving clients across India, Kuwait, and beyond.
               </p>
               <div className="journey-decorative">
                 <svg width="250" height="400" viewBox="0 0 250 500" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -59,23 +58,23 @@ const About = () => {
                   <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=600" alt="Office" />
                 </div>
                 <div className="timeline-card-header">
-                  <h3>Elevate Web Design</h3>
+                  <h3>The Beginning</h3>
                   <div className="timeline-line"></div>
-                  <span className="year">2022</span>
+                  <span className="year">2012</span>
                 </div>
-                <p>Neque partrient sed nascetur facilisis suscipit ridiculus magna lobortis imperdiet vivamus est aliquam euismod nector quam convallis ornare justo service visionary sources unleash online</p>
-              </div>
+                  <p>Genova Technologies was established with a vision to deliver innovative, reliable, and customer-focused web solutions</p>
+                </div>
 
               <div className="timeline-card">
                 <div className="card-bg">
                   <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=600" alt="Workspace" />
                 </div>
                 <div className="timeline-card-header">
-                  <h3>WebFoundry Solutions</h3>
+                  <h3>Expanding Horizons</h3>
                   <div className="timeline-line"></div>
-                  <span className="year">2020</span>
+                  <span className="year">2016</span>
                 </div>
-                <p>Neque partrient sed nascetur facilisis suscipit ridiculus magna lobortis imperdiet vivamus est aliquam euismod nector quam convallis ornare justo service visionary sources unleash online</p>
+                <p>Genova Technologies expanded its services and capabilities, establishing itself as a leading web engineering company in India and Kuwait.</p>
               </div>
 
               <div className="timeline-card">
@@ -83,11 +82,11 @@ const About = () => {
                   <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=600" alt="Team" />
                 </div>
                 <div className="timeline-card-header">
-                  <h3>BrightPath Creations</h3>
+                  <h3>Global Presence</h3>
                   <div className="timeline-line"></div>
-                  <span className="year">2016</span>
+                  <span className="year">2020</span>
                 </div>
-                <p>Neque partrient sed nascetur facilisis suscipit ridiculus magna lobortis imperdiet vivamus est aliquam euismod nector quam convallis ornare justo service visionary sources unleash online</p>
+                <p>Extended our operations internationally, building long-term partnerships and delivering cutting-edge digital solutions.</p>
               </div>
 
               <div className="timeline-card">
@@ -95,11 +94,11 @@ const About = () => {
                   <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=600" alt="Meeting" />
                 </div>
                 <div className="timeline-card-header">
-                  <h3>BoldFrame Designs</h3>
+                  <h3>Future Ready</h3>
                   <div className="timeline-line"></div>
-                  <span className="year">2010</span>
+                  <span className="year">2026</span>
                 </div>
-                <p>Neque partrient sed nascetur facilisis suscipit ridiculus magna lobortis imperdiet vivamus est aliquam euismod nector quam convallis ornare justo service visionary sources unleash online</p>
+                <p>Continuing to innovate with modern technologies, empowering businesses with scalable, secure, and high-performance digital experiences.</p>
               </div>
             </div>
           </div>
@@ -114,21 +113,18 @@ const About = () => {
               <span className="subtitle">Who We Are</span>
               <h2>Crafting Digital Excellence Since 2013.</h2>
               <p className="lead">
-                One of the leading Web Engineering Companies in India & Kuwait with over 13 years of experience, 
-                bringing to the fore the uniqueness of technology integrated with customer satisfaction.
+                Genova Technologies is a leading Web Engineering Company in India and Kuwait with over 14 years of experience, delivering innovative digital solutions that combine technology, creativity, and customer satisfaction.
+
+Our team of skilled designers, developers, strategists, and project managers works together to create high-quality, scalable, and user-focused digital experiences that help businesses succeed.
+
+
               </p>
               
               <div className="hero-highlights">
-                <p>
-                  Our dedicated team consists of <strong>designers, developers, coders, and senior managers</strong> 
-                  who contribute to our growth with innovative ideas and seasoned experience.
-                </p>
-                <div className="highlight-tags">
-                  <span>Design</span>
-                  <span>Development</span>
-                  <span>Strategy</span>
-                  <span>Management</span>
-                </div>
+                <p style={{color:'black',gap:'30'}} ><strong>
+                  Design • Development • Strategy • Management
+                </strong></p>
+                
               </div>
             </div>
             <div className="hero-image-wrapper">
