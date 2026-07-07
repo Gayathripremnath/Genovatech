@@ -172,7 +172,7 @@ const Navbar = () => {
           </div>
           <div className="sidebar-contact-item">
             <MdOutlineEmail className="sidebar-contact-icon" />
-            <span>example@gmail.com</span>
+            <span>info@genovatechnologies.com</span>
           </div>
           <div className="sidebar-contact-item">
             <TbWorld className="sidebar-contact-icon" />

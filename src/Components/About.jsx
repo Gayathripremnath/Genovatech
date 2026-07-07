@@ -131,7 +131,7 @@ Our team of skilled designers, developers, strategists, and project managers wor
               <div className="image-card">
                 <img src={aboutHeroImg} alt="Our modern workspace" />
                 <div className="experience-badge">
-                  <span className="years">13+</span>
+                  <span className="years">14</span>
                   <span className="label">Years of Mastery</span>
                 </div>
               </div>

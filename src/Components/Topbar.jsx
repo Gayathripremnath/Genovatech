@@ -14,7 +14,9 @@ const Topbar = () => {
         <div className="topbar-right">
           <div className="topbar-item">
             <MdOutlineEmail className="topbar-icon" />
-            <span>[genovatechnology]</span>
+            <span>info@genovatechnologies.com
+
+</span>
           </div>
           <div className="topbar-divider"></div>
           <div className="topbar-item">

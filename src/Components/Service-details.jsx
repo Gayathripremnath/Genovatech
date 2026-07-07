@@ -137,7 +137,7 @@ const ServiceDetails = () => {
             </div>
           </div> < br/> <br/>
 
-          <p>Phosfluorescently maintain wireless scenarios after intermandated applications. Conveniently unique predominate revolutionary quality vectors through future-proof manufactured products. Objectively envisioneer high solution convergence through collaborative networks. Interactively generate B2C e-tailers for business data restore fully researched relationships through resource maximizing results.</p>
+          {/* <p>Phosfluorescently maintain wireless scenarios after intermandated applications. Conveniently unique predominate revolutionary quality vectors through future-proof manufactured products. Objectively envisioneer high solution convergence through collaborative networks. Interactively generate B2C e-tailers for business data restore fully researched relationships through resource maximizing results.</p> */}
 
         </div>
 
