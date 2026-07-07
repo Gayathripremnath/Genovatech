@@ -81,7 +81,7 @@ const Hero = () => {
   const testimonials = [
     {
       image: williamAvatar,
-      quote: "I can't recommend Genovatech enough. Their professional approach and innovative solutions have transformed how we operate. It's a true partnership that delivers consistent value.",
+      quote: "Working with Genova Technologies was an excellent experience. Their team understood our requirements, delivered the project on time, and provided innovative solutions that exceeded our expectations. Highly recommended for reliable digital services.",
       author: "William Henry",
       role: "Designer at Vertex Agency"
     },

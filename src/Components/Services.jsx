@@ -12,19 +12,19 @@ const Services = () => {
 
   const tiles = [
     { type: 'image', image: webDesignImg },
-    { type: 'content', title: 'Business Solution', desc: 'Fusce dignissim erat dis proin ornare class sem nibh', slug: 'business-solution' },
+    { type: 'content', title: 'Business Solution', desc: 'Smart digital solutions for modern business growth.', slug: 'business-solution' },
     { type: 'image', image: seoImg },
-    { type: 'content', title: 'Marketing Solution', desc: 'Fusce dignissim erat dis proin ornare class sem nibh', slug: 'marketing-solution' },
+    { type: 'content', title: 'Marketing Solution', desc: 'Boost your brand with result-driven digital marketing.', slug: 'marketing-solution' },
 
-    { type: 'content', title: 'Agency Marketing', desc: 'Fusce dignissim erat dis proin ornare class sem nibh', slug: 'agency-marketing' },
+    { type: 'content', title: 'Agency Marketing', desc: 'Creative strategies that drive business success.', slug: 'agency-marketing' },
     { type: 'image', image: mobileAppImg },
-    { type: 'content', title: 'Business Marketing', desc: 'Fusce dignissim erat dis proin ornare class sem nibh', slug: 'business-marketing' },
+    { type: 'content', title: 'Business Marketing', desc: 'Helping businesses grow through smart digital strategies.', slug: 'business-marketing' },
     { type: 'image', image: ecommerceImg },
 
     { type: 'image', image: panorma },
-    { type: 'content', title: 'Interactive 360° Panoramas', desc: 'Fusce dignissim erat dis proin ornare class sem nibh', slug: 'interactive-panoramas' },
+    { type: 'content', title: 'Interactive 360° Panoramas', desc: 'Explore immersive 360° virtual experiences with ease.', slug: 'interactive-panoramas' },
     { type: 'image', image: hosting },
-    { type: 'content', title: 'Domain & Webhosting', desc: 'Fusce dignissim erat dis proin ornare class sem nibh', slug: 'domain-hosting' }
+    { type: 'content', title: 'Domain & Webhosting', desc: 'Reliable domain registration and secure web hosting services.', slug: 'domain-hosting' }
   ];
 
   return (

@@ -14,7 +14,7 @@ const serviceData = {
   'business-solution': {
     title: 'Business Solution',
     heroImg: heroBg,
-    desc: 'Intrinsicly coordinate multifunctional functionalities reliable potentialities. Objectively envisioneer high in convergence through collaborative networks. Interactively generate B2C e-tailers for business data restore fully researched relationships through resource maximizing results.',
+    desc: 'Delivering innovative digital solutions that drive business growth and digital transformation. Combining creativity, technology, and expertise to build secure, scalable, and high-performance solutions for every business.',
     subTitle: 'Business Growth Management',
     subDesc: 'We empower businesses with innovative digital solutions, strategic web development, and technology-driven services that accelerate growth and strengthen online presence.',
     contentImg: webDesignImg,
@@ -22,41 +22,41 @@ const serviceData = {
   'marketing-solution': {
     title: 'Marketing Solution',
     heroImg: heroBg,
-    desc: 'Proactively restore professional data and multimedia based collaboration and idea sharing. Credibly top line deliverables and cross platform manufactured products. Dramatically facilitate enabled value with seamless growth strategies.',
+    desc: 'Empowering brands with innovative digital marketing strategies that increase visibility, engage audiences, and drive measurable business growth.',
     subTitle: 'Digital Marketing Growth',
-    subDesc: 'From SEO to paid campaigns, we craft marketing strategies that increase visibility, generate leads, and convert prospects into loyal customers.',
+    subDesc: 'Helping businesses grow through SEO, social media marketing, branding, and result driven digital campaigns. Creating powerful online strategies that increase brand awareness, generate quality leads, improve customer engagement, and deliver measurable business growth.F',
     contentImg: seoImg,
   },
   'agency-marketing': {
     title: 'Agency Marketing',
     heroImg: heroBg,
-    desc: 'Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.',
+    desc: 'Our agency delivers creative marketing solutions that strengthen brand identity, increase online visibility, and connect businesses with their target audience. Through innovative strategies and data driven campaigns, we help brands achieve sustainable growth and long term success.',
     subTitle: 'Full-Service Agency Solutions',
-    subDesc: 'Our agency marketing services cover brand identity, content creation, social media management, and performance analytics for maximum impact.',
+    subDesc: 'Our agency marketing services include brand strategy, creative design, content creation, social media management, SEO, and performance marketing to maximize reach, engagement, and business growth.',
     contentImg: mobileAppImg,
   },
   'business-marketing': {
     title: 'Business Marketing',
     heroImg: heroBg,
-    desc: 'Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions.',
+    desc: 'Our business marketing solutions combine strategic planning, digital innovation, and data driven campaigns to strengthen your brand, attract new customers, and drive sustainable business growth.',
     subTitle: 'Strategic Business Marketing',
-    subDesc: 'We align your marketing efforts with your business goals, ensuring every campaign delivers tangible results and a strong return on investment.',
+    subDesc: 'Helping businesses grow through targeted marketing strategies that increase brand visibility, attract customers, and deliver measurable results.',
     contentImg: ecommerceImg,
   },
   'interactive-panoramas': {
     title: 'Interactive 360° Panoramas',
     heroImg: heroBg,
-    desc: 'Bring your spaces to life with immersive 360° virtual tours. Objectively innovate empowered manufactured products whereas parallel platforms. Holisticly predominate extensible testing procedures for reliable supply chains.',
+    desc: 'Showcase your business with immersive 360° virtual tours that provide engaging, interactive experiences. Allow customers to explore your spaces anytime, anywhere with high quality panoramic views.',
     subTitle: 'Immersive Virtual Experiences',
-    subDesc: 'Our interactive panorama solutions let your audience explore spaces virtually, boosting engagement for real estate, tourism, and events.',
+    subDesc: 'Create engaging 360° virtual tours that allow customers to explore your business, properties, or facilities from anywhere, delivering an interactive and memorable digital experience.',
     contentImg: panormaImg,
   },
   'domain-hosting': {
     title: 'Domain & Webhosting',
     heroImg: heroBg,
-    desc: 'Reliably innovate granular internal or organic sources whereas high standards in web-readiness. Energistically scale future-proof core competencies vis-a-vis impactful experiences. Dramatically synthesize integrated schemas with optimal networks.',
+    desc: 'Secure your online presence with reliable domain registration and high performance web hosting. Our hosting solutions provide speed, security, scalability, and maximum uptime to keep your website running smoothly.',
     subTitle: 'Reliable Hosting Infrastructure',
-    subDesc: 'We provide fast, secure, and scalable hosting solutions with 99.9% uptime guarantees, SSL certificates, and 24/7 technical support.',
+    subDesc: 'Power your website with secure, high speed hosting, reliable uptime, advanced security, and dedicated support for seamless online performance.',
     contentImg: hostingImg,
   },
 };
@@ -96,7 +96,7 @@ const ServiceDetails = () => {
           <img src="https://plus.unsplash.com/premium_photo-1690303193705-eec163806599?q=80&w=684&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt={service.title} className="sd-main-img" />
           <h2>{service.subTitle}</h2>
           <p>{service.subDesc}</p>
-          <p>Intrinsicly coordinate multifunctional functionalities reliable potentialities. Objectively envisioneer high in convergence through collaborative networks. Interactively generate B2C e-tailers for business data restore fully researched relationships through resource maximizing results.</p>
+          <p>We create innovative marketing strategies that connect businesses with the right audience through SEO, social media, content marketing, and paid advertising. Our goal is to increase brand visibility, generate quality leads, and deliver measurable results that support long term business growth</p>
 
           <div className="sd-features">
             <div className="sd-feature-item">
