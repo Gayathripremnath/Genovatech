@@ -21,7 +21,7 @@ const Topbar = () => {
           <div className="topbar-divider"></div>
           <div className="topbar-item">
             <MdPhone className="topbar-icon" />
-            <span>Hotline: +91 7559080005</span>
+            <a href="tel:+917559080005">Hotline: +91 7559080005</a>
           </div>
         </div>
       </div>
