@@ -74,7 +74,7 @@ const Navbar = () => {
                       <div className="mega-menu-item">
                         <div className="mega-menu-icon"><PiHandshakeLight /></div>
                         <div className="mega-menu-info">
-                          <h4>Structural Engineering</h4>
+                          <h4>Web Development</h4>
                           <p>We provide best IT solutions for any type of business.</p>
                         </div>
                       </div>
@@ -88,8 +88,8 @@ const Navbar = () => {
                       <div className="mega-menu-item">
                         <div className="mega-menu-icon"><PiGearLight /></div>
                         <div className="mega-menu-info">
-                          <h4>Post-Construction</h4>
-                          <p>We provide best IT solutions for any type of business as.</p>
+                          <h4>Mobile App Development</h4>
+                          <p>Powerful Android and iOS applications tailored to your business needs.</p>
                         </div>
                       </div>
                       <div className="mega-menu-item">
