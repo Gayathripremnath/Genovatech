@@ -82,7 +82,7 @@ const Navbar = () => {
                         <div className="mega-menu-icon"><PiLightbulbLight /></div>
                         <div className="mega-menu-info">
                           <h4>Creative Ideas</h4>
-                          <p>Quis nulla blandit vulputate morbi adipiscing sem vestibulum. Nulla turpis...</p>
+                          <p>Innovative concepts and creative solutions tailored to your business success.</p>
                         </div>
                       </div>
                       <div className="mega-menu-item">
@@ -96,7 +96,7 @@ const Navbar = () => {
                         <div className="mega-menu-icon"><PiMagnifyingGlassLight /></div>
                         <div className="mega-menu-info">
                           <h4>Market Research</h4>
-                          <p>Elever Architecture is a New-York-based studio on modern...</p>
+                          <p>Data driven insights and market analysis to support smarter business decisions.</p>
                         </div>
                       </div>
                       <div className="mega-menu-cta">
