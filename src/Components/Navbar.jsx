@@ -168,15 +168,25 @@ const Navbar = () => {
 
           <div className="sidebar-contact-item">
             <MdPhone className="sidebar-contact-icon" />
-            <span>+91 7559080005</span>
+            <a href="tel:+917559080005">
+  <span>+91 7559080005</span>
+</a>
           </div>
           <div className="sidebar-contact-item">
             <MdOutlineEmail className="sidebar-contact-icon" />
-            <span>info@genovatechnologies.com</span>
+            <a href="mailto:info@genovatechnologies.com">
+  <span>info@genovatechnologies.com</span>
+</a>
           </div>
           <div className="sidebar-contact-item">
             <TbWorld className="sidebar-contact-icon" />
-            <span>www.webexample.com</span>
+            <a
+  href="https://www.genovatechnologies.com/"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <span>www.genovatechnologies.com</span>
+</a>
           </div>
           <div className="sidebar-contact-item">
             <MdLocationOn className="sidebar-contact-icon-l" />
