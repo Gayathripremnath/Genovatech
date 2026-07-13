@@ -1,5 +1,9 @@
 import React from 'react';
 import './Project.css';
+import sasthapuri from '../assets/sasthapuri.png'; 
+import smart from '../assets/smart.png';
+import mss from '../assets/mss.png';
+import akwrf from '../assets/akwrf.png';
 
 const Project = () => {
   return (
@@ -35,43 +39,72 @@ const Project = () => {
             {/* Row 1 */}
             <div className="project-card">
               <div className="project-image">
-                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=800" alt="Business Growth" />
+                <img src={sasthapuri} alt="Sasthapuri Luxury Hotel " />
               </div>
               <div className="project-info">
-                <h3>Business Growth</h3>
-                <p>Growth isn't just about getting bigger—it's about getting better. At we specialize in empowering businesses to and strategically.</p>
+                <h3>Sasthaprui Luxury Hotel</h3>
+                <p>Sasthapuri Hotel in Kozhikode offers comfortable stays, warm hospitality, and quality service, making it an ideal choice for business and leisure travelers.</p>
               </div>
+               <a
+    href="https://sasthapuri.com"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    https://sasthapuri.com
+  </a>
             </div>
 
             <div className="project-card">
               <div className="project-image">
-                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800" alt="Startup Solution" />
+                <img src={smart} alt="Startup Solution" />
               </div>
               <div className="project-info">
-                <h3>Startup Solution</h3>
-                <p>Growth isn't just about getting bigger—it's about getting better. At we specialize in empowering businesses to and strategically.</p>
+                <h3>Smart Builders</h3>
+                <p>Smart Build is a construction management platform that simplifies project planning, tracking, and team collaboration.</p>
               </div>
+                <a
+    href="https://smartbuildapp.com"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    https://smartbuildapp.com
+  </a>
             </div>
 
             <div className="project-card">
               <div className="project-image">
-                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800" alt="Growth Manage" />
+                <img src={mss} alt="Growth Manage" />
               </div>
               <div className="project-info">
-                <h3>Growth Manage</h3>
-                <p>Growth isn't just about getting bigger—it's about getting better. At we specialize in empowering businesses to and strategically.</p>
+                <h3>M.S.S Public School</h3>
+                <p>M.S.S. Public School is a CBSE school in Kozhikode focused on academic excellence, holistic development, and quality education.</p>
               </div>
+              <a
+    href="https://msspublicschool.org"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    https://msspublicschool.org
+  </a>
             </div>
 
             {/* Row 2 */}
             <div className="project-card">
               <div className="project-image">
-                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800" alt="Company Skills" />
+                <img src={akwrf} alt="Company Skills" />
               </div>
               <div className="project-info">
-                <h3>Company Skills</h3>
-                <p>Growth isn't just about getting bigger—it's about getting better. At we specialize in empowering businesses to and strategically.</p>
+                <h3>AKWRF Kerala</h3>
+                <p>AKWRF Kerala is a platform showcasing the organization's welfare programs, services, and community development initiatives across Kerala.</p>
               </div>
+              <a
+    href="https://www.akwrfkerala.com/index.php"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="project-url"
+  >
+    https://www.akwrfkerala.com/index.php
+  </a>
             </div>
 
             <div className="project-card">
