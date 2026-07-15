@@ -10,6 +10,16 @@ import ema2 from '../assets/EMA2.png'
 import vma from '../assets/VMA.png'
 import vma1 from '../assets/VMA1.png'
 import vma2 from '../assets/VMA2.png'
+import cma from '../assets/CMA.png'
+import cma1 from '../assets/CMA1.png'
+import cma2 from '../assets/CMA2.png'
+import ima from '../assets/IMA.png'
+import ima1 from '../assets/IMA1.png'
+import ima2 from '../assets/IMA2.png'
+import hma from '../assets/HMA.png'
+import hma1 from '../assets/HMA1.png'
+import hma2 from '../assets/HMA2.png'
+
 
 const productDetailsData = {
   'SMA': {
@@ -60,9 +70,9 @@ const productDetailsData = {
     duration: '10 Months',
     price: 'Custom',
     description: 'Simplify contract lifecycle management from creation and negotiation to execution and renewal.',
-    mainImg: 'https://images.unsplash.com/photo-1621331122533-465bdcfa6e01?w=1200&auto=format',
-    subImg1: 'https://images.unsplash.com/photo-1572635196237-14b3f281503f?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    subImg2: 'https://images.unsplash.com/photo-1612479121907-15bca39a5388?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHx8',
+    mainImg: cma,
+    subImg1: cma1,
+    subImg2: cma2,
   },
   'IMA': {
     name: 'Inventory Management App',
@@ -73,9 +83,9 @@ const productDetailsData = {
     duration: '10 Months',
     price: 'Custom',
     description: 'Optimize your supply chain with real-time inventory tracking, automated reordering, and warehouse management.',
-    mainImg: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&auto=format',
-    subImg1: 'https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&q=60',
-    subImg2: 'https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&q=60',
+    mainImg: ima,
+    subImg1: ima1,
+    subImg2: ima2,
   },
   'HMA': {
     name: 'Hospital Management App',
@@ -86,9 +96,9 @@ const productDetailsData = {
     duration: '14 Months',
     price: 'Custom',
     description: 'A complete digital transformation for healthcare providers, managing patient records, appointments, and billing.',
-    mainImg: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1200&auto=format',
-    subImg1: 'https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=60',
-    subImg2: 'https://images.unsplash.com/photo-1538108149393-fdfd81895907?auto=format&fit=crop&q=60',
+    mainImg: hma,
+    subImg1: hma1,
+    subImg2: hma2,
   }
 };
 
