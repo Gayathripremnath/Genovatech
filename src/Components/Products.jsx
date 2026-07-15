@@ -1,25 +1,28 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './Products.css';
+import sma from '../assets/SMA.png'
+import ema from '../assets/EMA.png'
+import vma from '../assets/VMA.png'
 
 const productData = [
   {
     id: 1,
     name: "School Management App",
     shortName: "SMA",
-    img: "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHByb2R1Y3RzfGVufDB8fDB8fHww",
+    img: sma,
   },
   {
     id: 2,
     name: "Vehicle Management App",
     shortName: "VMA",
-    img: "https://images.unsplash.com/photo-1638803782506-d975a6809f43?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDk3fHx8ZW58MHx8fHx8",
+    img: vma,
   },
   {
     id: 3,
     name: "Enquiry Management App",
     shortName: "EMA",
-    img: "https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cHJvZHVjdHN8ZW58MHx8MHx8fDA%3D",
+    img: ema,
   },
   {
     id: 4,

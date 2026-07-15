@@ -1,6 +1,15 @@
 import React from 'react';
 import './Product-details.css';
 import { useParams, Link } from 'react-router-dom';
+import sma from '../assets/SMA.png'
+import sma1 from '../assets/SMA1.png'
+import sma2 from '../assets/SMA2.png'
+import ema from '../assets/EMA.png'
+import ema1 from '../assets/EMA1.png'
+import ema2 from '../assets/EMA2.png'
+import vma from '../assets/VMA.png'
+import vma1 from '../assets/VMA1.png'
+import vma2 from '../assets/VMA2.png'
 
 const productDetailsData = {
   'SMA': {
@@ -12,9 +21,9 @@ const productDetailsData = {
     duration: '12 Months',
     price: 'Custom',
     description: 'A comprehensive solution for educational institutions to manage students, staff, and administrative tasks efficiently.',
-    mainImg: 'https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=1200&auto=format',
-    subImg1: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDI1fHx8ZW58MHx8fHx8',
-    subImg2: 'https://images.unsplash.com/photo-1687511529800-96d05873c08a?auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDQ3fHx8ZW58MHx8fHx8',
+    mainImg: sma,
+    subImg1: sma1,
+    subImg2: sma2,
   },
   'VMA': {
     name: 'Vehicle Management App',
@@ -25,9 +34,9 @@ const productDetailsData = {
     duration: '8 Months',
     price: 'Custom',
     description: 'Streamline your fleet operations with real-time tracking, maintenance scheduling, and driver management.',
-    mainImg: 'https://images.unsplash.com/photo-1638803782506-d975a6809f43?w=1200&auto=format',
-    subImg1: 'https://images.unsplash.com/photo-1505740106531-4243f3831c78?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    subImg2: 'https://images.unsplash.com/photo-1613040809024-b4ef7ba99bc3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fHw%3D',
+    mainImg: vma,
+    subImg1: vma1,
+    subImg2: vma2,
   },
   'EMA': {
     name: 'Enquiry Management App',
@@ -38,9 +47,9 @@ const productDetailsData = {
     duration: '6 Months',
     price: 'Custom',
     description: 'Capture and manage leads effectively to improve conversion rates and customer engagement.',
-    mainImg: 'https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=1200&auto=format',
-    subImg1: 'https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzh8fHByb2R1Y3RzfGVufDB8fDB8fHww',
-    subImg2: 'https://images.unsplash.com/photo-1673453071000-8620d5f9dbae?auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEzfHx8ZW58MHx8fHx8',
+    mainImg: ema,
+    subImg1: ema1,
+    subImg2: ema2,
   },
   'CMA': {
     name: 'Contract Management App',

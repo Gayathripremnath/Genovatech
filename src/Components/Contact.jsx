@@ -78,6 +78,7 @@ const Contact = () => {
           {/* Right: Get in Touch Form */}
           <div className="contact-form-container">
             <div className="form-header">
+              
               <h2>Get in Touch</h2>
               <p>Have a project in mind? Fill out the form below and let's get started.</p>
             </div>

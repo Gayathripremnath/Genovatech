@@ -128,8 +128,11 @@ const Navbar = () => {
                 </span>
               </span>
             </button>
-            <button className="btn-book">Book a Meeting</button>
-            <button className="btn-menu" onClick={() => setIsMenuOpen(true)}>
+<Link to="/contact">
+  <button className="btn-book">Book a Meeting</button>
+</Link>  
+  
+        <button className="btn-menu" onClick={() => setIsMenuOpen(true)}>
               <HiOutlineMenuAlt3 />
             </button>
           </div>
