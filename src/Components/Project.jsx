@@ -32,7 +32,6 @@ const Project = () => {
               <span className="subtitle">CASE STUDIES</span>
               <h2>Specialist Business Cases</h2>
             </div>
-            <button className="btn-view-project">View Project</button>
           </div>
 
           <div className="projects-grid">

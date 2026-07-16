@@ -7,7 +7,8 @@ import {
   FaInstagram, 
   FaMapMarkerAlt, 
   FaPhoneAlt, 
-  FaRegEnvelope 
+  FaRegEnvelope, 
+  FaYoutube
 } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
@@ -22,11 +23,13 @@ const Footer = () => {
             <div className="footer-col branding-col">
               <h2 className="footer-cta-title">Ready To<br />Work With Us?</h2>
               <p className="footer-about-text">
-                Partner with us to transform your ideas into powerful digital experiences. Let's create something extraordinary together.
+                Whether you're launching a startup or scaling an enterprise, we're ready to build powerful web and mobile applications that help your business succeed in the digital world.
               </p>
               <div className="social-links">
                  <a href="https://www.facebook.com/Genova-Technologies-Pvt-Ltd" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
                 <a href="https://www.instagram.com/genovatechnologies_pvt_ltd/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+                <a href="https://www.linkedin.com/company/genova-technologies/" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>
+                <a href="https://www.linkedin.com/company/genova-technologies/" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /></a>
               </div>
             </div>
 
@@ -59,20 +62,13 @@ const Footer = () => {
             <div className="footer-col contact-col">
               <h3 className="footer-title">Contact Us</h3>
               <ul className="footer-contact-info">
-                <li>
-                  <FaMapMarkerAlt className="contact-icon" />
-                  <span>1st Floor, Basil Building, Horse Ride Road, Opp. St. Michels Church, Westhill, Kozhikode, Kerala, 673005</span>
-                </li>
-                <li>
-                  <span className="gstin-label">GSTIN:</span>
-                  <span>32AKLPL0387L1ZW</span>
-                </li>
+               
                 <li>
                   <FaPhoneAlt className="contact-icon" />
                   <div className="phone-numbers">
-                    <a href="tel:+917559080005">+91 7559080005</a>
-                    <a href="tel:+918714359715">+91 8714359715</a>
-                    <a href="tel:+919562020978">+91 9562020978</a>
+                    <a href="tel:+917559080005">India — Kerala: +91 7559080005</a>
+                    <a href="tel:+971501249940">UAE: +971 50 124 9940</a>
+                    <a href="tel:+96597855527">Kuwait: +965 978 555 27</a>
                   </div>
                 </li>
               </ul>
@@ -86,7 +82,7 @@ const Footer = () => {
         <div className="footer-container">
           <div className="footer-bottom-flex">
             <p className="copyright">
-              &copy; Copyright @ 2026. <span>"GENOVA TECHNOLOGIES"</span>. All rights reserved.
+              &copy; Copyright @ 2026. <span>"GENOVA TECHNOLOGIES PVT LTD"</span>. All rights reserved.
             </p>
           </div>
         </div>

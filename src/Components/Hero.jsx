@@ -237,22 +237,19 @@ Helping businesses grow through creative and reliable solutions.
             </div>
             <h2 className="about-title">Who We Are</h2>
             <p className="about-description">
-              Genova Technologies is a leading web engineering and digital solutions company with operations in India and Kuwait. With over 14 years of experience, we have been helping businesses transform their ideas into innovative digital solutions through cutting-edge technology, creative design, and reliable development services.
+              Genova Technologies Pvt. Ltd. is a leading Web Application and Mobile App Development company with operations in India and the UAE. With over 14 years of experience, we help businesses transform their ideas into innovative, scalable, and secure digital solutions. Our expertise includes custom web applications, mobile app development, enterprise software, ERP/CRM solutions, e-commerce platforms, and cloud-based applications tailored to meet unique business requirements.
 
-Driven by a team of passionate professionals, we are committed to delivering high-quality, user-focused solutions that create lasting value. At Genova Technologies, we believe that great design is not just about appearance—it's about creating experiences that work seamlessly and help businesses grow.
+Driven by a team of experienced developers, designers, and technology experts, Genova Technologies Pvt. Ltd. is committed to delivering high-quality, user-centric solutions that enhance productivity, streamline operations, and accelerate business growth. We believe that successful software is built on innovation, performance, reliability, and exceptional user experiences, helping businesses thrive in today's digital world.
             </p>
             <ul className="about-list">
-              <li><FaCheckCircle className="check-icon" /><span>Web Design &amp; Development</span></li>
-              <li><FaCheckCircle className="check-icon" /><span>Expert &amp; Experienced Team</span></li>
-              <li><FaCheckCircle className="check-icon" /><span>14 Years of Industry Excellence</span></li>
+              <li><FaCheckCircle className="check-icon" /><span>Turning Ideas into Powerful Web & Mobile Applications.</span></li>
+              <li><FaCheckCircle className="check-icon" /><span>Building Smart Digital Solutions for Every Business.</span></li>
+              <li><FaCheckCircle className="check-icon" /><span>Innovative Web & Mobile Apps, Built to Grow Your Business.</span></li>
+              <li><FaCheckCircle className="check-icon" /><span>From Concept to Code, We Build Exceptional Digital Experiences.</span></li>
             </ul>
             <div className="about-contact-area">
               <div className="contact-box">
-                <div className="contact-icon-wrap"><FiPhoneCall /></div>
-                <div className="contact-info">
-                  <span>Call us anytime</span>
-                  <strong onClick={()=> window.location.href = 'tel:+917559080005'}>+91 7559080005</strong>
-                </div>
+               
               </div>
             </div>
           </div>
@@ -265,7 +262,7 @@ Driven by a team of passionate professionals, we are committed to delivering hig
         <div className="hqs-bg-text">Service</div>
         <div className="hqs-header">
           <span className="hqs-tagline">OUR SERVICE</span>
-          <h2 className="hqs-title">High Quality Services</h2>
+          <h2 className="hqs-title"> What We Offer</h2>
         </div>
 
         {/* The Grid (What We Do content) placed here */}
@@ -394,7 +391,7 @@ Driven by a team of passionate professionals, we are committed to delivering hig
         <div className="appointment-bg-text">Hello</div>
         <div className="appointment-container">
           <div className="appointment-form-wrap">
-            <span className="appointment-tagline">MAKE AN APPOINTMENT</span>
+            <span className="appointment-tagline">MAKE AN ENQUIRY </span>
             <h2 className="appointment-title">Request a free quote</h2>
             
             <form className="appointment-form" onSubmit={(e) => {

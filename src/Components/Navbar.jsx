@@ -12,6 +12,7 @@ import logoImg from '../assets/Genovatech.png';
 import megaMenuImg from '../assets/mega-menu-team.png';
 import { useTheme } from '../context/ThemeContext';
 import sma from '../assets/SMA.png'
+import { FaYoutube } from 'react-icons/fa';
 
 
 const Navbar = () => {
@@ -172,10 +173,7 @@ const Navbar = () => {
           <h4>Get In Touch</h4>
 
           <div className="sidebar-contact-item">
-            <MdPhone className="sidebar-contact-icon" />
-            <a href="tel:+917559080005">
-  <span>+91 7559080005</span>
-</a>
+   
           </div>
           <div className="sidebar-contact-item">
             <MdOutlineEmail className="sidebar-contact-icon" />
@@ -193,16 +191,13 @@ const Navbar = () => {
   <span>www.genovatechnologies.com</span>
 </a>
           </div>
-          <div className="sidebar-contact-item">
-            <MdLocationOn className="sidebar-contact-icon-l" />
-            <span>1st Floor, Basil Building, Horse Ride Road, Opp. St. Michels Church, Westhill, Kozhikode, Kerala, 673005
-            </span>
-          </div>
+         \
 
           <div className="sidebar-socials">
             <a href="https://www.facebook.com/Genova-Technologies-Pvt-Ltd" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
             <a href="https://www.instagram.com/genovatechnologies_pvt_ltd/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
             <a href="https://www.linkedin.com/company/genova-technologies/" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /></a>
+            <a href="https://www.linkedin.com/company/genova-technologies/" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>
           </div>
         </div>
 
