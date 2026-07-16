@@ -29,8 +29,8 @@ const Project = () => {
         <div className="container">
           <div className="section-header">
             <div className="header-text">
-              <span className="subtitle">CASE STUDIES</span>
-              <h2>Specialist Business Cases</h2>
+              <span className="subtitle">Featured Projects</span>
+              <h2>Creating Digital Success Stories.</h2>
             </div>
           </div>
 
