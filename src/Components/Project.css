@@ -204,6 +204,7 @@
 }
 
 .project-info p {
+  text-align: justify;  
   font-size: 15px;
   color: #666;
   line-height: 1.7;
