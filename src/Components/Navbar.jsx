@@ -11,6 +11,8 @@ import { BsSun, BsMoonStarsFill } from 'react-icons/bs';
 import logoImg from '../assets/Genovatech.png';
 import megaMenuImg from '../assets/mega-menu-team.png';
 import { useTheme } from '../context/ThemeContext';
+import sma from '../assets/SMA.png'
+
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -129,7 +131,7 @@ const Navbar = () => {
               </span>
             </button>
 <Link to="/contact">
-  <button className="btn-book">Book a Meeting</button>
+  <button className="btn-book">Make an Enquiry</button>
 </Link>  
   
         <button className="btn-menu" onClick={() => setIsMenuOpen(true)}>
