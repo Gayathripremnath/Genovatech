@@ -9,6 +9,10 @@ import dr from '../assets/Dr.png'
 import well from '../assets/welltrans.png'
 import rahoboth from '../assets/rahoboth.png'
 import matrix from '../assets/matrix.png'
+import fortqueen from '../assets/fortqueen.png'
+import greenline from '../assets/greenline.png'
+import konaris from '../assets/konaris.png'
+import eco from '../assets/eco.png'
 
 const Project = () => {
   return (
@@ -162,7 +166,7 @@ const Project = () => {
               </div>
               <div className="project-info">
                 <h3>Matrix Infrastructures</h3>
-                <p>Smart Build is a construction management platform designed to simplify project planning, progress tracking, and team collaboration. It enhances productivity through efficient project management and real-time coordination.</p>
+                <p>We designed and developed the official website for Matrix Infrastructures. The platform showcases their construction services, projects, and expertise. It strengthens their online presence and enhances customer engagement.</p>
               </div>
       <a
   href="https://matrixinfrastructures.in/"
@@ -174,7 +178,79 @@ const Project = () => {
   <FaGlobe size={22} />
 </a>
             </div>
-            
+              <div className="project-card">
+              <div className="project-image">
+                <img src={fortqueen} alt="Startup Solution" />
+              </div>
+              <div className="project-info">
+                <h3>Fort Queen Hotel, Kochi</h3>
+                <p>We developed the website for Fort Queen Hotel, Kochi, and continue to provide ongoing technical support. The platform enhances their online presence, and the client is highly satisfied with the results.</p>
+              </div>
+      <a
+  href="https://www.fortqueen.com/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="project-url"
+  aria-label="Visit Sasthapuri Website"
+>
+  <FaGlobe size={22} />
+</a>
+            </div>
+               <div className="project-card">
+              <div className="project-image">
+                <img src={greenline} alt="Startup Solution" />
+              </div>
+              <div className="project-info">
+                <h3>Green Line Architects</h3>
+                <p>We developed a custom website for Green Line Architects with a modern, responsive, and visually engaging design. The website reflects their architectural vision, and the client was highly satisfied with the final outcome.</p>
+              </div>
+      <a
+  href="https://greenlinearchitects.in/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="project-url"
+  aria-label="Visit Sasthapuri Website"
+>
+  <FaGlobe size={22} />
+</a>
+            </div>
+
+              <div className="project-card">
+              <div className="project-image">
+                <img src={konaris} alt="Startup Solution" />
+              </div>
+              <div className="project-info">
+                <h3>Konaris India – Calicut</h3>
+                <p>We designed and developed a modern, user-friendly website for Konaris India. We also provided business email setup and ongoing technical support. The client is highly satisfied with the overall solution.</p>
+              </div>
+      <a
+  href="https://konarisindia.com/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="project-url"
+  aria-label="Visit Sasthapuri Website"
+>
+  <FaGlobe size={22} />
+</a>
+            </div>
+                <div className="project-card">
+              <div className="project-image">
+                <img src={eco} alt="Startup Solution" />
+              </div>
+              <div className="project-info">
+                <h3>Eco We Plus - Calicut</h3>
+                <p>We designed and developed a modern, user-friendly website for Eco We Plus. The website showcases their waste management services with a clean and responsive design. The client was highly satisfied with the final outcome.</p>
+              </div>
+      <a
+  href="https://www.ecoweplus.com/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="project-url"
+  aria-label="Visit Sasthapuri Website"
+>
+  <FaGlobe size={22} />
+</a>
+            </div>
             <div className="project-card">
               <div className="project-image">
                 <img src={smart} alt="Startup Solution" />
