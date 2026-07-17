@@ -256,7 +256,7 @@ const Project = () => {
                 <img src={smart} alt="Startup Solution" />
               </div>
               <div className="project-info">
-                <h3>Smart Builders</h3>
+                <h3>Smart Build</h3>
                 <p>Smart Build is a construction management platform designed to simplify project planning, progress tracking, and team collaboration. It enhances productivity through efficient project management and real-time coordination.</p>
               </div>
       <a
