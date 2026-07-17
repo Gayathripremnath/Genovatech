@@ -445,6 +445,10 @@
 }
 
 @media (max-width: 768px) {
+    .faq-section {
+        margin-bottom: 30px;
+    }
+
     .details-hero {
         height: 50vh;
     }

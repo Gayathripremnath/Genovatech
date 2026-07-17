@@ -28,7 +28,7 @@ const Footer = () => {
               <div className="social-links">
                  <a href="https://www.facebook.com/Genova-Technologies-Pvt-Ltd" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
                 <a href="https://www.instagram.com/genovatechnologies_pvt_ltd/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-                <a href="https://www.linkedin.com/company/genova-technologies/" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>
+                <a href="https://www.youtube.com/@genovatechnologiespvtltd" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>
                 <a href="https://www.linkedin.com/company/genova-technologies/" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /></a>
               </div>
             </div>

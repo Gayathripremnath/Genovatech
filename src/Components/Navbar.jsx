@@ -104,7 +104,7 @@ const Navbar = () => {
                       </div>
                       <div className="mega-menu-cta">
                         <h4>Get Free Consultation</h4>
-                        <p>From preconstruction to virtual design and construction.</p>
+                        <p>Let's build the right solution for your business</p>
                       </div>
                     </div>
                     <div className="mega-menu-image">
@@ -165,7 +165,7 @@ const Navbar = () => {
         {/* On Desktop Only: Original Small Paragraph */}
         <div className="sidebar-content">
           <img src={logoImg} alt="logo" className="sidebar-logo-img" />
-          <p>We must explain to you how all seds this mistakens idea denouncing pleasures and praising account. All seds this mistakens idea denouncing pleasures.</p>
+          <p>We deliver innovative digital solutions with a focus on quality, performance, and user experience. Our team creates modern, responsive websites that help businesses grow and achieve lasting success.</p>
         </div>
 
         {/* On Desktop Only: Contact Details */}
@@ -191,13 +191,13 @@ const Navbar = () => {
   <span>www.genovatechnologies.com</span>
 </a>
           </div>
-         \
+         
 
           <div className="sidebar-socials">
             <a href="https://www.facebook.com/Genova-Technologies-Pvt-Ltd" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
             <a href="https://www.instagram.com/genovatechnologies_pvt_ltd/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
             <a href="https://www.linkedin.com/company/genova-technologies/" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /></a>
-            <a href="https://www.linkedin.com/company/genova-technologies/" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>
+            <a href="https://www.youtube.com/@genovatechnologiespvtltd" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>
           </div>
         </div>
 

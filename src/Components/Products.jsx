@@ -76,7 +76,7 @@ const Products = () => {
           <span className="products-tagline">Innovation Meets Purpose</span>
           <h2 className="products-title">Our Premium Products</h2>
           <p className="products-subtitle">
-            We build scalable, robust, and user-centric software solutions designed to solve real-world business challenges. Explore our suite of specialized management applications.
+            We build scalable, user-friendly software solutions tailored to real business needs. Explore our range of powerful management applications designed to improve efficiency and productivity.
           </p>
         </header>
 

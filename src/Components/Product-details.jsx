@@ -215,8 +215,10 @@ const ProductDetails = () => {
                     <h3>We Work Strictly And Responsibly.</h3>
                     <p>Proactively restore professional data and multimedia based collaboration and idea sharing. Credibly top line deliverables and cross platform manufactured products. Dramatically facilitate enabled value with seamless growth strategies.</p>
                     <p>Proactively restore professional data and multimedia based collaboration and idea sharing. Credibly top line deliverables and cross platform manufactured products.</p>
-                    <button className="faq-quote-btn">Get A Free Quote</button>
-                  </div>
+<Link to="/contact">
+  <button className="faq-quote-btn">Get A Free Quote</button>
+</Link>                
+  </div>
                 </div>
               </div>
             </details>
