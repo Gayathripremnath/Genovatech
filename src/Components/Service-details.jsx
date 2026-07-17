@@ -156,35 +156,7 @@ const ServiceDetails = () => {
             </ul>
           </div>
 
-          <div className="sd-widget">
-            <h3 className="sd-widget-title">Download</h3>
-            <ul className="sd-download-list">
-              <li>
-                <a href="#">
-                  <span className="sd-dl-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12h8M8 16h5"/></svg>
-                  </span>
-                  <span className="sd-dl-info">
-                    <strong>Our Brochures</strong>
-                    <small>Download</small>
-                  </span>
-                  <span className="sd-dl-arrow">→</span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <span className="sd-dl-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
-                  </span>
-                  <span className="sd-dl-info">
-                    <strong>Company Details</strong>
-                    <small>Download</small>
-                  </span>
-                  <span className="sd-dl-arrow">→</span>
-                </a>
-              </li>
-            </ul>
-          </div>
+          
 
           <div className="sd-widget sd-help-widget">
             <div className="sd-help-logo">

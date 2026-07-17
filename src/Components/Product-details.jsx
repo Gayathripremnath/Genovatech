@@ -129,36 +129,14 @@ const ProductDetails = () => {
           </div>
         </section>
 
+
+
         {/* Info Box Section */}
         <section className="info-box-section">
-          <div className="info-card">
-            <h2 className="info-title">Quality-Driven Approach to {product.name}</h2>
-            <p className="info-text">
-              We deliver cutting-edge software solutions designed to streamline your business processes and enhance productivity. Our approach combines innovative technology with user-centric design to ensure long-term success.
-            </p>
-            <div className="info-grid">
-              <div className="info-item">
-                <span className="info-label">Client:</span>
-                <span className="info-value">{product.client}</span>
-              </div>
-              <div className="info-item">
-                <span className="info-label">Location:</span>
-                <span className="info-value">{product.location}</span>
-              </div>
-              <div className="info-item">
-                <span className="info-label">Project Year:</span>
-                <span className="info-value">{product.year}</span>
-              </div>
-              <div className="info-item">
-                <span className="info-label">Duration:</span>
-                <span className="info-value">{product.duration}</span>
-              </div>
-              <div className="info-item">
-                <span className="info-label">Price:</span>
-                <span className="info-value">{product.price}</span>
-              </div>
-            </div>
-          </div>
+          <h2 className="info-title">Quality-Driven Approach to {product.name}</h2>
+          <p className="info-text">
+            We deliver cutting-edge software solutions designed to streamline your business processes and enhance productivity. Our approach combines innovative technology with user-centric design to ensure long-term success.
+          </p>
         </section>
 
         {/* Content Section */}
@@ -174,29 +152,7 @@ const ProductDetails = () => {
           </p>
         </section>
 
-        {/* Stats Section */}
-        <section className="stats-box">
-          <div className="stat-item">
-            <i className="ri-group-line"></i>
-            <h3>1,200+</h3>
-            <p>Active Users</p>
-          </div>
-          <div className="stat-item">
-            <i className="ri-building-line"></i>
-            <h3>100+</h3>
-            <p>Successful Deployments</p>
-          </div>
-          <div className="stat-item">
-            <i className="ri-checkbox-circle-line"></i>
-            <h3>95%+</h3>
-            <p>Client Satisfaction</p>
-          </div>
-          <div className="stat-item">
-            <i className="ri-time-line"></i>
-            <h3>24/7</h3>
-            <p>Customer Support</p>
-          </div>
-        </section>
+
 
         {/* FAQ Section */}
         <section className="faq-section">

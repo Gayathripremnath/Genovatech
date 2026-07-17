@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { FaArrowRight } from 'react-icons/fa';
 import './Products.css';
 import sma from '../assets/SMA.png'
 import ema from '../assets/EMA.png'
@@ -9,17 +10,11 @@ import ima from '../assets/IMA.png'
 import hma from '../assets/HMA.png'
 
 const productData = [
-  {
-    id: 1,
-    name: "School Management App",
-    shortName: "SMA",
-    img: sma,
-  },
-  {
-    id: 2,
-    name: "Vehicle Management App",
-    shortName: "VMA",
-    img: vma,
+   {
+    id: 4,
+    name: "Contract Management App",
+    shortName: "CMA",
+    img: cma,
   },
   {
     id: 3,
@@ -28,10 +23,16 @@ const productData = [
     img: ema,
   },
   {
-    id: 4,
-    name: "Contract Management App",
-    shortName: "CMA",
-    img: cma,
+    id: 1,
+    name: "Farm Management App",
+    shortName: "FMA",
+    img: sma,
+  },
+  {
+    id: 2,
+    name: "Vehicle Management App",
+    shortName: "VMA",
+    img: vma,
   },
   {
     id: 5,
@@ -88,29 +89,16 @@ const Products = () => {
               </div>
               <div className="product-content">
                 <h3 className="product-short-name">{product.shortName}</h3>
-                <h4 className="product-full-name">{product.name}</h4>
-                <Link to={`/product-details/${product.shortName}`} className="product-btn">View Details</Link>
+                <div className="product-name-row">
+                  <h4 className="product-full-name">{product.name}</h4>
+                  <Link to={`/product-details/${product.shortName}`} className="product-arrow-link"><FaArrowRight /></Link>
+                </div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* ── NEWSLETTER SECTION ── */}
-        <div className="newsletter-wrap">
-          <div className="newsletter-card">
-            <div className="newsletter-content">
-              <h3 className="newsletter-title">SUBSCRIBE TO OUR NEWSLETTER</h3>
-              <div className="newsletter-form">
-                <input 
-                  type="email" 
-                  placeholder="enter your email address" 
-                  className="newsletter-input"
-                />
-                <button className="newsletter-btn">Subscribe Now</button>
-              </div>
-            </div>
-          </div>
-        </div>
+      
       </div>
     </section>
   );

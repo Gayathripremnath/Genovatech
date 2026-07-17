@@ -1,125 +1,50 @@
- /* Project.css */
+/* Project.css */
 .project-page {
   background-color: var(--theme-bg);
   min-height: 100vh;
 }
 
-/* Banner Styles */
-.project-banner {
-  position: relative;
-  height: 350px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  margin-top: 0; /* Ensures it starts at the top under the transparent navbar */
-}
-
-.banner-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-
-.banner-bg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.banner-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(34, 43, 49, 0.75); /* Dark blue/grey overlay to match reference */
-}
-
-.banner-content {
-  position: relative;
-  z-index: 2;
-  margin-top: 40px; /* Ensures it starts at the top under the transparent navbar */
+/* Page Header (Products-style) */
+.project-page-header {
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
+  max-width: 800px;
+  margin: 0 auto 70px;
+  padding-top: 60px;
 }
 
-/* Large stroked background text */
-.bg-text {
-  position: absolute;
-  font-size: 130px;
-  font-family: var(--font-headings, sans-serif);
+.project-tagline {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #d04e09;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.project-page-title {
+  font-family: 'Red Hat Display', serif;
+  font-size: 48px;
   font-weight: 800;
-  color: transparent;
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
-  z-index: -1;
-  pointer-events: none;
-  white-space: nowrap;
-  letter-spacing: 2px;
+  color: #1a2530;
+  margin-bottom: 20px;
+  letter-spacing: -1.5px;
 }
 
-/* Foreground title */
-.banner-title {
-  font-size: 52px;
-  font-family: var(--font-headings, sans-serif);
-  font-weight: 700;
-  color: #ffffff;
-  margin-top: 20px;
-  position: relative;
-  letter-spacing: -0.5px;
+.project-page-subtitle {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: #666;
+  line-height: 1.8;
+  text-align: center;
 }
 
-/* Content Area Placeholder */
-.project-content {
-  padding: 100px 0;
+[data-theme="dark"] .project-page-title {
+  color: var(--theme-text-primary);
 }
 
-/* Responsive adjustments */
-@media (max-width: 992px) {
-  .bg-text {
-    font-size: 130px;
-  }
-  
-  .banner-title {
-    font-size: 42px;
-  }
-}
-
-@media (max-width: 768px) {
-  .project-banner {
-    height: 400px;
-  }
-  
-  .bg-text {
-    font-size: 90px;
-    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.15);
-  }
-  
-  .banner-title {
-    font-size: 32px;
-  }
-}
-
-@media (max-width: 480px) {
-  .project-banner {
-    height: 350px;
-  }
-  
-  .bg-text {
-    font-size: 60px;
-  }
-  
-  .banner-title {
-    font-size: 26px;
-  }
+[data-theme="dark"] .project-page-subtitle {
+  color: var(--theme-text-secondary);
 }
 
 /* --- Case Studies Section --- */
@@ -362,34 +287,21 @@
 }
 
 @media (max-width: 992px) {
+  .project-page-title {
+    font-size: 36px;
+  }
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .newsletter-grid {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 40px;
-  }
-  .newsletter-text h2 {
-    font-size: 36px;
-  }
-  .banner-title {
-    font-size: 38px;
-  }
-  .bg-text {
-    font-size: 110px;
-  }
-}
 
 @media (max-width: 768px) {
-  .project-banner {
-    height: 380px;
+  .project-page-title {
+    font-size: 28px;
+    letter-spacing: -0.5px;
   }
-  .bg-text {
-    font-size: 80px;
-  }
-  .banner-title {
-    font-size: 30px;
+  .project-page-header {
+    padding-top: 40px;
+    margin-bottom: 40px;
   }
   .section-header {
     flex-direction: column;
@@ -436,13 +348,7 @@
 }
 
 @media (max-width: 480px) {
-  .project-banner {
-    height: 300px;
-  }
-  .bg-text {
-    font-size: 55px;
-  }
-  .banner-title {
+  .project-page-title {
     font-size: 24px;
   }
   .header-text h2 {

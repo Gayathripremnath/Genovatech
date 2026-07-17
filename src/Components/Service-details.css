@@ -11,15 +11,28 @@
   background-position: center top;
   position: relative;
   padding-top: 190px;
-  /* hero ends roughly at mid-point of categories card */
   padding-bottom: 0;
   min-height: 550px;
+  overflow: hidden;
+}
+
+.sd-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  background-size: cover;
+  background-position: center top;
+  filter: blur(6px);
+  transform: scale(1.05);
+  z-index: 0;
 }
 
 .sd-hero-overlay {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.52);
+  z-index: 1;
 }
 
 /* ── LAYOUT WRAPPER: spans hero bottom + page top ── */

@@ -17,30 +17,15 @@ import eco from '../assets/eco.png'
 const Project = () => {
   return (
     <div className="project-page">
-      {/* Banner Section */}
-      <section className="project-banner">
-        <div className="banner-bg">
-          <img 
-            src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=1920" 
-            alt="Project Banner" 
-          />
-          <div className="banner-overlay"></div>
-        </div>
-        
-        <div className="banner-content">
-          <div className="bg-text">Project</div>
-          <h1 className="banner-title">Project </h1>
-        </div>
-      </section>
-
       {/* Case Studies Section */}
       <section className="case-studies-section">
         <div className="container">
-          <div className="section-header">
-            <div className="header-text">
-              <span className="subtitle">Featured Projects</span>
-              <h2>Creating Digital Success Stories.</h2>
-            </div>
+          <div className="project-page-header">
+            <span className="project-tagline">Our Work</span>
+            <h2 className="project-page-title">Creating Digital Success Stories</h2>
+            <p className="project-page-subtitle">
+              We design and develop scalable, user-friendly digital solutions tailored to real business needs. Explore our portfolio of impactful projects built to drive growth and efficiency.
+            </p>
           </div>
 
           <div className="projects-grid">

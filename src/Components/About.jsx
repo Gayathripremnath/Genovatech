@@ -53,6 +53,40 @@ const About = () => {
             </div>
             
             <div className="journey-timeline">
+              
+              <div className="timeline-card">
+                <div className="card-bg">
+                  <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=600" alt="Meeting" />
+                </div>
+                <div className="timeline-card-header">
+                  <h3>Future Ready</h3>
+                  <div className="timeline-line"></div>
+                  <span className="year">2026</span>
+                </div>
+                <p>Continuing to innovate with modern technologies, empowering businesses with scalable, secure, and high-performance digital experiences.</p>
+              </div>
+              <div className="timeline-card">
+                <div className="card-bg">
+                  <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=600" alt="Team" />
+                </div>
+                <div className="timeline-card-header">
+                  <h3>Global Presence</h3>
+                  <div className="timeline-line"></div>
+                  <span className="year">2020</span>
+                </div>
+                <p>Extended our operations internationally, building long-term partnerships and delivering cutting-edge digital solutions.</p>
+              </div>
+              <div className="timeline-card">
+                <div className="card-bg">
+                  <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=600" alt="Workspace" />
+                </div>
+                <div className="timeline-card-header">
+                  <h3>Expanding Horizons</h3>
+                  <div className="timeline-line"></div>
+                  <span className="year">2016</span>
+                </div>
+                <p>Genova Technologies expanded its services and capabilities, establishing itself as a leading web engineering company in India and Kuwait.</p>
+              </div>
               <div className="timeline-card">
                 <div className="card-bg">
                   <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=600" alt="Office" />
@@ -65,41 +99,10 @@ const About = () => {
                   <p>Genova Technologies was established with a vision to deliver innovative, reliable, and customer-focused web solutions</p>
                 </div>
 
-              <div className="timeline-card">
-                <div className="card-bg">
-                  <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=600" alt="Workspace" />
-                </div>
-                <div className="timeline-card-header">
-                  <h3>Expanding Horizons</h3>
-                  <div className="timeline-line"></div>
-                  <span className="year">2016</span>
-                </div>
-                <p>Genova Technologies expanded its services and capabilities, establishing itself as a leading web engineering company in India and Kuwait.</p>
-              </div>
+              
 
-              <div className="timeline-card">
-                <div className="card-bg">
-                  <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=600" alt="Team" />
-                </div>
-                <div className="timeline-card-header">
-                  <h3>Global Presence</h3>
-                  <div className="timeline-line"></div>
-                  <span className="year">2020</span>
-                </div>
-                <p>Extended our operations internationally, building long-term partnerships and delivering cutting-edge digital solutions.</p>
-              </div>
+              
 
-              <div className="timeline-card">
-                <div className="card-bg">
-                  <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=600" alt="Meeting" />
-                </div>
-                <div className="timeline-card-header">
-                  <h3>Future Ready</h3>
-                  <div className="timeline-line"></div>
-                  <span className="year">2026</span>
-                </div>
-                <p>Continuing to innovate with modern technologies, empowering businesses with scalable, secure, and high-performance digital experiences.</p>
-              </div>
             </div>
           </div>
         </div>
