@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { FaArrowRight } from 'react-icons/fa';
 import './Products.css';
 import sma from '../assets/SMA.png'
 import ema from '../assets/EMA.png'
@@ -83,7 +82,7 @@ const Products = () => {
 
         <div className="products-grid">
           {productData.map((product) => (
-            <div key={product.id} className="product-card">
+            <Link to={`/product-details/${product.shortName}`} key={product.id} className="product-card">
               <div className="product-img-wrapper">
                 <img src={product.img} alt={product.name} className="product-img" />
               </div>
@@ -91,10 +90,10 @@ const Products = () => {
                 <h3 className="product-short-name">{product.shortName}</h3>
                 <div className="product-name-row">
                   <h4 className="product-full-name">{product.name}</h4>
-                  <Link to={`/product-details/${product.shortName}`} className="product-arrow-link"><FaArrowRight /></Link>
+                  <span className="product-arrow-link">❯</span>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 

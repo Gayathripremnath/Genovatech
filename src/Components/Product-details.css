@@ -4,6 +4,49 @@
     font-family: 'Inter', sans-serif;
 }
 
+/* Page Header */
+.pd-page-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 0;
+  padding: 120px 20px 20px;
+}
+
+.pd-tagline {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #d04e09;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.pd-page-title {
+  font-family: 'Red Hat Display', serif;
+  font-size: 48px;
+  font-weight: 800;
+  color: #1a2530;
+  margin-bottom: 20px;
+  letter-spacing: -1.5px;
+}
+
+.pd-page-subtitle {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: #666;
+  line-height: 1.8;
+  text-align: center;
+}
+
+[data-theme="dark"] .pd-page-title {
+  color: var(--theme-text-primary);
+}
+
+[data-theme="dark"] .pd-page-subtitle {
+  color: var(--theme-text-secondary);
+}
+
 /* Hero Section */
 .details-hero {
     height: 60vh;
@@ -54,7 +97,7 @@
 .details-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 80px 20px;
+    padding: 20px 20px 80px;
 }
 
 /* Image Grid */
@@ -62,7 +105,7 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 20px;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
 }
 
 .main-image img,

@@ -1,24 +1,7 @@
 import React from 'react';
 import './Product-details.css';
 import { useParams, Link } from 'react-router-dom';
-import sma from '../assets/SMA.png'
-import sma1 from '../assets/SMA1.png'
-import sma2 from '../assets/SMA2.png'
-import ema from '../assets/EMA.png'
-import ema1 from '../assets/EMA1.png'
-import ema2 from '../assets/EMA2.png'
-import vma from '../assets/VMA.png'
-import vma1 from '../assets/VMA1.png'
-import vma2 from '../assets/VMA2.png'
-import cma from '../assets/CMA.png'
-import cma1 from '../assets/CMA1.png'
-import cma2 from '../assets/CMA2.png'
-import ima from '../assets/IMA.png'
-import ima1 from '../assets/IMA1.png'
-import ima2 from '../assets/IMA2.png'
-import hma from '../assets/HMA.png'
-import hma1 from '../assets/HMA1.png'
-import hma2 from '../assets/HMA2.png'
+
 
 
 const productDetailsData = {
@@ -31,9 +14,6 @@ const productDetailsData = {
     duration: '12 Months',
     price: 'Custom',
     description: 'A comprehensive solution for educational institutions to manage students, staff, and administrative tasks efficiently.',
-    mainImg: sma,
-    subImg1: sma1,
-    subImg2: sma2,
   },
   'VMA': {
     name: 'Vehicle Management App',
@@ -44,9 +24,7 @@ const productDetailsData = {
     duration: '8 Months',
     price: 'Custom',
     description: 'Streamline your fleet operations with real-time tracking, maintenance scheduling, and driver management.',
-    mainImg: vma,
-    subImg1: vma1,
-    subImg2: vma2,
+    
   },
   'EMA': {
     name: 'Enquiry Management App',
@@ -57,9 +35,7 @@ const productDetailsData = {
     duration: '6 Months',
     price: 'Custom',
     description: 'Capture and manage leads effectively to improve conversion rates and customer engagement.',
-    mainImg: ema,
-    subImg1: ema1,
-    subImg2: ema2,
+    
   },
   'CMA': {
     name: 'Contract Management App',
@@ -70,9 +46,7 @@ const productDetailsData = {
     duration: '10 Months',
     price: 'Custom',
     description: 'Simplify contract lifecycle management from creation and negotiation to execution and renewal.',
-    mainImg: cma,
-    subImg1: cma1,
-    subImg2: cma2,
+   
   },
   'IMA': {
     name: 'Inventory Management App',
@@ -83,9 +57,7 @@ const productDetailsData = {
     duration: '10 Months',
     price: 'Custom',
     description: 'Optimize your supply chain with real-time inventory tracking, automated reordering, and warehouse management.',
-    mainImg: ima,
-    subImg1: ima1,
-    subImg2: ima2,
+    
   },
   'HMA': {
     name: 'Hospital Management App',
@@ -96,9 +68,7 @@ const productDetailsData = {
     duration: '14 Months',
     price: 'Custom',
     description: 'A complete digital transformation for healthcare providers, managing patient records, appointments, and billing.',
-    mainImg: hma,
-    subImg1: hma1,
-    subImg2: hma2,
+   
   }
 };
 
@@ -108,27 +78,18 @@ const ProductDetails = () => {
 
   return (
     <div className="product-details-page">
-      {/* Hero Section */}
-      <section className="details-hero" style={{ backgroundImage: `url(${product.mainImg})` }}>
-        <div className="hero-overlay"></div>
-        <div className="hero-content">
-          <span className="hero-category">Project Details</span>
-          <h1 className="hero-title">{product.name}</h1>
-        </div>
+
+      {/* Page Header */}
+      <section className="pd-page-header">
+        <span className="pd-tagline">Our Products</span>
+        <h2 className="pd-page-title">{product.name}</h2>
+        <p className="pd-page-subtitle">
+          {product.description}
+        </p>
       </section>
 
       <div className="details-container">
-        {/* Image Grid Section */}
-        <section className="image-grid-section">
-          <div className="main-image">
-            <img src={product.mainImg} alt="Main project" />
-          </div>
-          <div className="sub-images">
-            <img src={product.subImg1} alt="Sub project 1" />
-            <img src={product.subImg2} alt="Sub project 2" />
-          </div>
-        </section>
-
+       
 
 
         {/* Info Box Section */}
