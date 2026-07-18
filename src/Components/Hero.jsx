@@ -195,13 +195,9 @@ const Hero = () => {
             </div>
           </h1>
 
-          <p className="hero-description">
-            Building innovative digital experiences with modern technology.<br />
-Helping businesses grow through creative and reliable solutions.
+         
 
-          </p>
-
-          <Link to="/projects" className="btn-explore">
+          <Link to="/services" className="btn-explore">
             Explore Opportunities
           </Link>
         </div>
@@ -386,70 +382,6 @@ Driven by a team of experienced developers, designers, and technology experts, G
         </div>
       </section>
 
-      {/* ── APPOINTMENT SECTION ── */}
-      <section className="appointment-section">
-        <div className="appointment-bg-text">Hello</div>
-        <div className="appointment-container">
-          <div className="appointment-form-wrap">
-            <span className="appointment-tagline">MAKE AN ENQUIRY </span>
-            <h2 className="appointment-title">Request a free quote</h2>
-            
-            <form className="appointment-form" onSubmit={(e) => {
-              e.preventDefault();
-              const form = e.target;
-              const name = form.name.value.trim();
-              const number = form.number.value.trim();
-              const email = form.email.value.trim();
-              const message = form.message.value.trim();
-              const errors = {};
-              if (!name) errors.name = 'Name is required';
-              if (!number) errors.number = 'Number is required';
-              else if (!/^[0-9+\-\s]{7,15}$/.test(number)) errors.number = 'Enter a valid number';
-              if (!email) errors.email = 'Email is required';
-              else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errors.email = 'Enter a valid email';
-              if (!message) errors.message = 'Message is required';
-              // show errors
-              document.querySelectorAll('.appt-error').forEach(el => el.remove());
-              let hasError = false;
-              Object.entries(errors).forEach(([field, msg]) => {
-                hasError = true;
-                const input = form[field];
-                input.classList.add('input-error');
-                const span = document.createElement('span');
-                span.className = 'appt-error';
-                span.textContent = msg;
-                input.parentNode.appendChild(span);
-              });
-              if (!hasError) {
-                form.reset();
-                document.querySelectorAll('.appt-error').forEach(el => el.remove());
-                form.querySelectorAll('.input-error').forEach(el => el.classList.remove('input-error'));
-                alert('Message sent successfully!');
-              }
-            }}>
-              <div className="form-row">
-                <div className="input-group">
-                  <input type="text" name="name" placeholder="Your Name" className="form-input" onChange={e => { e.target.classList.remove('input-error'); e.target.parentNode.querySelector('.appt-error')?.remove(); }} />
-                </div>
-                <div className="input-group">
-                  <input type="text" name="number" placeholder="Number" className="form-input" onChange={e => { e.target.classList.remove('input-error'); e.target.parentNode.querySelector('.appt-error')?.remove(); }} />
-                </div>
-              </div>
-              <div className="input-group full-width">
-                <input type="email" name="email" placeholder="Your Email" className="form-input" onChange={e => { e.target.classList.remove('input-error'); e.target.parentNode.querySelector('.appt-error')?.remove(); }} />
-              </div>
-              <div className="input-group full-width">
-                <textarea name="message" placeholder="Type Your Message" className="form-textarea" onChange={e => { e.target.classList.remove('input-error'); e.target.parentNode.querySelector('.appt-error')?.remove(); }}></textarea>
-              </div>
-              <button type="submit" className="btn-submit">Submit Message</button>
-            </form>
-          </div>
-
-          <div className="appointment-image">
-            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=800" alt="Consultation" />
-          </div>
-        </div>
-      </section>
     </div>
   );
 };
